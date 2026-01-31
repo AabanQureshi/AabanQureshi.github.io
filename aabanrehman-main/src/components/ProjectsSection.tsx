@@ -1,4 +1,4 @@
-import { FileText, GraduationCap, Clock, Receipt, Calendar, ShoppingCart, Users, Package, Brain } from "lucide-react";
+import { FileText, GraduationCap, Clock, Receipt, Calendar, ShoppingCart, Users, Package, Brain, LucideIcon } from "lucide-react";
 
 interface Project {
   title: string;
@@ -7,7 +7,7 @@ interface Project {
   role: string;
   techStack: string[];
   keyFeatures: string[];
-  icon: any;
+  icon: LucideIcon;
 }
 
 const projects: Project[] = [
@@ -259,7 +259,7 @@ const ProjectsSection = () => {
             
             return (
               <div
-                key={project.title}
+                key={`${project.title}-${index}`}
                 className="group p-6 rounded-xl bg-gradient-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-elevated flex flex-col"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
