@@ -37,10 +37,11 @@ jobs:
         working-directory: ./aabanrehman-main
         run: npm run build
       
-      - name: Copy CNAME and CV to dist
+      - name: Copy required files to dist
         run: |
           cp CNAME aabanrehman-main/dist/
           cp Aaban_Rehman_CV.pdf aabanrehman-main/dist/
+          cp aabanrehman-main/public/.nojekyll aabanrehman-main/dist/
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
