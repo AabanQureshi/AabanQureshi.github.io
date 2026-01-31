@@ -2,39 +2,39 @@ import { Code2, Database, Cloud, Layers, GitBranch, Server } from "lucide-react"
 
 const skillCategories = [
   {
-    title: "Languages & Frameworks",
+    title: "Backend & .NET Core",
     icon: Code2,
-    skills: ["C#", "ASP.NET Core", "MVC Core", "Blazor", "JavaScript", "jQuery", "React"],
+    skills: ["C#", "ASP.NET Core", "Entity Framework Core", "Domain-Driven Design", "Vertical Slice Architecture", "SOLID Principles", "Clean Architecture", "Microservices", "MVC", "Minimal APIs", "Web APIs"],
     color: "primary",
   },
   {
-    title: "Database & ORM",
-    icon: Database,
-    skills: ["MSSQL Server", "MySQL", "Entity Framework Core", "SQL", "Database Management"],
-    color: "accent",
-  },
-  {
-    title: "Cloud & DevOps",
-    icon: Cloud,
-    skills: ["Microsoft Azure", "Cloud Computing", "Deployment", "CI/CD", "Azure Fundamentals"],
-    color: "primary",
-  },
-  {
-    title: "Architecture & Design",
+    title: "Frontend",
     icon: Layers,
-    skills: ["Clean Architecture", "Domain Driven Design", "Vertical Slice", "SOLID Principles", "Microservices"],
+    skills: ["Blazor", "React", "HTML5", "CSS3", "Bootstrap", "JavaScript", "jQuery", "TypeScript"],
     color: "accent",
   },
   {
-    title: "APIs & Services",
-    icon: Server,
-    skills: ["RESTful APIs", "Controller APIs", "Minimal APIs", "Web APIs"],
+    title: "Databases & Data",
+    icon: Database,
+    skills: ["MSSQL Server", "MySQL", "SQL", "Database Management"],
     color: "primary",
   },
   {
-    title: "Tools & Frontend",
+    title: "Cloud, DevOps & Infrastructure",
+    icon: Cloud,
+    skills: ["Azure Fundamentals AZ-900", "Azure AI-900", "AWS Virtual Machines", "AWS Deployments", "CI/CD Pipelines", "Deployment", "Server Management", "Git"],
+    color: "accent",
+  },
+  {
+    title: "APIs & Integrations",
+    icon: Server,
+    skills: ["RESTful APIs", "Third-Party Integrations", "Stripe", "PostGrid", "USPS", "Firebase"],
+    color: "primary",
+  },
+  {
+    title: "Development Practices",
     icon: GitBranch,
-    skills: ["Git", "HTML", "CSS", "Bootstrap", "Version Control"],
+    skills: ["Background Services", "Performance Optimization", "Version Control", "Code Reviews", "Mentoring"],
     color: "accent",
   },
 ];

@@ -6,36 +6,42 @@ const certifications = [
     issuer: "Microsoft",
     icon: "🏆",
     color: "primary",
+    url: "https://www.coursera.org/account/accomplishments/specialization/certificate/YOUR_CERT_ID",
   },
   {
     title: "Microsoft Azure Fundamentals (AZ-900)",
     issuer: "Microsoft",
     icon: "☁️",
     color: "primary",
+    url: "https://learn.microsoft.com/en-us/users/YOUR_USER_ID/credentials/YOUR_CERT_ID",
   },
   {
     title: "Microsoft Azure AI Fundamentals (AI-900)",
     issuer: "Microsoft",
     icon: "🤖",
     color: "accent",
+    url: "https://learn.microsoft.com/en-us/users/YOUR_USER_ID/credentials/YOUR_CERT_ID",
   },
   {
     title: "Database Integration and Management",
     issuer: "Microsoft",
     icon: "🗄️",
     color: "primary",
+    url: "https://www.coursera.org/account/accomplishments/certificate/YOUR_CERT_ID",
   },
   {
     title: "Meta React Specialization",
     issuer: "Meta",
     icon: "⚛️",
     color: "accent",
+    url: "https://www.coursera.org/account/accomplishments/specialization/certificate/YOUR_CERT_ID",
   },
   {
     title: "Deployments and DevOps",
     issuer: "Microsoft",
     icon: "🚀",
     color: "primary",
+    url: "https://www.coursera.org/account/accomplishments/certificate/YOUR_CERT_ID",
   },
 ];
 
@@ -63,8 +69,11 @@ const CertificationsSection = () => {
             const isAccent = cert.color === "accent";
             
             return (
-              <div
+              <a
                 key={cert.title}
+                href={cert.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group p-5 rounded-xl bg-gradient-card border border-border hover:border-primary/50 transition-all duration-300 cursor-pointer hover:shadow-elevated"
               >
                 <div className="flex items-start gap-4">
@@ -82,7 +91,7 @@ const CertificationsSection = () => {
                   </div>
                   <ExternalLink className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
-              </div>
+              </a>
             );
           })}
         </div>

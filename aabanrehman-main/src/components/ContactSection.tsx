@@ -1,7 +1,41 @@
 import { Mail, Phone, MapPin, Linkedin, Github, Send } from "lucide-react";
 import { Button } from "./ui/button";
+import { Input } from "./ui/input";
+import { Textarea } from "./ui/textarea";
+import { Label } from "./ui/label";
+import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // Simulate form submission
+    setTimeout(() => {
+      toast({
+        title: "Message sent!",
+        description: "Thank you for reaching out. I'll get back to you soon!",
+      });
+      setFormData({ name: "", email: "", message: "" });
+      setIsSubmitting(false);
+    }, 1000);
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
   return (
     <section className="py-24 px-6 relative" id="contact">
       {/* Background decorations */}
@@ -25,7 +59,67 @@ const ContactSection = () => {
         {/* Contact card */}
         <div className="p-8 md:p-12 rounded-2xl glass border border-border shadow-elevated">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12">
-            {/* Left - Contact info */}
+            {/* Left - Contact Form */}
+            <div>
+              <h3 className="text-2xl font-semibold text-foreground mb-6">Send a message</h3>
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="space-y-2">
+                  <Label htmlFor="name" className="text-sm text-muted-foreground">
+                    Name
+                  </Label>
+                  <Input
+                    id="name"
+                    name="name"
+                    type="text"
+                    placeholder="Your name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="bg-secondary/50 border-border focus:border-primary"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="email" className="text-sm text-muted-foreground">
+                    Email
+                  </Label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="your.email@example.com"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="bg-secondary/50 border-border focus:border-primary"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="message" className="text-sm text-muted-foreground">
+                    Message
+                  </Label>
+                  <Textarea
+                    id="message"
+                    name="message"
+                    placeholder="Your message..."
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    rows={5}
+                    className="bg-secondary/50 border-border focus:border-primary resize-none"
+                  />
+                </div>
+                <Button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-primary text-primary-foreground font-semibold glow-primary hover:opacity-90 transition-opacity"
+                >
+                  <Send className="w-4 h-4 mr-2" />
+                  {isSubmitting ? "Sending..." : "Send Message"}
+                </Button>
+              </form>
+            </div>
+
+            {/* Right - Contact info */}
             <div className="space-y-6">
               <h3 className="text-2xl font-semibold text-foreground mb-6">Get in touch</h3>
               
@@ -61,41 +155,25 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground mb-1">Location</p>
-                  <p className="font-mono text-sm text-foreground">Rawalpindi, Pakistan</p>
+                  <p className="font-mono text-sm text-foreground">Islamabad</p>
                 </div>
               </div>
-            </div>
-
-            {/* Right - CTA */}
-            <div className="flex flex-col justify-center">
-              <div className="p-6 rounded-xl bg-gradient-card border border-border">
-                <h4 className="text-lg font-semibold text-foreground mb-3">Ready to collaborate?</h4>
-                <p className="text-muted-foreground text-sm mb-6 leading-relaxed">
-                  Whether you have a project in mind, a job opportunity, or just want to say hello — I'd love to hear from you!
-                </p>
-                
-                <div className="space-y-3">
-                  <a href="mailto:aabanqureshi564@gmail.com" className="block">
-                    <Button className="w-full bg-gradient-primary text-primary-foreground font-semibold glow-primary hover:opacity-90 transition-opacity">
-                      <Send className="w-4 h-4 mr-2" />
-                      Send an Email
+              
+              <div className="pt-6">
+                <h4 className="text-lg font-semibold text-foreground mb-3">Connect on social</h4>
+                <div className="flex gap-3">
+                  <a href="https://www.linkedin.com/in/aaban-qureshi/" target="_blank" rel="noopener noreferrer" className="flex-1">
+                    <Button variant="outline" className="w-full border-border hover:border-primary hover:bg-secondary">
+                      <Linkedin className="w-4 h-4 mr-2" />
+                      LinkedIn
                     </Button>
                   </a>
-                  
-                  <div className="flex gap-3">
-                    <a href="https://www.linkedin.com/in/aaban-qureshi/" target="_blank" rel="noopener noreferrer" className="flex-1">
-                      <Button variant="outline" className="w-full border-border hover:border-primary hover:bg-secondary">
-                        <Linkedin className="w-4 h-4 mr-2" />
-                        LinkedIn
-                      </Button>
-                    </a>
-                    <a href="https://github.com/AabanQureshi" target="_blank" rel="noopener noreferrer" className="flex-1">
-                      <Button variant="outline" className="w-full border-border hover:border-primary hover:bg-secondary">
-                        <Github className="w-4 h-4 mr-2" />
-                        GitHub
-                      </Button>
-                    </a>
-                  </div>
+                  <a href="https://github.com/AabanQureshi" target="_blank" rel="noopener noreferrer" className="flex-1">
+                    <Button variant="outline" className="w-full border-border hover:border-primary hover:bg-secondary">
+                      <Github className="w-4 h-4 mr-2" />
+                      GitHub
+                    </Button>
+                  </a>
                 </div>
               </div>
             </div>
