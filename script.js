@@ -87,25 +87,32 @@ contactForm.addEventListener('submit', async function(e) {
         const emailBody = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(formData.message)}`;
         const mailtoLink = `mailto:contact@aabanrehman.me?subject=${encodeURIComponent(finalSubject)}&body=${emailBody}`;
         
-        // For demonstration, we'll use FormSubmit (a free form backend service)
-        // You can replace this with your preferred email service
-        const response = await fetch('https://formsubmit.co/ajax/your-email@example.com', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify({
-                name: formData.name,
-                email: formData.email,
-                subject: finalSubject,
-                message: formData.message,
-                _subject: `Portfolio Contact: ${finalSubject}`,
-                _template: 'table'
-            })
-        });
+        // Attempt to use FormSubmit service (free form backend)
+        // Note: Replace 'contact@aabanrehman.me' with your actual email address
+        // or configure a different email service endpoint
+        let response;
+        try {
+            response = await fetch('https://formsubmit.co/ajax/contact@aabanrehman.me', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: formData.name,
+                    email: formData.email,
+                    subject: finalSubject,
+                    message: formData.message,
+                    _subject: `Portfolio Contact: ${finalSubject}`,
+                    _template: 'table'
+                })
+            });
+        } catch (fetchError) {
+            // If fetch fails, we'll use the fallback
+            response = null;
+        }
 
-        if (response.ok) {
+        if (response && response.ok) {
             showMessage('Thank you! Your message has been sent successfully. I\'ll get back to you soon.', 'success');
             contactForm.reset();
             customSubjectGroup.style.display = 'none';
@@ -117,7 +124,7 @@ contactForm.addEventListener('submit', async function(e) {
             customSubjectGroup.style.display = 'none';
         }
     } catch (error) {
-        // If FormSubmit fails, fallback to mailto
+        // If there's any error, fallback to mailto
         const finalSubject = formData.subject === 'other' ? formData.customSubject : getSubjectText(formData.subject);
         const emailBody = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(formData.message)}`;
         const mailtoLink = `mailto:contact@aabanrehman.me?subject=${encodeURIComponent(finalSubject)}&body=${emailBody}`;
@@ -201,26 +208,28 @@ document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
 });
 
-// Certificate links - Placeholder functionality
-// Replace these URLs with your actual certificate links
+// Certificate links - Update these URLs with your actual certificate links
+// To add your certificates, replace the URLs below with your actual certificate URLs
 const certificateLinks = document.querySelectorAll('.cert-link');
 certificateLinks.forEach(link => {
     link.addEventListener('click', function(e) {
-        e.preventDefault();
         const certNumber = this.getAttribute('data-cert');
         
-        // Replace these with your actual certificate URLs
+        // TODO: Replace these placeholder URLs with your actual certificate URLs
         const certificateUrls = {
-            '1': 'https://example.com/certificate1',
-            '2': 'https://example.com/certificate2',
-            '3': 'https://example.com/certificate3'
+            '1': '', // Add your certificate 1 URL here
+            '2': '', // Add your certificate 2 URL here
+            '3': ''  // Add your certificate 3 URL here
         };
         
         const certUrl = certificateUrls[certNumber];
         
-        if (certUrl && certUrl !== 'https://example.com/certificate' + certNumber) {
+        if (certUrl && certUrl.startsWith('http')) {
+            // Valid URL exists, open it
             window.open(certUrl, '_blank');
         } else {
+            // No URL configured yet
+            e.preventDefault();
             alert('Certificate link will be added soon. Please check back later!');
         }
     });
