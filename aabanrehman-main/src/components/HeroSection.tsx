@@ -57,7 +57,7 @@ const HeroSection = () => {
           </a>
           <div className="flex items-center gap-2">
             <MapPin className="w-4 h-4" />
-            <span className="text-sm font-mono">Rawalpindi, Pakistan</span>
+            <span className="text-sm font-mono">Islamabad</span>
           </div>
         </div>
 
@@ -67,6 +67,12 @@ const HeroSection = () => {
             <Button size="lg" className="bg-gradient-primary text-primary-foreground font-semibold px-8 glow-primary hover:opacity-90 transition-opacity">
               <Mail className="w-4 h-4 mr-2" />
               Get In Touch
+            </Button>
+          </a>
+          <a href="/Aaban_Rehman_CV.pdf" download="Aaban_Rehman_CV.pdf">
+            <Button size="lg" variant="outline" className="border-border hover:bg-secondary hover:border-primary transition-all">
+              <Download className="w-4 h-4 mr-2" />
+              Download CV
             </Button>
           </a>
           <a href="https://www.linkedin.com/in/aaban-qureshi/" target="_blank" rel="noopener noreferrer">

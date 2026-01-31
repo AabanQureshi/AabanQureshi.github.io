@@ -2,27 +2,43 @@ import { Building2, Calendar, ChevronRight } from "lucide-react";
 
 const experiences = [
   {
-    title: "ASP.NET Core Developer",
+    title: "Full Stack .NET + React (TS) Engineer",
     company: "OwaSoft Technologies",
     period: "July 2025 – Present",
     current: true,
     responsibilities: [
-      "Developing and maintaining scalable applications using ASP.NET Core MVC, micro-architecture patterns, and modern development practices",
-      "Collaborating seamlessly with the frontend team, leveraging full-stack expertise to ensure smooth integration between backend and UI components",
-      "Leading and mentoring interns, providing technical guidance, code reviews, and training",
-      "Designing and managing server-side architecture and database pipelines for reliability and scalability",
-      "Overseeing production server maintenance, deployments, monitoring, and performance optimization",
+      "Developed and maintained scalable applications using ASP.NET Core MVC, micro-architecture patterns, and modern development practices",
+      "Collaborated seamlessly with the frontend team, leveraging full-stack expertise to ensure smooth integration between backend and UI components",
+      "Led and mentored interns, providing technical guidance, code reviews, and training to help them grow as developers",
+      "Designed and managed server-side architecture and database pipelines, ensuring reliability, scalability, and efficiency",
+      "Architected and implemented a microservices-based system for InkedFlow using ASP.NET Core MVC, comprising over 10+ .NET Core API projects",
+      "Integrated third-party services including PostGrid, USPS, and Stripe, handling transactions efficiently and reducing integration errors by 30%",
     ],
   },
   {
-    title: "Internee",
+    title: ".NET Developer",
     company: "Kartoa Technologies",
-    period: "Mar 2025 – May 2025",
+    period: "Feb 2025 – May 2025",
     current: false,
     responsibilities: [
-      "Gained hands-on full-stack development experience by working on real client projects using Blazor for frontend and ASP.NET Core for backend services",
+      "Gained hands-on full-stack development experience working on real client projects using Blazor for frontend and ASP.NET Core for backend services",
       "Contributed to building modules for a legal-tech platform (WooqLaw.com), implementing features specific to lawyers' workflows and case management",
-      "Collaborated closely with senior developers to understand and apply enterprise architecture patterns",
+      "Collaborated closely with senior developers to understand and apply enterprise architecture patterns, improving code structure and maintainability",
+      "Developed and optimized 5+ reusable components in Blazor, enhancing frontend efficiency",
+      "Implemented API endpoints increasing data retrieval speed by 22% with ASP.NET Core",
+    ],
+  },
+  {
+    title: "Project Lead",
+    company: "Adan IT Center",
+    period: "Aug 2024 – Feb 2025",
+    current: false,
+    responsibilities: [
+      "Led production readiness and go-live for the Learning Management System (LMS) in partnership with NAVTTC (National Vocational & Technical Training Commission)",
+      "Collaborated directly with trainers, teachers, and institutes under NAVTTC to conduct system training sessions, demonstrate features, and gather feedback",
+      "Attended and contributed to requirement refinement meetings with stakeholders, clarifying needs and prioritizing enhancements",
+      "Oversaw final testing, deployment, and post-launch support, delivering a reliable, production-grade platform that supported government-backed skills development programs",
+      "Applied production best practices to ensure scalability, data integrity, and maintainability in a live environment serving multi-institute users",
     ],
   },
 ];
@@ -104,7 +120,7 @@ const ExperienceSection = () => {
               <p className="text-muted-foreground font-mono text-sm">International Islamic University, Islamabad</p>
             </div>
           </div>
-          <p className="text-sm text-muted-foreground ml-16">2022 – Present</p>
+          <p className="text-sm text-muted-foreground ml-16">Jan 2022 – Jun 2026</p>
         </div>
       </div>
     </section>
