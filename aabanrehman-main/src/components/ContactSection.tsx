@@ -19,11 +19,12 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
+    // Note: This is a client-side demo form. In production, integrate with a backend service.
+    // For now, it shows a success message. Users can still reach out via email/phone.
     setTimeout(() => {
       toast({
-        title: "Message sent!",
-        description: "Thank you for reaching out. I'll get back to you soon!",
+        title: "Thanks for your interest!",
+        description: "Please email me directly at aabanqureshi564@gmail.com for now.",
       });
       setFormData({ name: "", email: "", message: "" });
       setIsSubmitting(false);

@@ -69,7 +69,7 @@ const HeroSection = () => {
               Get In Touch
             </Button>
           </a>
-          <a href="/Aaban's CV.pdf" download="Aaban_Rehman_CV.pdf">
+          <a href="/Aaban_Rehman_CV.pdf" download="Aaban_Rehman_CV.pdf">
             <Button size="lg" variant="outline" className="border-border hover:bg-secondary hover:border-primary transition-all">
               <Download className="w-4 h-4 mr-2" />
               Download CV

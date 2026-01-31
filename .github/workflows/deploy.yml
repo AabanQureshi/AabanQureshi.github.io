@@ -40,7 +40,7 @@ jobs:
       - name: Copy CNAME and CV to dist
         run: |
           cp CNAME aabanrehman-main/dist/
-          cp "Aaban's CV.pdf" aabanrehman-main/dist/
+          cp Aaban_Rehman_CV.pdf aabanrehman-main/dist/
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

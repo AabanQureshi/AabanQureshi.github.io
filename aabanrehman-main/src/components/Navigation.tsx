@@ -41,7 +41,7 @@ const Navigation = () => {
                 {link.label}
               </a>
             ))}
-            <a href="/Aaban's CV.pdf" download="Aaban_Rehman_CV.pdf">
+            <a href="/Aaban_Rehman_CV.pdf" download="Aaban_Rehman_CV.pdf">
               <Button size="sm" className="bg-gradient-primary text-primary-foreground font-semibold">
                 <Download className="w-4 h-4 mr-2" />
                 Resume
@@ -72,7 +72,7 @@ const Navigation = () => {
                   {link.label}
                 </a>
               ))}
-              <a href="/Aaban's CV.pdf" download="Aaban_Rehman_CV.pdf">
+              <a href="/Aaban_Rehman_CV.pdf" download="Aaban_Rehman_CV.pdf">
                 <Button size="sm" className="bg-gradient-primary text-primary-foreground font-semibold w-fit">
                   <Download className="w-4 h-4 mr-2" />
                   Resume
