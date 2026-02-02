@@ -11,6 +11,11 @@ interface Project {
   icon: LucideIcon;
 }
 
+interface ExpandState {
+  techStack: boolean;
+  features: boolean;
+}
+
 const projects: Project[] = [
   {
     title: "SmartInvoice AI",
@@ -235,14 +240,14 @@ const projects: Project[] = [
 ];
 
 const ProjectsSection = () => {
-  const [expandedProjects, setExpandedProjects] = useState<Record<number, { techStack: boolean; features: boolean }>>({});
+  const [expandedProjects, setExpandedProjects] = useState<Record<number, ExpandState>>({});
 
   const toggleExpand = (index: number, type: 'techStack' | 'features') => {
     setExpandedProjects(prev => ({
       ...prev,
       [index]: {
-        techStack: type === 'techStack' ? !prev[index]?.techStack : prev[index]?.techStack || false,
-        features: type === 'features' ? !prev[index]?.features : prev[index]?.features || false,
+        ...prev[index],
+        [type]: !prev[index]?.[type]
       }
     }));
   };
