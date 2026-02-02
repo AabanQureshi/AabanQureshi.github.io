@@ -1,4 +1,5 @@
-import { FileText, GraduationCap, Clock, Receipt, Calendar, ShoppingCart, Users, Package, Brain, LucideIcon } from "lucide-react";
+import { FileText, GraduationCap, Clock, Receipt, Calendar, ShoppingCart, Users, Package, Brain, LucideIcon, ChevronDown, ChevronUp } from "lucide-react";
+import { useState } from "react";
 
 interface Project {
   title: string;
@@ -234,6 +235,18 @@ const projects: Project[] = [
 ];
 
 const ProjectsSection = () => {
+  const [expandedProjects, setExpandedProjects] = useState<Record<number, { techStack: boolean; features: boolean }>>({});
+
+  const toggleExpand = (index: number, type: 'techStack' | 'features') => {
+    setExpandedProjects(prev => ({
+      ...prev,
+      [index]: {
+        techStack: type === 'techStack' ? !prev[index]?.techStack : prev[index]?.techStack || false,
+        features: type === 'features' ? !prev[index]?.features : prev[index]?.features || false,
+      }
+    }));
+  };
+
   return (
     <section className="py-24 px-6 relative" id="projects">
       {/* Background decoration */}
@@ -256,6 +269,8 @@ const ProjectsSection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => {
             const Icon = project.icon;
+            const isTechStackExpanded = expandedProjects[index]?.techStack || false;
+            const isFeaturesExpanded = expandedProjects[index]?.features || false;
             
             return (
               <div
@@ -295,7 +310,7 @@ const ProjectsSection = () => {
                 <div className="mb-4">
                   <h4 className="text-xs font-semibold text-foreground mb-2 uppercase tracking-wide">Tech Stack</h4>
                   <div className="flex flex-wrap gap-1.5">
-                    {project.techStack.slice(0, 5).map((tech) => (
+                    {(isTechStackExpanded ? project.techStack : project.techStack.slice(0, 5)).map((tech) => (
                       <span
                         key={tech}
                         className="px-2 py-0.5 text-xs font-mono bg-secondary text-muted-foreground rounded hover:text-foreground hover:bg-muted transition-colors"
@@ -304,9 +319,20 @@ const ProjectsSection = () => {
                       </span>
                     ))}
                     {project.techStack.length > 5 && (
-                      <span className="px-2 py-0.5 text-xs font-mono text-primary">
-                        +{project.techStack.length - 5} more
-                      </span>
+                      <button
+                        onClick={() => toggleExpand(index, 'techStack')}
+                        className="px-2 py-0.5 text-xs font-mono text-primary hover:text-primary/80 transition-colors flex items-center gap-1 cursor-pointer"
+                      >
+                        {isTechStackExpanded ? (
+                          <>
+                            Show less <ChevronUp className="w-3 h-3" />
+                          </>
+                        ) : (
+                          <>
+                            +{project.techStack.length - 5} more <ChevronDown className="w-3 h-3" />
+                          </>
+                        )}
+                      </button>
                     )}
                   </div>
                 </div>
@@ -315,15 +341,28 @@ const ProjectsSection = () => {
                 <div className="mt-auto">
                   <h4 className="text-xs font-semibold text-foreground mb-2 uppercase tracking-wide">Key Features</h4>
                   <ul className="space-y-1.5">
-                    {project.keyFeatures.slice(0, 3).map((feature) => (
+                    {(isFeaturesExpanded ? project.keyFeatures : project.keyFeatures.slice(0, 3)).map((feature) => (
                       <li key={feature} className="flex items-start gap-2 text-xs text-muted-foreground">
                         <span className="text-primary mt-0.5">•</span>
                         <span className="line-clamp-1">{feature}</span>
                       </li>
                     ))}
                     {project.keyFeatures.length > 3 && (
-                      <li className="text-xs text-primary font-mono">
-                        +{project.keyFeatures.length - 3} more features
+                      <li>
+                        <button
+                          onClick={() => toggleExpand(index, 'features')}
+                          className="text-xs text-primary hover:text-primary/80 transition-colors font-mono flex items-center gap-1 cursor-pointer"
+                        >
+                          {isFeaturesExpanded ? (
+                            <>
+                              Show less <ChevronUp className="w-3 h-3" />
+                            </>
+                          ) : (
+                            <>
+                              +{project.keyFeatures.length - 3} more features <ChevronDown className="w-3 h-3" />
+                            </>
+                          )}
+                        </button>
                       </li>
                     )}
                   </ul>
