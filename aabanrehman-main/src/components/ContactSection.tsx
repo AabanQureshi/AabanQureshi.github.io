@@ -23,14 +23,14 @@ const ContactSection = () => {
     try {
       // Send email using EmailJS
       await emailjs.send(
-        "service_hbiv80m", // Service ID
-        "template_x32jud7", // Template ID
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
           name: formData.name,
           email: formData.email,
           message: formData.message,
         },
-        "k1IFJNKhJ2s-yZ7xQ" // Public Key
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
 
       toast({

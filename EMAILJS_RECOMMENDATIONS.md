@@ -1,5 +1,23 @@
 # EmailJS Contact Form - Recommendations
 
+## Environment Variables Setup
+
+The EmailJS credentials are now stored in environment variables for better security and configuration management.
+
+### Configuration Files:
+
+1. **`.env`** - Contains your actual EmailJS credentials (already configured)
+2. **`.env.example`** - Template file for other developers
+
+### Current Configuration:
+```
+VITE_EMAILJS_SERVICE_ID=service_hbiv80m
+VITE_EMAILJS_TEMPLATE_ID=template_x32jud7
+VITE_EMAILJS_PUBLIC_KEY=k1IFJNKhJ2s-yZ7xQ
+```
+
+**Note:** The `.env` file is excluded from git via `.gitignore` to keep credentials secure.
+
 ## Email Template Body
 
 Your current template uses the basic parameters (name, email, message). Here's a recommended enhanced template body for better professional presentation:
