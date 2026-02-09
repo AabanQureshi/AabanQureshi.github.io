@@ -74,7 +74,7 @@ const CertificationsSection = () => {
                 href={cert.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group p-5 rounded-xl bg-gradient-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-elevated cursor-pointer block"
+                className="group p-5 rounded-xl bg-gradient-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-elevated block"
               >
                 <div className="flex items-start gap-4">
                   <div className={`w-12 h-12 rounded-lg flex items-center justify-center text-2xl ${isAccent ? 'bg-accent/20' : 'bg-primary/20'} group-hover:scale-110 transition-transform duration-300`}>
