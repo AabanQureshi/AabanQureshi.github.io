@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate OG Image</title>
+    <style>
+        body { margin: 0; padding: 20px; font-family: Arial, sans-serif; }
+        #canvas-container { margin: 20px 0; }
+        canvas { border: 1px solid #ccc; display: block; }
+        button { padding: 10px 20px; font-size: 16px; cursor: pointer; margin: 10px 0; }
+        .instructions { background: #f0f0f0; padding: 15px; border-radius: 5px; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <h1>Open Graph Image Generator</h1>
+    <div class="instructions">
+        <h3>Instructions:</h3>
+        <ol>
+            <li>Open this file in a browser</li>
+            <li>Click "Generate Image"</li>
+            <li>Right-click on the canvas and "Save Image As..."</li>
+            <li>Save as "og-image.png" in the public folder</li>
+        </ol>
+    </div>
+    <button onclick="generateImage()">Generate Image</button>
+    <div id="canvas-container"></div>
+    
+    <script>
+        function generateImage() {
+            const container = document.getElementById('canvas-container');
+            container.innerHTML = '';
+            
+            const canvas = document.createElement('canvas');
+            canvas.width = 1200;
+            canvas.height = 630;
+            container.appendChild(canvas);
+            
+            const ctx = canvas.getContext('2d');
+            
+            // Background gradient
+            const gradient = ctx.createLinearGradient(0, 0, 1200, 630);
+            gradient.addColorStop(0, '#0f172a');
+            gradient.addColorStop(1, '#1e293b');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 1200, 630);
+            
+            // Decorative circles
+            ctx.fillStyle = 'rgba(59, 130, 246, 0.1)';
+            ctx.beginPath();
+            ctx.arc(900, 150, 200, 0, Math.PI * 2);
+            ctx.fill();
+            
+            ctx.fillStyle = 'rgba(139, 92, 246, 0.1)';
+            ctx.beginPath();
+            ctx.arc(300, 450, 150, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Text
+            ctx.textAlign = 'center';
+            
+            // Name
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 80px Arial';
+            ctx.fillText('Aaban Rehman', 600, 250);
+            
+            // Title
+            ctx.fillStyle = '#94a3b8';
+            ctx.font = '40px Arial';
+            ctx.fillText('Full-Stack ASP.NET Core Developer', 600, 340);
+            
+            // Technologies
+            ctx.fillStyle = '#3b82f6';
+            ctx.font = '30px monospace';
+            ctx.fillText('Microsoft Certified | Azure | Blazor', 600, 420);
+            
+            // Logo badge
+            ctx.fillStyle = 'rgba(59, 130, 246, 0.2)';
+            ctx.beginPath();
+            ctx.arc(600, 540, 50, 0, Math.PI * 2);
+            ctx.fill();
+            
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 48px Arial';
+            ctx.fillText('AR', 600, 560);
+            
+            alert('Image generated! Right-click on the canvas and select "Save Image As..." to save as og-image.png');
+        }
+    </script>
+</body>
+</html>
