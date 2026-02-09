@@ -23,6 +23,21 @@ This is my personal portfolio website showcasing my skills, experience, and proj
 
 ## Local Development
 
+### Prerequisites
+
+1. Clone the repository
+2. Set up EmailJS credentials (required for contact form):
+   - Copy `.env.example` to `.env` in the `aabanrehman-main` directory
+   - Fill in your EmailJS credentials:
+     ```
+     VITE_EMAILJS_SERVICE_ID=your_service_id
+     VITE_EMAILJS_TEMPLATE_ID=your_template_id
+     VITE_EMAILJS_PUBLIC_KEY=your_public_key
+     VITE_EMAILJS_AUTO_REPLY_TEMPLATE_ID=your_autoreply_template_id
+     ```
+
+### Running Locally
+
 ```bash
 cd aabanrehman-main
 npm install
@@ -42,8 +57,21 @@ The build output will be in the `aabanrehman-main/dist` directory.
 
 This site is automatically deployed to GitHub Pages via GitHub Actions when changes are pushed to the `main` branch.
 
+### Required GitHub Secrets
+
+For the contact form to work in production, you must configure these repository secrets:
+
+1. Go to repository **Settings** → **Secrets and variables** → **Actions**
+2. Add the following secrets:
+   - `VITE_EMAILJS_SERVICE_ID` - Your EmailJS service ID
+   - `VITE_EMAILJS_TEMPLATE_ID` - Your EmailJS template ID for admin notifications
+   - `VITE_EMAILJS_PUBLIC_KEY` - Your EmailJS public key
+   - `VITE_EMAILJS_AUTO_REPLY_TEMPLATE_ID` - Your EmailJS template ID for auto-reply emails (optional)
+
+### Deployment Workflow
+
 The deployment workflow:
-1. Builds the React app using Vite
+1. Builds the React app using Vite (with environment variables injected)
 2. Copies CNAME, CV, and .nojekyll files to dist
 3. Deploys to GitHub Pages
 
