@@ -57,7 +57,10 @@ const ContactSection = () => {
             publicKey
           );
         } catch (autoReplyError) {
-          console.warn("Auto-reply failed, but main message was sent:", autoReplyError);
+          console.warn(
+            "Auto-reply email could not be sent (user will not receive confirmation), but main notification was delivered successfully:",
+            autoReplyError
+          );
           // Don't throw error - main email was successful
         }
       }
