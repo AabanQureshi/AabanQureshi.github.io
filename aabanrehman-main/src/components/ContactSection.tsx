@@ -5,6 +5,7 @@ import { Textarea } from "./ui/textarea";
 import { Label } from "./ui/label";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from "@emailjs/browser";
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -19,16 +20,34 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Note: This is a client-side demo form. In production, integrate with a backend service.
-    // For now, it shows a success message. Users can still reach out via email/phone.
-    setTimeout(() => {
+    try {
+      // Send email using EmailJS
+      await emailjs.send(
+        "service_hbiv80m", // Service ID
+        "template_x32jud7", // Template ID
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        },
+        "k1IFJNKhJ2s-yZ7xQ" // Public Key
+      );
+
       toast({
-        title: "Thanks for your interest!",
-        description: "Please email me directly at aabanqureshi564@gmail.com for now.",
+        title: "Message sent successfully! ✓",
+        description: "Thank you for reaching out. I'll get back to you soon!",
       });
       setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("Failed to send message:", error);
+      toast({
+        title: "Failed to send message",
+        description: "Please try again or contact me directly at aabanqureshi564@gmail.com",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   const handleChange = (
