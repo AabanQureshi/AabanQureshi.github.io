@@ -11,9 +11,9 @@ The EmailJS credentials are now stored in environment variables for better secur
 
 ### Current Configuration:
 ```
-VITE_EMAILJS_SERVICE_ID=service_hbiv80m
-VITE_EMAILJS_TEMPLATE_ID=template_x32jud7
-VITE_EMAILJS_PUBLIC_KEY=k1IFJNKhJ2s-yZ7xQ
+VITE_EMAILJS_SERVICE_ID=service_xxxxx
+VITE_EMAILJS_TEMPLATE_ID=template_xxxxx
+VITE_EMAILJS_PUBLIC_KEY=your_public_key_here
 ```
 
 **Note:** The `.env` file is excluded from git via `.gitignore` to keep credentials secure.
