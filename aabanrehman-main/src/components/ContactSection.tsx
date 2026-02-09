@@ -5,6 +5,9 @@ import { Textarea } from "./ui/textarea";
 import { Label } from "./ui/label";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from "@emailjs/browser";
+
+const CONTACT_EMAIL = "aabanqureshi564@gmail.com";
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -19,16 +22,64 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Note: This is a client-side demo form. In production, integrate with a backend service.
-    // For now, it shows a success message. Users can still reach out via email/phone.
-    setTimeout(() => {
+    try {
+      // Validate environment variables
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+      const autoReplyTemplateId = import.meta.env.VITE_EMAILJS_AUTO_REPLY_TEMPLATE_ID;
+
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error("EmailJS configuration is missing. Please check environment variables.");
+      }
+
+      const templateParams = {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      };
+
+      // Send main email to you
+      await emailjs.send(
+        serviceId,
+        templateId,
+        templateParams,
+        publicKey
+      );
+
+      // Send auto-reply to the user (if auto-reply template is configured)
+      if (autoReplyTemplateId) {
+        try {
+          await emailjs.send(
+            serviceId,
+            autoReplyTemplateId,
+            templateParams,
+            publicKey
+          );
+        } catch (autoReplyError) {
+          console.warn(
+            "Auto-reply email could not be sent (user will not receive confirmation), but main notification was delivered successfully:",
+            autoReplyError
+          );
+          // Don't throw error - main email was successful
+        }
+      }
+
       toast({
-        title: "Thanks for your interest!",
-        description: "Please email me directly at aabanqureshi564@gmail.com for now.",
+        title: "Message sent successfully! ✓",
+        description: "Thank you for reaching out. I'll get back to you soon!",
       });
       setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("Failed to send message:", error);
+      toast({
+        title: "Failed to send message",
+        description: `Please try again or contact me directly at ${CONTACT_EMAIL}`,
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   const handleChange = (
@@ -125,7 +176,7 @@ const ContactSection = () => {
               <h3 className="text-2xl font-semibold text-foreground mb-6">Get in touch</h3>
               
               <a 
-                href="mailto:aabanqureshi564@gmail.com" 
+                href={`mailto:${CONTACT_EMAIL}`} 
                 className="flex items-center gap-4 p-4 rounded-xl bg-secondary/50 hover:bg-secondary border border-border hover:border-primary/50 transition-all group"
               >
                 <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center group-hover:glow-primary transition-all">
@@ -133,7 +184,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground mb-1">Email</p>
-                  <p className="font-mono text-sm text-foreground group-hover:text-primary transition-colors">aabanqureshi564@gmail.com</p>
+                  <p className="font-mono text-sm text-foreground group-hover:text-primary transition-colors">{CONTACT_EMAIL}</p>
                 </div>
               </a>
 
