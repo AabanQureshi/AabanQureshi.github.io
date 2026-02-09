@@ -1,4 +1,4 @@
-import { Award } from "lucide-react";
+import { Award, ExternalLink } from "lucide-react";
 
 const certifications = [
   {
@@ -6,36 +6,42 @@ const certifications = [
     issuer: "Microsoft",
     icon: "🏆",
     color: "primary",
+    url: "https://www.coursera.org/specializations/backend-development-with-asp-net",
   },
   {
     title: "Microsoft Azure Fundamentals (AZ-900)",
     issuer: "Microsoft",
     icon: "☁️",
     color: "primary",
+    url: "https://learn.microsoft.com/en-us/certifications/azure-fundamentals/",
   },
   {
     title: "Microsoft Azure AI Fundamentals (AI-900)",
     issuer: "Microsoft",
     icon: "🤖",
     color: "accent",
+    url: "https://learn.microsoft.com/en-us/certifications/azure-ai-fundamentals/",
   },
   {
     title: "Database Integration and Management",
     issuer: "Microsoft",
     icon: "🗄️",
     color: "primary",
+    url: "https://www.coursera.org/learn/database-integration-management",
   },
   {
     title: "Meta React Specialization",
     issuer: "Meta",
     icon: "⚛️",
     color: "accent",
+    url: "https://www.coursera.org/professional-certificates/meta-front-end-developer",
   },
   {
     title: "Deployments and DevOps",
     issuer: "Microsoft",
     icon: "🚀",
     color: "primary",
+    url: "https://www.coursera.org/learn/deployment-devops",
   },
 ];
 
@@ -63,25 +69,31 @@ const CertificationsSection = () => {
             const isAccent = cert.color === "accent";
             
             return (
-              <div
+              <a
                 key={cert.title}
-                className="group p-5 rounded-xl bg-gradient-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-elevated"
+                href={cert.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group p-5 rounded-xl bg-gradient-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-elevated cursor-pointer block"
               >
                 <div className="flex items-start gap-4">
-                  <div className={`w-12 h-12 rounded-lg flex items-center justify-center text-2xl ${isAccent ? 'bg-accent/20' : 'bg-primary/20'}`}>
+                  <div className={`w-12 h-12 rounded-lg flex items-center justify-center text-2xl ${isAccent ? 'bg-accent/20' : 'bg-primary/20'} group-hover:scale-110 transition-transform duration-300`}>
                     {cert.icon}
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors text-sm leading-tight mb-2">
-                      {cert.title}
-                    </h3>
+                    <div className="flex items-start justify-between gap-2 mb-2">
+                      <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors text-sm leading-tight">
+                        {cert.title}
+                      </h3>
+                      <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
+                    </div>
                     <div className="flex items-center gap-2">
                       <Award className={`w-3 h-3 ${isAccent ? 'text-accent' : 'text-primary'}`} />
                       <span className="text-xs font-mono text-muted-foreground">{cert.issuer}</span>
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             );
           })}
         </div>
