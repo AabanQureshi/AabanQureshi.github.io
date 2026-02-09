@@ -14,9 +14,18 @@ The EmailJS credentials are now stored in environment variables for better secur
 VITE_EMAILJS_SERVICE_ID=service_xxxxx
 VITE_EMAILJS_TEMPLATE_ID=template_xxxxx
 VITE_EMAILJS_PUBLIC_KEY=your_public_key_here
+VITE_EMAILJS_AUTO_REPLY_TEMPLATE_ID=template_xxxxx  # Optional: For auto-reply emails
 ```
 
 **Note:** The `.env` file is excluded from git via `.gitignore` to keep credentials secure.
+
+## Auto-Reply Feature
+
+The contact form now supports automatic reply emails! When a user submits the form:
+1. **Main email** is sent to you (aabanqureshi564@gmail.com)
+2. **Auto-reply email** is sent to the user confirming receipt
+
+See `AUTO_REPLY_TEMPLATE.md` for detailed setup instructions and HTML template.
 
 ## Email Template Body
 

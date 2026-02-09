@@ -27,22 +27,40 @@ const ContactSection = () => {
       const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
       const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
       const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+      const autoReplyTemplateId = import.meta.env.VITE_EMAILJS_AUTO_REPLY_TEMPLATE_ID;
 
       if (!serviceId || !templateId || !publicKey) {
         throw new Error("EmailJS configuration is missing. Please check environment variables.");
       }
 
-      // Send email using EmailJS
+      const templateParams = {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      };
+
+      // Send main email to you
       await emailjs.send(
         serviceId,
         templateId,
-        {
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-        },
+        templateParams,
         publicKey
       );
+
+      // Send auto-reply to the user (if auto-reply template is configured)
+      if (autoReplyTemplateId) {
+        try {
+          await emailjs.send(
+            serviceId,
+            autoReplyTemplateId,
+            templateParams,
+            publicKey
+          );
+        } catch (autoReplyError) {
+          console.warn("Auto-reply failed, but main message was sent:", autoReplyError);
+          // Don't throw error - main email was successful
+        }
+      }
 
       toast({
         title: "Message sent successfully! ✓",
