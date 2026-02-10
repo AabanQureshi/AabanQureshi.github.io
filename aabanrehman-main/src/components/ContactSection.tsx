@@ -3,6 +3,7 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Label } from "./ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from "@emailjs/browser";
@@ -14,6 +15,7 @@ const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    service: "",
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -36,6 +38,7 @@ const ContactSection = () => {
       const templateParams = {
         name: formData.name,
         email: formData.email,
+        service: formData.service,
         message: formData.message,
       };
 
@@ -69,7 +72,7 @@ const ContactSection = () => {
         title: "Message sent successfully! ✓",
         description: "Thank you for reaching out. I'll get back to you soon!",
       });
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({ name: "", email: "", service: "", message: "" });
     } catch (error) {
       console.error("Failed to send message:", error);
       toast({
@@ -146,6 +149,28 @@ const ContactSection = () => {
                       className="bg-secondary/50 border-border focus:border-primary max-w-full"
                     />
                   </div>
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="service" className="text-sm text-muted-foreground">
+                    Service Required
+                  </Label>
+                  <Select
+                    value={formData.service}
+                    onValueChange={(value) => setFormData({ ...formData, service: value })}
+                  >
+                    <SelectTrigger className="bg-secondary/50 border-border focus:border-primary max-w-full">
+                      <SelectValue placeholder="Select a service" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="web-development">Web Development</SelectItem>
+                      <SelectItem value="api-development">API Development</SelectItem>
+                      <SelectItem value="consultation">Technical Consultation</SelectItem>
+                      <SelectItem value="full-stack-project">Full-Stack Project</SelectItem>
+                      <SelectItem value="bug-fixing">Bug Fixing & Maintenance</SelectItem>
+                      <SelectItem value="code-review">Code Review</SelectItem>
+                      <SelectItem value="other">Other</SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="message" className="text-sm text-muted-foreground">
