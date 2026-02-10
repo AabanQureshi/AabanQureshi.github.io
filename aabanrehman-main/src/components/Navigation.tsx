@@ -27,7 +27,7 @@ const Navigation = () => {
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
+          <a href="#" className="flex items-center gap-2 relative z-50">
             <span className="text-xl font-bold font-mono text-gradient">{"<AR />"}</span>
           </a>
 
@@ -52,17 +52,17 @@ const Navigation = () => {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 text-muted-foreground hover:text-primary transition-colors"
+            className="md:hidden p-2 text-muted-foreground hover:text-primary transition-colors relative z-50"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
-        {/* Mobile menu */}
+        {/* Mobile menu overlay */}
         {isMobileMenuOpen && (
-          <div className="md:hidden pt-4 pb-2 border-t border-border mt-4">
-            <div className="flex flex-col gap-4">
+          <div className="fixed inset-0 top-[72px] bg-white dark:bg-gray-900 backdrop-blur-lg md:hidden z-40 animate-slide-down">
+            <div className="px-6 py-4 flex flex-col gap-4">
               {navLinks.map((link) => (
                 <a
                   key={link.label}

@@ -3,6 +3,7 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Label } from "./ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from "@emailjs/browser";
@@ -14,6 +15,7 @@ const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    service: "",
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -36,6 +38,7 @@ const ContactSection = () => {
       const templateParams = {
         name: formData.name,
         email: formData.email,
+        service: formData.service,
         message: formData.message,
       };
 
@@ -69,7 +72,7 @@ const ContactSection = () => {
         title: "Message sent successfully! ✓",
         description: "Thank you for reaching out. I'll get back to you soon!",
       });
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({ name: "", email: "", service: "", message: "" });
     } catch (error) {
       console.error("Failed to send message:", error);
       toast({
@@ -109,41 +112,65 @@ const ContactSection = () => {
         </div>
 
         {/* Contact card */}
-        <div className="p-8 md:p-12 rounded-2xl glass border border-border shadow-elevated">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+        <div className="p-8 md:p-12 rounded-2xl glass border border-border shadow-elevated overflow-hidden">
+          <div className="grid md:grid-cols-2 gap-4 md:gap-6">
             {/* Left - Contact Form */}
             <div>
               <h3 className="text-2xl font-semibold text-foreground mb-6">Send a message</h3>
               <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="space-y-2">
-                  <Label htmlFor="name" className="text-sm text-muted-foreground">
-                    Name
-                  </Label>
-                  <Input
-                    id="name"
-                    name="name"
-                    type="text"
-                    placeholder="Your name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="bg-secondary/50 border-border focus:border-primary"
-                  />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="name" className="text-sm text-muted-foreground">
+                      Name
+                    </Label>
+                    <Input
+                      id="name"
+                      name="name"
+                      type="text"
+                      placeholder="Your name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                      className="bg-secondary/50 border-border focus:border-primary max-w-full"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="email" className="text-sm text-muted-foreground">
+                      Email
+                    </Label>
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      placeholder="your.email@example.com"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                      className="bg-secondary/50 border-border focus:border-primary max-w-full"
+                    />
+                  </div>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="email" className="text-sm text-muted-foreground">
-                    Email
+                  <Label htmlFor="service" className="text-sm text-muted-foreground">
+                    Service Required
                   </Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="your.email@example.com"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="bg-secondary/50 border-border focus:border-primary"
-                  />
+                  <Select
+                    value={formData.service}
+                    onValueChange={(value) => setFormData({ ...formData, service: value })}
+                  >
+                    <SelectTrigger className="bg-secondary/50 border-border focus:border-primary max-w-full">
+                      <SelectValue placeholder="Select a service" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="web-development">Web Development</SelectItem>
+                      <SelectItem value="api-development">API Development</SelectItem>
+                      <SelectItem value="consultation">Technical Consultation</SelectItem>
+                      <SelectItem value="full-stack-project">Full-Stack Project</SelectItem>
+                      <SelectItem value="bug-fixing">Bug Fixing & Maintenance</SelectItem>
+                      <SelectItem value="code-review">Code Review</SelectItem>
+                      <SelectItem value="other">Other</SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="message" className="text-sm text-muted-foreground">
@@ -157,13 +184,13 @@ const ContactSection = () => {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="bg-secondary/50 border-border focus:border-primary resize-none"
+                    className="bg-secondary/50 border-border focus:border-primary resize-none max-w-full"
                   />
                 </div>
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-primary text-primary-foreground font-semibold glow-primary hover:opacity-90 transition-opacity"
+                  className="w-full max-w-full bg-gradient-primary text-primary-foreground font-semibold glow-primary hover:opacity-90 transition-opacity"
                 >
                   <Send className="w-4 h-4 mr-2" />
                   {isSubmitting ? "Sending..." : "Send Message"}

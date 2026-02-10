@@ -133,6 +133,10 @@
   .animate-fade-in {
     animation: fadeIn 0.8s ease-out forwards;
   }
+
+  .animate-slide-down {
+    animation: slideDown 0.3s ease-out forwards;
+  }
 }
 
 @keyframes float {
@@ -154,6 +158,17 @@
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Custom scrollbar */
