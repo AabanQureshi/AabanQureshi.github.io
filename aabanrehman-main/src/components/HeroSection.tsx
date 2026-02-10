@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-6 py-20">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-6 py-20 z-10">
       {/* Background decorations */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-slow" />

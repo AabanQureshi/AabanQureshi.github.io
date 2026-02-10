@@ -109,41 +109,43 @@ const ContactSection = () => {
         </div>
 
         {/* Contact card */}
-        <div className="p-8 md:p-12 rounded-2xl glass border border-border shadow-elevated">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+        <div className="p-8 md:p-12 rounded-2xl glass border border-border shadow-elevated overflow-hidden">
+          <div className="grid md:grid-cols-2 gap-4 md:gap-6">
             {/* Left - Contact Form */}
             <div>
               <h3 className="text-2xl font-semibold text-foreground mb-6">Send a message</h3>
               <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="space-y-2">
-                  <Label htmlFor="name" className="text-sm text-muted-foreground">
-                    Name
-                  </Label>
-                  <Input
-                    id="name"
-                    name="name"
-                    type="text"
-                    placeholder="Your name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="bg-secondary/50 border-border focus:border-primary"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="email" className="text-sm text-muted-foreground">
-                    Email
-                  </Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="your.email@example.com"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="bg-secondary/50 border-border focus:border-primary"
-                  />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="name" className="text-sm text-muted-foreground">
+                      Name
+                    </Label>
+                    <Input
+                      id="name"
+                      name="name"
+                      type="text"
+                      placeholder="Your name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                      className="bg-secondary/50 border-border focus:border-primary max-w-full"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="email" className="text-sm text-muted-foreground">
+                      Email
+                    </Label>
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      placeholder="your.email@example.com"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                      className="bg-secondary/50 border-border focus:border-primary max-w-full"
+                    />
+                  </div>
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="message" className="text-sm text-muted-foreground">
@@ -157,13 +159,13 @@ const ContactSection = () => {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="bg-secondary/50 border-border focus:border-primary resize-none"
+                    className="bg-secondary/50 border-border focus:border-primary resize-none max-w-full"
                   />
                 </div>
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-primary text-primary-foreground font-semibold glow-primary hover:opacity-90 transition-opacity"
+                  className="w-full max-w-full bg-gradient-primary text-primary-foreground font-semibold glow-primary hover:opacity-90 transition-opacity"
                 >
                   <Send className="w-4 h-4 mr-2" />
                   {isSubmitting ? "Sending..." : "Send Message"}
