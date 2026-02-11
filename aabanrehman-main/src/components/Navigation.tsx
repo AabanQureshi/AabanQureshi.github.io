@@ -6,7 +6,7 @@ const navLinks = [
   { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
-  { label: "Certifications", href: "#certifications" },
+  { label: "Education", href: "#education" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -84,7 +84,7 @@ const Navigation = () => {
             <div 
               className="fixed inset-0 md:hidden z-[1000] overflow-y-auto"
               style={{ 
-                background: 'rgba(10, 14, 39, 0.98)',
+                background: '#1e293b',
                 backdropFilter: 'blur(16px)',
                 WebkitBackdropFilter: 'blur(16px)'
               }}

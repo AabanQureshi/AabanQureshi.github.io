@@ -108,20 +108,6 @@ const ExperienceSection = () => {
             </div>
           ))}
         </div>
-
-        {/* Education */}
-        <div className="mt-16 p-6 rounded-xl glass border border-border">
-          <div className="flex items-center gap-4 mb-2">
-            <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center">
-              <span className="text-2xl">🎓</span>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-foreground">BS Software Engineering</h3>
-              <p className="text-muted-foreground font-mono text-sm">International Islamic University, Islamabad</p>
-            </div>
-          </div>
-          <p className="text-sm text-muted-foreground ml-16">Jan 2022 – Jun 2026</p>
-        </div>
       </div>
     </section>
   );
