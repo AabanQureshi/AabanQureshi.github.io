@@ -90,14 +90,18 @@ const skillCategories = [
 const SkillsSection = () => {
   return (
     <section className="py-24 px-6 relative" id="skills">
-      <div className="max-w-6xl mx-auto">
+      {/* Background decoration */}
+      <div className="absolute right-0 top-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-slow" />
+      <div className="absolute left-0 bottom-1/4 w-80 h-80 bg-accent/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }} />
+      
+      <div className="max-w-6xl mx-auto relative z-10">
         {/* Section header */}
         <div className="text-center mb-16">
-          <span className="text-primary font-mono text-sm mb-4 block">{"<Skills />"}</span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <span className="text-primary font-mono text-sm mb-4 block animate-fade-in">{"<Skills />"}</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 animate-slide-up">
             Technical <span className="text-gradient">Expertise</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
             A comprehensive toolkit for building modern, scalable web applications
           </p>
         </div>
@@ -110,11 +114,11 @@ const SkillsSection = () => {
             return (
               <div
                 key={skill.name}
-                className="group p-4 rounded-xl bg-gradient-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-elevated flex flex-col items-center justify-center gap-3 hover:scale-110 transform cursor-default"
+                className="group p-4 rounded-xl bg-gradient-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-elevated flex flex-col items-center justify-center gap-3 hover:scale-110 hover:-translate-y-2 transform cursor-default animate-scale-in"
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
                 <Icon 
-                  className="w-12 h-12 md:w-16 md:h-16 transition-colors duration-300" 
+                  className="w-12 h-12 md:w-16 md:h-16 transition-all duration-300 group-hover:scale-110" 
                   style={{ color: skill.color }}
                 />
                 
@@ -128,7 +132,7 @@ const SkillsSection = () => {
 
         {/* Legacy category view for additional context */}
         <div className="mt-16 pt-16 border-t border-border/50">
-          <h3 className="text-2xl font-semibold text-center mb-8">Additional Skills & Expertise</h3>
+          <h3 className="text-2xl font-semibold text-center mb-8 animate-fade-in">Additional Skills & Expertise</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {skillCategories.map((category, index) => {
               const Icon = category.icon;
@@ -137,10 +141,10 @@ const SkillsSection = () => {
               return (
                 <div
                   key={category.title}
-                  className="group p-6 rounded-xl bg-gradient-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-elevated"
+                  className="group p-6 rounded-xl bg-gradient-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-elevated hover-lift animate-slide-up"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-4 ${isAccent ? 'bg-accent/20' : 'bg-primary/20'}`}>
+                  <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-4 ${isAccent ? 'bg-accent/20' : 'bg-primary/20'} group-hover:scale-110 transition-transform`}>
                     <Icon className={`w-6 h-6 ${isAccent ? 'text-accent' : 'text-primary'}`} />
                   </div>
                   
@@ -152,7 +156,7 @@ const SkillsSection = () => {
                     {category.skills.map((skill) => (
                       <span
                         key={skill}
-                        className="px-3 py-1 text-xs font-mono bg-secondary text-muted-foreground rounded-md hover:text-foreground hover:bg-muted transition-colors"
+                        className="px-3 py-1 text-xs font-mono bg-secondary text-muted-foreground rounded-md hover:text-foreground hover:bg-muted transition-all hover:scale-105"
                       >
                         {skill}
                       </span>

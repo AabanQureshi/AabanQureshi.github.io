@@ -47,32 +47,33 @@ const ExperienceSection = () => {
   return (
     <section className="py-24 px-6 relative" id="experience">
       {/* Background decoration */}
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-72 h-72 bg-accent/5 rounded-full blur-3xl" />
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-pulse-slow" />
+      <div className="absolute right-0 top-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }} />
       
       <div className="max-w-4xl mx-auto relative z-10">
         {/* Section header */}
         <div className="text-center mb-16">
-          <span className="text-primary font-mono text-sm mb-4 block">{"<Experience />"}</span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <span className="text-primary font-mono text-sm mb-4 block animate-fade-in">{"<Experience />"}</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 animate-slide-up">
             Work <span className="text-gradient">Experience</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
             Building enterprise solutions and mentoring the next generation of developers
           </p>
         </div>
 
         {/* Timeline */}
         <div className="relative">
-          {/* Vertical line */}
+          {/* Vertical line with gradient */}
           <div className="absolute left-0 md:left-8 top-0 bottom-0 w-px bg-gradient-to-b from-primary via-accent to-transparent" />
 
           {experiences.map((exp, index) => (
-            <div key={index} className="relative pl-8 md:pl-20 pb-12 last:pb-0">
-              {/* Timeline dot */}
-              <div className={`absolute left-0 md:left-8 -translate-x-1/2 w-4 h-4 rounded-full border-2 ${exp.current ? 'bg-primary border-primary glow-primary' : 'bg-card border-accent'}`} />
+            <div key={index} className="relative pl-8 md:pl-20 pb-12 last:pb-0 animate-slide-in-left" style={{ animationDelay: `${index * 0.15}s` }}>
+              {/* Timeline dot with glow */}
+              <div className={`absolute left-0 md:left-8 -translate-x-1/2 w-4 h-4 rounded-full border-2 transition-all duration-300 ${exp.current ? 'bg-primary border-primary glow-primary animate-pulse-glow' : 'bg-card border-accent hover:border-primary hover:scale-125'}`} />
               
               {/* Content card */}
-              <div className="p-6 rounded-xl bg-gradient-card border border-border hover:border-primary/30 transition-all duration-300 group">
+              <div className="p-6 rounded-xl bg-gradient-card border border-border hover:border-primary/30 transition-all duration-300 group hover-lift">
                 {/* Header */}
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-4">
                   <div>
@@ -88,7 +89,7 @@ const ExperienceSection = () => {
                     <Calendar className="w-4 h-4 text-muted-foreground" />
                     <span className="text-sm font-mono text-muted-foreground">{exp.period}</span>
                     {exp.current && (
-                      <span className="px-2 py-0.5 text-xs font-semibold bg-primary/20 text-primary rounded-full">
+                      <span className="px-2 py-0.5 text-xs font-semibold bg-primary/20 text-primary rounded-full animate-pulse">
                         Current
                       </span>
                     )}
@@ -98,7 +99,7 @@ const ExperienceSection = () => {
                 {/* Responsibilities */}
                 <ul className="space-y-3">
                   {exp.responsibilities.map((resp, i) => (
-                    <li key={i} className="flex items-start gap-3 text-muted-foreground text-sm leading-relaxed">
+                    <li key={i} className="flex items-start gap-3 text-muted-foreground text-sm leading-relaxed group-hover:text-foreground/80 transition-colors">
                       <ChevronRight className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
                       <span>{resp}</span>
                     </li>

@@ -71,16 +71,17 @@ const EducationCertificationsSection = () => {
   return (
     <section className="py-24 px-6 relative" id="education">
       {/* Background decoration */}
-      <div className="absolute right-0 top-1/3 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute right-0 top-1/3 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-slow" />
+      <div className="absolute left-0 bottom-1/4 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }} />
       
       <div className="max-w-4xl mx-auto relative z-10">
         {/* Section header */}
         <div className="text-center mb-16">
-          <span className="text-primary font-mono text-sm mb-4 block">{"<Education />"}</span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <span className="text-primary font-mono text-sm mb-4 block animate-fade-in">{"<Education />"}</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 animate-slide-up">
             Education & <span className="text-gradient">Certifications</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
             Academic background and professional credentials in modern technologies
           </p>
         </div>
@@ -100,18 +101,18 @@ const EducationCertificationsSection = () => {
             } : {};
 
             return (
-              <div key={index} className="relative pl-8 md:pl-20 pb-8 last:pb-0">
+              <div key={index} className="relative pl-8 md:pl-20 pb-8 last:pb-0 animate-slide-in-left" style={{ animationDelay: `${index * 0.1}s` }}>
                 {/* Timeline dot */}
-                <div className={`absolute left-0 md:left-8 -translate-x-1/2 w-4 h-4 rounded-full border-2 ${isEducation ? 'bg-primary border-primary' : 'bg-card border-accent'}`} />
+                <div className={`absolute left-0 md:left-8 -translate-x-1/2 w-4 h-4 rounded-full border-2 transition-all duration-300 hover:scale-125 ${isEducation ? 'bg-primary border-primary glow-primary' : 'bg-card border-accent hover:border-primary'}`} />
                 
                 {/* Content card */}
                 <ContentWrapper
                   {...wrapperProps}
-                  className={`block p-5 rounded-xl bg-gradient-card border border-border hover:border-primary/50 transition-all duration-300 group ${item.url ? 'cursor-pointer' : ''}`}
+                  className={`block p-5 rounded-xl bg-gradient-card border border-border hover:border-primary/50 transition-all duration-300 group hover-lift ${item.url ? 'cursor-pointer' : ''}`}
                 >
                   <div className="flex items-start gap-4">
                     {/* Icon */}
-                    <div className={`w-12 h-12 rounded-lg flex items-center justify-center text-2xl flex-shrink-0 ${isEducation ? 'bg-primary/20' : 'bg-accent/20'}`}>
+                    <div className={`w-12 h-12 rounded-lg flex items-center justify-center text-2xl flex-shrink-0 group-hover:scale-110 transition-transform ${isEducation ? 'bg-primary/20' : 'bg-accent/20'}`}>
                       {item.icon}
                     </div>
                     
