@@ -255,17 +255,17 @@ const ProjectsSection = () => {
   return (
     <section className="py-24 px-6 relative" id="projects">
       {/* Background decoration */}
-      <div className="absolute right-0 top-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute left-0 bottom-1/4 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
+      <div className="absolute right-0 top-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-slow" />
+      <div className="absolute left-0 bottom-1/4 w-80 h-80 bg-accent/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }} />
       
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section header */}
         <div className="text-center mb-16">
-          <span className="text-primary font-mono text-sm mb-4 block">{"<Projects />"}</span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <span className="text-primary font-mono text-sm mb-4 block animate-fade-in">{"<Projects />"}</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 animate-slide-up">
             Featured <span className="text-gradient">Projects</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
             Architecting scalable solutions with modern .NET technologies and cloud-native practices
           </p>
         </div>
@@ -280,12 +280,12 @@ const ProjectsSection = () => {
             return (
               <div
                 key={`${project.title}-${index}`}
-                className="group p-6 rounded-xl bg-gradient-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-elevated flex flex-col"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="group p-6 rounded-xl bg-gradient-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-elevated flex flex-col hover-lift animate-scale-in"
+                style={{ animationDelay: `${index * 0.08}s` }}
               >
                 {/* Icon & Title */}
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:bg-primary/30 transition-all duration-300">
                     <Icon className="w-6 h-6 text-primary" />
                   </div>
                   <div className="flex-1 min-w-0">
