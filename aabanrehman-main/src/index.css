@@ -85,7 +85,7 @@
     --muted-foreground: 230 10% 55%;      /* Soft muted */
 
     /* Accent - Cyan/Teal for vibrant contrast */
-    --accent: 190 95% 50%;                /* Vibrant Cyan #00c2d1 */
+    --accent: 187 100% 41%;               /* Vibrant Cyan #06B6D4 */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -415,7 +415,7 @@
 
 /* Custom scrollbar - Dark theme */
 .dark ::-webkit-scrollbar-track {
-  background: #0d1017;
+  background: #0a0d14;
 }
 
 .dark ::-webkit-scrollbar-thumb {
