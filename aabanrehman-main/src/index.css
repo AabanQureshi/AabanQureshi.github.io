@@ -62,59 +62,69 @@
     --sidebar-ring: 262 69% 50%;
   }
 
-  /* Dark Theme - VS Code Dark Professional */
+  /* Dark Theme - VS Code Dark Professional with Soft Vibrant Gradients */
   .dark {
-    /* Backgrounds - VS Code dark theme colors */
-    --background: 220 13% 12%;            /* VS Code dark #1e1e1e */
-    --foreground: 0 0% 90%;               /* Light text #e5e5e5 */
+    /* Backgrounds - Rich dark with vibrant undertones */
+    --background: 230 20% 8%;             /* Deep dark with blue undertone #0d1017 */
+    --foreground: 0 0% 92%;               /* Light text #ebebeb */
 
-    --card: 220 13% 16%;                  /* Elevated dark #252526 */
-    --card-foreground: 0 0% 90%;
+    --card: 230 18% 12%;                  /* Elevated dark #171c26 */
+    --card-foreground: 0 0% 92%;
 
-    --popover: 220 13% 16%;
-    --popover-foreground: 0 0% 90%;
+    --popover: 230 18% 12%;
+    --popover-foreground: 0 0% 92%;
 
-    /* Primary - .NET Purple (#512BD4) - slightly brighter for dark mode */
-    --primary: 262 69% 55%;               /* .NET Purple lighter #6B3FF8 */
+    /* Primary - .NET Purple - vibrant for dark mode */
+    --primary: 262 80% 60%;               /* Vibrant Purple #8B5CF6 */
     --primary-foreground: 0 0% 100%;      /* White text */
 
-    --secondary: 220 13% 20%;             /* Dark gray #2d2d30 */
-    --secondary-foreground: 0 0% 90%;
+    --secondary: 230 18% 16%;             /* Dark gray with blue tint */
+    --secondary-foreground: 0 0% 92%;
 
-    --muted: 220 13% 20%;
-    --muted-foreground: 220 9% 60%;       /* Muted gray #8e8e8e */
+    --muted: 230 15% 18%;
+    --muted-foreground: 230 10% 55%;      /* Soft muted */
 
-    /* Accent - Azure Blue - brighter for dark */
-    --accent: 206 100% 50%;               /* Azure Blue #1a9fff */
+    /* Accent - Cyan/Teal for vibrant contrast */
+    --accent: 190 95% 50%;                /* Vibrant Cyan #00c2d1 */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    /* Success color - Emerald */
+    /* Success color - Vibrant Emerald */
     --success: 160 84% 45%;
 
-    --border: 220 13% 24%;                /* Border #3c3c3c */
-    --input: 220 13% 24%;
-    --ring: 262 69% 55%;
+    --border: 230 15% 20%;                /* Soft border */
+    --input: 230 15% 20%;
+    --ring: 262 80% 60%;
 
-    /* Custom tokens - Dark mode gradients */
-    --gradient-primary: linear-gradient(135deg, #6B3FF8 0%, #1a9fff 100%);
-    --gradient-accent: linear-gradient(135deg, #1a9fff 0%, #00d4ff 100%);
-    --gradient-hero: linear-gradient(135deg, rgba(107, 63, 248, 0.12) 0%, rgba(26, 159, 255, 0.08) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(220 13% 18%), hsl(220 13% 14%));
-    --glow-primary: 0 0 50px rgba(107, 63, 248, 0.35);
-    --glow-accent: 0 0 40px rgba(26, 159, 255, 0.3);
-    --shadow-elevated: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+    /* Custom tokens - Soft vibrant gradients for dark mode */
+    --gradient-primary: linear-gradient(135deg, #8B5CF6 0%, #06B6D4 100%);
+    --gradient-accent: linear-gradient(135deg, #06B6D4 0%, #22D3EE 100%);
+    --gradient-hero: radial-gradient(ellipse at 20% 0%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                     radial-gradient(ellipse at 80% 20%, rgba(6, 182, 212, 0.12) 0%, transparent 40%),
+                     radial-gradient(ellipse at 40% 80%, rgba(236, 72, 153, 0.1) 0%, transparent 50%),
+                     radial-gradient(ellipse at 90% 90%, rgba(59, 130, 246, 0.08) 0%, transparent 40%);
+    --gradient-card: linear-gradient(145deg, hsl(230 18% 14%), hsl(230 18% 10%));
+    --gradient-mesh: 
+      radial-gradient(at 40% 20%, rgba(139, 92, 246, 0.2) 0px, transparent 50%),
+      radial-gradient(at 80% 0%, rgba(6, 182, 212, 0.15) 0px, transparent 50%),
+      radial-gradient(at 0% 50%, rgba(236, 72, 153, 0.12) 0px, transparent 50%),
+      radial-gradient(at 80% 50%, rgba(59, 130, 246, 0.1) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, rgba(139, 92, 246, 0.15) 0px, transparent 50%),
+      radial-gradient(at 80% 100%, rgba(6, 182, 212, 0.1) 0px, transparent 50%);
+    --glow-primary: 0 0 60px rgba(139, 92, 246, 0.4);
+    --glow-accent: 0 0 50px rgba(6, 182, 212, 0.35);
+    --shadow-elevated: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 30px rgba(139, 92, 246, 0.1);
 
-    --sidebar-background: 220 13% 16%;
-    --sidebar-foreground: 0 0% 90%;
-    --sidebar-primary: 262 69% 55%;
+    --sidebar-background: 230 18% 12%;
+    --sidebar-foreground: 0 0% 92%;
+    --sidebar-primary: 262 80% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 13% 20%;
-    --sidebar-accent-foreground: 0 0% 90%;
-    --sidebar-border: 220 13% 24%;
-    --sidebar-ring: 262 69% 55%;
+    --sidebar-accent: 230 18% 16%;
+    --sidebar-accent-foreground: 0 0% 92%;
+    --sidebar-border: 230 15% 20%;
+    --sidebar-ring: 262 80% 60%;
   }
 }
 
@@ -128,6 +138,11 @@
     background-image: var(--gradient-hero);
     background-attachment: fixed;
     transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .dark body,
+  body.dark {
+    background-image: var(--gradient-mesh);
   }
 
   ::selection {
@@ -170,6 +185,10 @@
     background: var(--gradient-hero);
   }
 
+  .bg-gradient-mesh {
+    background: var(--gradient-mesh);
+  }
+
   .glow-primary {
     box-shadow: var(--glow-primary);
   }
@@ -188,8 +207,9 @@
   }
 
   .dark .glass {
-    background: hsl(220 13% 16% / 0.9);
-    border: 1px solid rgba(107, 63, 248, 0.15);
+    background: hsl(230 18% 12% / 0.85);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 0 60px rgba(139, 92, 246, 0.03);
   }
 
   /* Animation utilities */
@@ -257,7 +277,7 @@
   }
 
   .dark .hover-lift:hover {
-    box-shadow: 0 20px 40px rgba(107, 63, 248, 0.25);
+    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.25), 0 0 20px rgba(6, 182, 212, 0.15);
   }
 
   .hover-glow {
@@ -269,7 +289,7 @@
   }
 
   .dark .hover-glow:hover {
-    box-shadow: 0 0 30px rgba(107, 63, 248, 0.35);
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.35), 0 0 20px rgba(6, 182, 212, 0.2);
   }
 }
 
@@ -395,13 +415,13 @@
 
 /* Custom scrollbar - Dark theme */
 .dark ::-webkit-scrollbar-track {
-  background: #1e1e1e;
+  background: #0d1017;
 }
 
 .dark ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #6B3FF8, #1a9fff);
+  background: linear-gradient(180deg, #8B5CF6, #06B6D4);
 }
 
 .dark ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #8B5CF6, #00d4ff);
+  background: linear-gradient(180deg, #A78BFA, #22D3EE);
 }
