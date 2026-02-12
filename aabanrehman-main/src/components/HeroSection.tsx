@@ -35,7 +35,7 @@ const HeroSection = () => {
 
         {/* Title badges with stagger animation */}
         <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
-          <span className="px-4 py-2 bg-gradient-primary text-primary-foreground font-mono text-sm md:text-base font-semibold rounded-lg animate-scale-in glow-primary" style={{ animationDelay: '0.2s' }}>
+          <span className="px-4 py-2 bg-gradient-primary text-white font-mono text-sm md:text-base font-semibold rounded-lg animate-scale-in glow-primary" style={{ animationDelay: '0.2s' }}>
             Full-Stack Developer
           </span>
           <span className="px-4 py-2 bg-secondary text-secondary-foreground font-mono text-sm md:text-base rounded-lg border border-border animate-scale-in hover:border-primary/50 transition-colors" style={{ animationDelay: '0.3s' }}>
@@ -73,7 +73,7 @@ const HeroSection = () => {
         {/* CTA Buttons with hover effects */}
         <div className="flex flex-wrap items-center justify-center gap-4 animate-slide-up" style={{ animationDelay: '0.9s' }}>
           <a href="mailto:aabanqureshi564@gmail.com">
-            <Button size="lg" className="bg-gradient-primary text-primary-foreground font-semibold px-8 glow-primary hover:opacity-90 transition-all hover:scale-105 animate-pulse-glow">
+            <Button size="lg" className="bg-gradient-primary text-white font-semibold px-8 glow-primary hover:opacity-90 transition-all hover:scale-105 animate-pulse-glow">
               <Mail className="w-4 h-4 mr-2" />
               Get In Touch
             </Button>

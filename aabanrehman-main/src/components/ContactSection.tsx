@@ -191,7 +191,7 @@ const ContactSection = () => {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full md:w-auto md:min-w-[200px] bg-gradient-primary text-primary-foreground font-semibold hover:opacity-90 transition-all hover:translate-y-[-2px] hover:shadow-[0_10px_20px_rgba(59,130,246,0.3)]"
+                  className="w-full md:w-auto md:min-w-[200px] bg-gradient-primary text-white font-semibold hover:opacity-90 transition-all hover:translate-y-[-2px] hover:shadow-[0_10px_20px_rgba(81,43,212,0.3)]"
                 >
                   <Send className="w-4 h-4 mr-2" />
                   {isSubmitting ? "Sending..." : "Send Message"}

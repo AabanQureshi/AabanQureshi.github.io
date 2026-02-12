@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Download } from "lucide-react";
+import { Menu, X, Download, Sun, Moon, Monitor } from "lucide-react";
 import { Button } from "./ui/button";
+import { useTheme } from "@/contexts/ThemeContext";
 
 const navLinks = [
   { label: "Skills", href: "#skills" },
@@ -13,6 +14,7 @@ const navLinks = [
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { theme, setTheme, resolvedTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,6 +36,32 @@ const Navigation = () => {
     };
   }, [isMobileMenuOpen]);
 
+  const cycleTheme = () => {
+    if (theme === 'system') {
+      setTheme('light');
+    } else if (theme === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('system');
+    }
+  };
+
+  const getThemeIcon = () => {
+    if (theme === 'system') {
+      return <Monitor className="w-4 h-4" />;
+    } else if (theme === 'light') {
+      return <Sun className="w-4 h-4" />;
+    } else {
+      return <Moon className="w-4 h-4" />;
+    }
+  };
+
+  const getThemeLabel = () => {
+    if (theme === 'system') return 'System';
+    if (theme === 'light') return 'Light';
+    return 'Dark';
+  };
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'glass shadow-elevated' : 'bg-transparent'}`}>
       <div className="max-w-6xl mx-auto px-6 py-4">
@@ -44,7 +72,7 @@ const Navigation = () => {
           </a>
 
           {/* Desktop navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <a
                 key={link.label}
@@ -54,8 +82,21 @@ const Navigation = () => {
                 {link.label}
               </a>
             ))}
+            
+            {/* Theme toggle button */}
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={cycleTheme}
+              className="border-border hover:border-primary hover:bg-secondary transition-all"
+              title={`Current: ${getThemeLabel()} - Click to change`}
+            >
+              {getThemeIcon()}
+              <span className="ml-2 text-xs">{getThemeLabel()}</span>
+            </Button>
+            
             <a href="/Aaban_Rehman_CV.pdf" download="Aaban_Rehman_CV.pdf">
-              <Button size="sm" className="bg-gradient-primary text-primary-foreground font-semibold">
+              <Button size="sm" className="bg-gradient-primary text-white font-semibold">
                 <Download className="w-4 h-4 mr-2" />
                 Resume
               </Button>
@@ -63,12 +104,25 @@ const Navigation = () => {
           </div>
 
           {/* Mobile menu button */}
-          <button
-            className="md:hidden p-2 text-muted-foreground hover:text-primary transition-colors relative z-50"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          <div className="md:hidden flex items-center gap-2">
+            {/* Theme toggle for mobile */}
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={cycleTheme}
+              className="border-border hover:border-primary p-2"
+              title={`Current: ${getThemeLabel()}`}
+            >
+              {getThemeIcon()}
+            </Button>
+            
+            <button
+              className="p-2 text-muted-foreground hover:text-primary transition-colors relative z-50"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile menu overlay backdrop */}
@@ -82,12 +136,7 @@ const Navigation = () => {
             />
             {/* Mobile menu */}
             <div 
-              className="fixed inset-0 md:hidden z-[1000] overflow-y-auto"
-              style={{ 
-                background: '#0a0c10',
-                backdropFilter: 'blur(16px)',
-                WebkitBackdropFilter: 'blur(16px)'
-              }}
+              className="fixed inset-0 md:hidden z-[1000] overflow-y-auto bg-background"
             >
               {/* Close button inside menu */}
               <div className="flex justify-end p-6">
@@ -111,7 +160,7 @@ const Navigation = () => {
                   </a>
                 ))}
                 <a href="/Aaban_Rehman_CV.pdf" download="Aaban_Rehman_CV.pdf" className="mt-4">
-                  <Button size="lg" className="bg-gradient-primary text-primary-foreground font-semibold w-full">
+                  <Button size="lg" className="bg-gradient-primary text-white font-semibold w-full">
                     <Download className="w-4 h-4 mr-2" />
                     Resume
                   </Button>
