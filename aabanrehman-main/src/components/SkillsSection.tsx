@@ -1,8 +1,7 @@
-import { Code2, Database, Cloud, Layers, GitBranch, Server, Code } from "lucide-react";
-import { 
-  SiDotnet, 
+import { Code2, Database, Cloud, Layers, Server } from "lucide-react";
+import {
+  SiDotnet,
   SiReact,
-  SiAngular,
   SiGit,
   SiBlazor,
   SiJavascript,
@@ -16,74 +15,106 @@ import {
   SiStripe
 } from "react-icons/si";
 
-// Individual skills with their specific icons
+// Individual skills with their specific icons for visual display
 const individualSkills = [
-  // Backend & .NET Core
-  { name: "C#", icon: Code, color: "#239120", category: "Backend & .NET Core" },
-  { name: "ASP.NET Core", icon: SiDotnet, color: "#512BD4", category: "Backend & .NET Core" },
-  { name: "Entity Framework Core", icon: SiDotnet, color: "#512BD4", category: "Backend & .NET Core" },
-  { name: ".NET Core", icon: SiDotnet, color: "#512BD4", category: "Backend & .NET Core" },
-  
+  // Backend (Primary focus - displayed first)
+  { name: "C#", icon: SiDotnet, color: "#239120", category: "Backend" },
+  { name: "ASP.NET Core", icon: SiDotnet, color: "#512BD4", category: "Backend" },
+  { name: "Entity Framework Core", icon: SiDotnet, color: "#512BD4", category: "Backend" },
+
   // Frontend
   { name: "Blazor", icon: SiBlazor, color: "#512BD4", category: "Frontend" },
   { name: "React", icon: SiReact, color: "#61DAFB", category: "Frontend" },
-  { name: "Angular", icon: SiAngular, color: "#DD0031", category: "Frontend" },
   { name: "TypeScript", icon: SiTypescript, color: "#3178C6", category: "Frontend" },
   { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E", category: "Frontend" },
   { name: "HTML5", icon: SiHtml5, color: "#E34F26", category: "Frontend" },
   { name: "CSS3", icon: SiCss3, color: "#1572B6", category: "Frontend" },
   { name: "Bootstrap", icon: SiBootstrap, color: "#7952B3", category: "Frontend" },
-  
+
   // Databases
   { name: "SQL Server", icon: Database, color: "#CC2927", category: "Databases" },
   { name: "MySQL", icon: SiMysql, color: "#4479A1", category: "Databases" },
-  
+
   // Cloud & DevOps
   { name: "Azure", icon: Cloud, color: "#0089D6", category: "Cloud & DevOps" },
   { name: "AWS", icon: SiAmazon, color: "#FF9900", category: "Cloud & DevOps" },
   { name: "Git", icon: SiGit, color: "#F05032", category: "Cloud & DevOps" },
-  
-  // APIs & Integrations
-  { name: "Firebase", icon: SiFirebase, color: "#FFCA28", category: "APIs & Integrations" },
-  { name: "Stripe", icon: SiStripe, color: "#008CDD", category: "APIs & Integrations" },
+
+  // Integrations & Tools
+  { name: "Firebase", icon: SiFirebase, color: "#FFCA28", category: "Integrations & Tools" },
+  { name: "Stripe", icon: SiStripe, color: "#008CDD", category: "Integrations & Tools" },
 ];
 
 const skillCategories = [
   {
-    title: "Backend & .NET Core",
+    title: "Backend",
     icon: Code2,
-    skills: ["C#", "ASP.NET Core", "Entity Framework Core", "Domain-Driven Design", "Vertical Slice Architecture", "SOLID Principles", "Clean Architecture", "Microservices", "MVC", "Minimal APIs", "Web APIs"],
+    skills: [
+      "C#",
+      "ASP.NET Core",
+      "ASP.NET Core MVC",
+      "Minimal APIs",
+      "Web APIs",
+      "Entity Framework Core",
+      "Microservices Architecture",
+      "Background Services",
+      "Domain-Driven Design (DDD)",
+      "Vertical Slice Architecture (VSA)",
+      "Clean Architecture",
+      "SOLID Principles"
+    ],
     color: "primary",
   },
   {
     title: "Frontend",
     icon: Layers,
-    skills: ["Blazor", "React", "HTML5", "CSS3", "Bootstrap", "JavaScript", "jQuery", "TypeScript"],
+    skills: [
+      "Blazor",
+      "React",
+      "HTML5",
+      "CSS3",
+      "Bootstrap",
+      "JavaScript",
+      "TypeScript",
+      "jQuery"
+    ],
     color: "accent",
   },
   {
-    title: "Databases & Data",
+    title: "Databases",
     icon: Database,
-    skills: ["MSSQL Server", "MySQL", "SQL", "Database Management"],
+    skills: [
+      "SQL Server (MSSQL)",
+      "MySQL"
+    ],
     color: "primary",
   },
   {
-    title: "Cloud, DevOps & Infrastructure",
+    title: "Cloud & DevOps",
     icon: Cloud,
-    skills: ["Azure Fundamentals AZ-900", "Azure AI-900", "AWS Virtual Machines", "AWS Deployments", "CI/CD Pipelines", "Deployment", "Server Management", "Git"],
+    skills: [
+      "Microsoft Azure (AZ-900)",
+      "Azure AI Fundamentals (AI-900)",
+      "AWS Virtual Machines",
+      "CI/CD Pipelines",
+      "Server Management",
+      "Git"
+    ],
     color: "accent",
   },
   {
-    title: "APIs & Integrations",
+    title: "Integrations & Tools",
     icon: Server,
-    skills: ["RESTful APIs", "Third-Party Integrations", "Stripe", "PostGrid", "USPS", "Firebase"],
+    skills: [
+      "Stripe",
+      "PostGrid",
+      "USPS API",
+      "Firebase",
+      "RESTful APIs",
+      "Third-Party Integrations",
+      "Performance Optimization"
+    ],
     color: "primary",
-  },
-  {
-    title: "Development Practices",
-    icon: GitBranch,
-    skills: ["Background Services", "Performance Optimization", "Version Control", "Code Reviews", "Mentoring"],
-    color: "accent",
   },
 ];
 
@@ -130,9 +161,9 @@ const SkillsSection = () => {
           })}
         </div>
 
-        {/* Legacy category view for additional context */}
+        {/* Categorized skills view */}
         <div className="mt-16 pt-16 border-t border-border/50">
-          <h3 className="text-2xl font-semibold text-center mb-8 animate-fade-in">Additional Skills & Expertise</h3>
+          <h3 className="text-2xl font-semibold text-center mb-8 animate-fade-in">Technical Stack by Category</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {skillCategories.map((category, index) => {
               const Icon = category.icon;
