@@ -6,27 +6,27 @@
 
 @layer base {
   :root {
-    /* Backgrounds - Slate tones for cleaner dark theme */
-    --background: 222 47% 11%;          /* Slate 900 - #0f172a */
+    /* Backgrounds - Rich dark with purple undertones for good vibes */
+    --background: 250 25% 8%;           /* Deep dark purple-blue #0d0b14 */
     --foreground: 210 40% 96%;          /* Slate 100 - #f1f5f9 */
 
-    --card: 217 33% 17%;                /* Slate 800 - #1e293b */
+    --card: 255 20% 13%;                /* Soft dark purple #1a1625 */
     --card-foreground: 210 40% 96%;
 
-    --popover: 217 33% 17%;
+    --popover: 255 20% 13%;
     --popover-foreground: 210 40% 96%;
 
-    /* Accents - Blue 500 as primary, Violet 500 as secondary */
-    --primary: 217 91% 60%;             /* Blue 500 - #3b82f6 */
-    --primary-foreground: 222 47% 11%;
+    /* Accents - Vibrant cyan as primary, Pink/Magenta as secondary */
+    --primary: 177 70% 50%;             /* Cyan/Teal #26c6c6 */
+    --primary-foreground: 250 25% 8%;
 
-    --secondary: 217 33% 17%;
+    --secondary: 255 20% 18%;
     --secondary-foreground: 210 40% 96%;
 
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;    /* Slate 400 - #94a3b8 */
+    --muted: 255 15% 20%;
+    --muted-foreground: 240 10% 60%;
 
-    --accent: 263 70% 50%;              /* Violet 500 - #8b5cf6 */
+    --accent: 320 70% 55%;              /* Pink/Magenta #e052a0 */
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84% 60%;
@@ -35,28 +35,28 @@
     /* Success color - Emerald 500 */
     --success: 160 84% 39%;             /* Emerald 500 - #10b981 */
 
-    --border: 215 28% 17%;
-    --input: 215 28% 17%;
-    --ring: 217 91% 60%;
+    --border: 255 15% 20%;
+    --input: 255 15% 20%;
+    --ring: 177 70% 50%;
 
     --radius: 0.75rem;
 
-    /* Custom tokens - Blue to Violet gradients */
-    --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
-    --gradient-accent: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
-    --gradient-card: linear-gradient(145deg, hsl(217 33% 20%), hsl(217 33% 15%));
-    --glow-primary: 0 0 40px rgba(59, 130, 246, 0.3);
-    --glow-accent: 0 0 30px rgba(139, 92, 246, 0.25);
-    --shadow-elevated: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+    /* Custom tokens - Cyan to Pink gradients for energy */
+    --gradient-primary: linear-gradient(135deg, #26c6c6 0%, #e052a0 100%);
+    --gradient-accent: linear-gradient(135deg, #e052a0 0%, #9333ea 100%);
+    --gradient-card: linear-gradient(145deg, hsl(255 20% 16%), hsl(255 20% 11%));
+    --glow-primary: 0 0 40px rgba(38, 198, 198, 0.35);
+    --glow-accent: 0 0 30px rgba(224, 82, 160, 0.3);
+    --shadow-elevated: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
 
-    --sidebar-background: 217 33% 17%;
+    --sidebar-background: 255 20% 13%;
     --sidebar-foreground: 210 40% 96%;
-    --sidebar-primary: 217 91% 60%;
-    --sidebar-primary-foreground: 222 47% 11%;
-    --sidebar-accent: 217 33% 17%;
+    --sidebar-primary: 177 70% 50%;
+    --sidebar-primary-foreground: 250 25% 8%;
+    --sidebar-accent: 255 20% 18%;
     --sidebar-accent-foreground: 210 40% 96%;
-    --sidebar-border: 215 28% 17%;
-    --sidebar-ring: 217 91% 60%;
+    --sidebar-border: 255 15% 20%;
+    --sidebar-ring: 177 70% 50%;
   }
 }
 
@@ -118,9 +118,9 @@
   }
 
   .glass {
-    background: hsl(217 33% 17% / 0.8);
+    background: hsl(255 20% 13% / 0.85);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(148, 163, 184, 0.1);
+    border: 1px solid rgba(224, 82, 160, 0.1);
   }
 
   .animate-float {
@@ -182,14 +182,14 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #0f172a;
+  background: #0d0b14;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #334155;
+  background: #2d2640;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3b82f6;
+  background: #26c6c6;
 }

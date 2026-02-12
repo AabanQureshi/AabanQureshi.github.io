@@ -84,7 +84,7 @@ const Navigation = () => {
             <div 
               className="fixed inset-0 md:hidden z-[1000] overflow-y-auto"
               style={{ 
-                background: '#1e293b',
+                background: '#1a1625',
                 backdropFilter: 'blur(16px)',
                 WebkitBackdropFilter: 'blur(16px)'
               }}
