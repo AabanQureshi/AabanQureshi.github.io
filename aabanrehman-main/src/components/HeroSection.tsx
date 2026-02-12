@@ -50,7 +50,7 @@ const HeroSection = () => {
         <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed animate-fade-in" style={{ animationDelay: '0.5s' }}>
           Passionate and detail-oriented developer with hands-on experience in full-stack web development 
           using <span className="text-primary font-medium">ASP.NET Core</span>, <span className="text-primary font-medium">Blazor</span>, 
-          {" "}<span className="text-accent font-medium">Entity Framework</span>, and <span className="text-accent font-medium">SQL Server</span>. 
+          {" "}<span className="text-primary font-medium">Entity Framework</span>, and <span className="text-primary font-medium">SQL Server</span>. 
           Building impactful solutions with clean, maintainable code.
         </p>
 
