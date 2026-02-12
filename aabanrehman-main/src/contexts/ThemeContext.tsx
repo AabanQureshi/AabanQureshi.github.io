@@ -10,27 +10,37 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setTheme] = useState<Theme>(() => {
-    // Check localStorage first
-    if (typeof window !== 'undefined') {
-      const stored = localStorage.getItem('theme') as Theme;
-      if (stored && ['light', 'dark', 'system'].includes(stored)) {
-        return stored;
-      }
-    }
-    return 'system'; // Default to system preference
-  });
+// Helper to get system preference
+const getSystemTheme = (): 'light' | 'dark' => {
+  if (typeof window !== 'undefined') {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  return 'light';
+};
 
-  const [resolvedTheme, setResolvedTheme] = useState<'light' | 'dark'>('dark');
+// Helper to get initial theme from localStorage
+const getInitialTheme = (): Theme => {
+  if (typeof window !== 'undefined') {
+    const stored = localStorage.getItem('theme');
+    if (stored !== null && ['light', 'dark', 'system'].includes(stored)) {
+      return stored as Theme;
+    }
+  }
+  return 'system'; // Default to system preference
+};
+
+// Helper to resolve initial theme
+const getInitialResolvedTheme = (): 'light' | 'dark' => {
+  const theme = getInitialTheme();
+  return theme === 'system' ? getSystemTheme() : theme;
+};
+
+export function ThemeProvider({ children }: { children: ReactNode }) {
+  const [theme, setTheme] = useState<Theme>(getInitialTheme);
+  const [resolvedTheme, setResolvedTheme] = useState<'light' | 'dark'>(getInitialResolvedTheme);
 
   useEffect(() => {
     const root = window.document.documentElement;
-
-    // Function to get system preference
-    const getSystemTheme = (): 'light' | 'dark' => {
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    };
 
     // Apply theme
     const applyTheme = () => {
