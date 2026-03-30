@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, MapPin, Phone, Download, Sparkles } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Phone, Download } from "lucide-react";
 import { Button } from "./ui/button";
 
 const HeroSection = () => {
@@ -20,11 +20,10 @@ const HeroSection = () => {
       </div>
 
       <div className="max-w-5xl mx-auto text-center relative z-10">
-        {/* Status badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8 animate-scale-in hover-glow cursor-default">
+        {/* Open to Work badge */}
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8 animate-scale-in hover-glow cursor-default border border-green-500/20">
           <span className="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse" />
-          <span className="text-sm text-muted-foreground font-mono">Available for opportunities</span>
-          <Sparkles className="w-4 h-4 text-primary animate-pulse-slow" />
+          <span className="text-sm text-foreground font-medium">Open to Work — Freelance, Contract &amp; Full-Time Roles</span>
         </div>
 
         {/* Main heading with gradient animation */}
@@ -36,22 +35,18 @@ const HeroSection = () => {
         {/* Title badges with stagger animation */}
         <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
           <span className="px-4 py-2 bg-gradient-primary text-white font-mono text-sm md:text-base font-semibold rounded-lg animate-scale-in glow-primary" style={{ animationDelay: '0.2s' }}>
-            Full-Stack Developer
+            Full-Stack .NET Engineer
           </span>
           <span className="px-4 py-2 bg-secondary text-secondary-foreground font-mono text-sm md:text-base rounded-lg border border-border animate-scale-in hover:border-primary/50 transition-colors" style={{ animationDelay: '0.3s' }}>
-            ASP.NET Core
-          </span>
-          <span className="px-4 py-2 bg-secondary text-secondary-foreground font-mono text-sm md:text-base rounded-lg border border-border animate-scale-in hover:border-accent/50 transition-colors" style={{ animationDelay: '0.4s' }}>
-            Microsoft Certified
+            AI Integration Specialist
           </span>
         </div>
 
         {/* Description with fade animation */}
         <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed animate-fade-in" style={{ animationDelay: '0.5s' }}>
-          Passionate and detail-oriented developer with hands-on experience in full-stack web development 
-          using <span className="text-primary font-medium">ASP.NET Core</span>, <span className="text-primary font-medium">Blazor</span>, 
-          {" "}<span className="text-primary font-medium">Entity Framework</span>, and <span className="text-primary font-medium">SQL Server</span>. 
-          Building impactful solutions with clean, maintainable code.
+          Specialized in <span className="text-primary font-medium">ASP.NET Core</span>, <span className="text-primary font-medium">Microservices</span>,
+          {" "}<span className="text-primary font-medium">AI Agents</span>, and <span className="text-primary font-medium">Clean Architecture</span>.
+          Available for freelance, contract, remote international, and Pakistan-based roles.
         </p>
 
         {/* Contact info with slide animations */}

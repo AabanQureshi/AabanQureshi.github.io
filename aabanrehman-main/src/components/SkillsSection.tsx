@@ -1,120 +1,124 @@
-import { Code2, Database, Cloud, Layers, Server } from "lucide-react";
-import {
-  SiDotnet,
-  SiReact,
-  SiGit,
-  SiBlazor,
-  SiJavascript,
-  SiTypescript,
-  SiHtml5,
-  SiCss3,
-  SiBootstrap,
-  SiMysql,
-  SiAmazon,
-  SiFirebase,
-  SiStripe
-} from "react-icons/si";
-
-// Individual skills with their specific icons for visual display
-const individualSkills = [
-  // Backend (Primary focus - displayed first)
-  { name: "C#", icon: SiDotnet, color: "#239120", category: "Backend" },
-  { name: "ASP.NET Core", icon: SiDotnet, color: "#512BD4", category: "Backend" },
-  { name: "Entity Framework Core", icon: SiDotnet, color: "#512BD4", category: "Backend" },
-
-  // Frontend
-  { name: "Blazor", icon: SiBlazor, color: "#512BD4", category: "Frontend" },
-  { name: "React", icon: SiReact, color: "#61DAFB", category: "Frontend" },
-  { name: "TypeScript", icon: SiTypescript, color: "#3178C6", category: "Frontend" },
-  { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E", category: "Frontend" },
-  { name: "HTML5", icon: SiHtml5, color: "#E34F26", category: "Frontend" },
-  { name: "CSS3", icon: SiCss3, color: "#1572B6", category: "Frontend" },
-  { name: "Bootstrap", icon: SiBootstrap, color: "#7952B3", category: "Frontend" },
-
-  // Databases
-  { name: "SQL Server", icon: Database, color: "#CC2927", category: "Databases" },
-  { name: "MySQL", icon: SiMysql, color: "#4479A1", category: "Databases" },
-
-  // Cloud & DevOps
-  { name: "Azure", icon: Cloud, color: "#0089D6", category: "Cloud & DevOps" },
-  { name: "AWS", icon: SiAmazon, color: "#FF9900", category: "Cloud & DevOps" },
-  { name: "Git", icon: SiGit, color: "#F05032", category: "Cloud & DevOps" },
-
-  // Integrations & Tools
-  { name: "Firebase", icon: SiFirebase, color: "#FFCA28", category: "Integrations & Tools" },
-  { name: "Stripe", icon: SiStripe, color: "#008CDD", category: "Integrations & Tools" },
-];
+import { Code2, Database, Cloud, Layers, Server, Lock, Cpu, Workflow } from "lucide-react";
 
 const skillCategories = [
   {
-    title: "Backend",
+    title: "Backend & .NET",
     icon: Code2,
     skills: [
       "C#",
       "ASP.NET Core",
-      "ASP.NET Core MVC",
+      ".NET 8",
+      ".NET 9",
+      ".NET 10",
+      "Entity Framework Core",
+      "Clean Architecture",
+      "Vertical Slice Architecture",
+      "Custom CQRS (no MediatR)",
+      "Domain-Driven Design (DDD)",
+      "Microservices",
+      "Background Services",
       "Minimal APIs",
       "Web APIs",
-      "Entity Framework Core",
-      "Microservices Architecture",
-      "Background Services",
-      "Domain-Driven Design (DDD)",
-      "Vertical Slice Architecture (VSA)",
-      "Clean Architecture",
-      "SOLID Principles"
+      "OpenAPI/Swagger",
+      "xUnit",
+      ".NET MAUI",
+      "Blazor"
     ],
     color: "primary",
+  },
+  {
+    title: "AI & LLM Integration",
+    icon: Cpu,
+    skills: [
+      "AI Agent Development",
+      "LLM Integration (OpenAI, Anthropic Claude)",
+      "Local LLMs with Ollama",
+      "n8n Workflow Automation",
+      "Claude Code CLI",
+      "OpenRouter API"
+    ],
+    color: "accent",
   },
   {
     title: "Frontend",
     icon: Layers,
     skills: [
-      "Blazor",
       "React",
+      "TypeScript",
+      "JavaScript",
       "HTML5",
       "CSS3",
+      "Tailwind CSS",
       "Bootstrap",
-      "JavaScript",
-      "TypeScript",
       "jQuery"
     ],
-    color: "accent",
+    color: "primary",
   },
   {
     title: "Databases",
     icon: Database,
     skills: [
-      "SQL Server (MSSQL)",
-      "MySQL"
+      "MSSQL Server",
+      "PostgreSQL",
+      "SQLite",
+      "MySQL",
+      "EF Core Migrations",
+      "Database Replication & Scaling",
+      "Schema Optimization"
     ],
-    color: "primary",
+    color: "accent",
   },
   {
     title: "Cloud & DevOps",
     icon: Cloud,
     skills: [
-      "Microsoft Azure (AZ-900)",
-      "Azure AI Fundamentals (AI-900)",
-      "AWS Virtual Machines",
-      "CI/CD Pipelines",
-      "Server Management",
-      "Git"
+      "Azure (AZ-900, AI-900)",
+      "Azure Kubernetes Service (AKS)",
+      "Azure SQL",
+      "Azure Key Vault",
+      "Azure Service Bus",
+      "AWS (EC2)",
+      "Docker",
+      "Kubernetes (conceptual)",
+      "GitHub Actions CI/CD",
+      "YAML Pipelines",
+      "Server Management"
+    ],
+    color: "primary",
+  },
+  {
+    title: "Authentication & Security",
+    icon: Lock,
+    skills: [
+      "OAuth2",
+      "OpenID Connect",
+      "JWT"
     ],
     color: "accent",
   },
   {
-    title: "Integrations & Tools",
+    title: "Architecture & System Design",
     icon: Server,
     skills: [
-      "Stripe",
-      "PostGrid",
-      "USPS API",
-      "Firebase",
-      "RESTful APIs",
-      "Third-Party Integrations",
+      "System Architecture Design",
+      "Event-Driven Architecture",
+      "API Gateway",
+      "Reverse Proxy (Nginx, YARP)",
       "Performance Optimization"
     ],
     color: "primary",
+  },
+  {
+    title: "Integrations",
+    icon: Workflow,
+    skills: [
+      "Stripe",
+      "PostGrid",
+      "USPS",
+      "Firebase",
+      "RESTful APIs"
+    ],
+    color: "accent",
   },
 ];
 
@@ -124,79 +128,52 @@ const SkillsSection = () => {
       {/* Background decoration */}
       <div className="absolute right-0 top-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-slow" />
       <div className="absolute left-0 bottom-1/4 w-80 h-80 bg-accent/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }} />
-      
+
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Section header */}
         <div className="text-center mb-16">
           <span className="text-primary font-mono text-sm mb-4 block animate-fade-in">{"<Skills />"}</span>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 animate-slide-up">
-            Technical <span className="text-gradient">Expertise</span>
+            Technical <span className="text-gradient">Stack</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            A comprehensive toolkit for building modern, scalable web applications
+            Comprehensive expertise in modern .NET development, AI integration, and cloud-native architecture
           </p>
         </div>
 
-        {/* Skills grid with icons */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
-          {individualSkills.map((skill, index) => {
-            const Icon = skill.icon;
-            
+        {/* Categorized skills view */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {skillCategories.map((category, index) => {
+            const Icon = category.icon;
+            const isAccent = category.color === "accent";
+
             return (
               <div
-                key={skill.name}
-                className="group p-4 rounded-xl bg-gradient-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-elevated flex flex-col items-center justify-center gap-3 hover:scale-110 hover:-translate-y-2 transform cursor-default animate-scale-in"
-                style={{ animationDelay: `${index * 0.05}s` }}
+                key={category.title}
+                className="group p-6 rounded-xl bg-gradient-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-elevated hover-lift animate-slide-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <Icon 
-                  className="w-12 h-12 md:w-16 md:h-16 transition-all duration-300 group-hover:scale-110" 
-                  style={{ color: skill.color }}
-                />
-                
-                <h3 className="text-xs md:text-sm font-medium text-center text-muted-foreground group-hover:text-foreground transition-colors">
-                  {skill.name}
+                <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-4 ${isAccent ? 'bg-accent/20' : 'bg-primary/20'} group-hover:scale-110 transition-transform`}>
+                  <Icon className={`w-6 h-6 ${isAccent ? 'text-accent' : 'text-primary'}`} />
+                </div>
+
+                <h3 className="text-lg font-semibold mb-4 text-foreground group-hover:text-primary transition-colors">
+                  {category.title}
                 </h3>
+
+                <div className="flex flex-wrap gap-2">
+                  {category.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-3 py-1 text-xs font-mono bg-secondary text-muted-foreground rounded-md hover:text-foreground hover:bg-muted transition-all hover:scale-105"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
             );
           })}
-        </div>
-
-        {/* Categorized skills view */}
-        <div className="mt-16 pt-16 border-t border-border/50">
-          <h3 className="text-2xl font-semibold text-center mb-8 animate-fade-in">Technical Stack by Category</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {skillCategories.map((category, index) => {
-              const Icon = category.icon;
-              const isAccent = category.color === "accent";
-              
-              return (
-                <div
-                  key={category.title}
-                  className="group p-6 rounded-xl bg-gradient-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-elevated hover-lift animate-slide-up"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-4 ${isAccent ? 'bg-accent/20' : 'bg-primary/20'} group-hover:scale-110 transition-transform`}>
-                    <Icon className={`w-6 h-6 ${isAccent ? 'text-accent' : 'text-primary'}`} />
-                  </div>
-                  
-                  <h3 className="text-lg font-semibold mb-4 text-foreground group-hover:text-primary transition-colors">
-                    {category.title}
-                  </h3>
-                  
-                  <div className="flex flex-wrap gap-2">
-                    {category.skills.map((skill) => (
-                      <span
-                        key={skill}
-                        className="px-3 py-1 text-xs font-mono bg-secondary text-muted-foreground rounded-md hover:text-foreground hover:bg-muted transition-all hover:scale-105"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
         </div>
       </div>
     </section>
