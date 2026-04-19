@@ -16,44 +16,37 @@ interface ExpandState {
 const projects: Project[] = [
   {
     title: "InkedFlow",
-    description: "A microservices-based platform (10+ ASP.NET Core API projects) using DDD and Vertical Slice Architecture. Integrated Stripe, PostGrid, USPS. Built background services for automated contract generation, invoice creation, and Firebase push notifications.",
-    techStack: ["ASP.NET Core", "Microservices", "DDD", "VSA", "Stripe", "Firebase", "Docker", "AWS"],
+    description: "Microservices-based enterprise platform with 10+ ASP.NET Core APIs using DDD and VSA. Integrated Stripe, PostGrid, USPS, Azure Service Bus, and background services for automated contract/invoice workflows and Firebase notifications.",
+    techStack: ["ASP.NET Core", "Microservices", "DDD", "VSA", "Azure Service Bus", "Stripe", "PostGrid", "USPS", "Firebase", "Docker"],
     icon: Briefcase,
     type: "professional"
   },
   {
     title: "MediDiscounts",
-    description: "Led as project lead — coordinated mobile, web, and admin panel teams. Cut integration bugs by 25% and delivered on time.",
-    techStack: ["ASP.NET Core", ".NET", "Project Lead", "REST APIs"],
+    description: "Led cross-functional delivery as project lead, coordinating mobile, web, and admin teams to reduce integration bugs by 25% and ensure on-time delivery.",
+    techStack: ["ASP.NET Core", ".NET", "Project Leadership", "Integration Management", "Cross-Team Coordination"],
     icon: Building2,
     type: "professional"
   },
   {
-    title: "BizyPop",
-    description: "Multi-tenant loyalty and incentives platform. Refactored incentives system into a unified multi-incentive architecture with UNION ALL-based paginated queries, QR code generation, and Business/BusinessUser many-to-many restructure.",
-    techStack: ["ASP.NET Core", "EF Core", "Multi-Tenant", "SQL Server", "Clean Architecture"],
-    icon: Store,
-    type: "active"
-  },
-  {
-    title: "SmartInvoice AI",
-    description: "AI-powered billing system for small businesses — OCR-based invoice generation, monthly financial reports, cash flow insights. Hybrid Clean Architecture + Vertical Slice + CQRS. Web API + MVC frontend + planned MAUI mobile app.",
-    techStack: ["ASP.NET Core", "AI Integration", "OCR", "EF Core", "CQRS", ".NET MAUI"],
-    icon: Receipt,
-    type: "professional"
-  },
-  {
     title: "WooqLaw",
-    description: "Legal-tech platform built with Blazor frontend and ASP.NET Core backend. Developed 5+ reusable Blazor components, increased data retrieval speed by 22%.",
-    techStack: ["Blazor", "ASP.NET Core", "REST APIs", "MSSQL"],
+    description: "Legal-tech platform where full-stack features were built with Blazor frontend and ASP.NET Core backend. Delivered reusable components and API optimizations that improved retrieval speed by 22%.",
+    techStack: ["Blazor", "ASP.NET Core", "REST APIs", "Clean Architecture", "SOLID", "MSSQL"],
     icon: Scale,
     type: "professional"
   },
   {
     title: "NAVTTC LMS",
-    description: "Led production go-live of a nationwide Learning Management System in partnership with NAVTTC. Handled real data migration, deployment, and post-launch support across multiple government institutes.",
-    techStack: [".NET", "SQL Server", "LMS", "Project Lead"],
+    description: "Led production go-live of a nationwide LMS in partnership with NAVTTC, including real data migration, deployment, institute onboarding, and post-launch support.",
+    techStack: [".NET", "SQL Server", "LMS", "Deployment", "Data Migration", "Project Leadership"],
     icon: GraduationCap,
+    type: "professional"
+  },
+  {
+    title: "Cloud Infrastructure & CI/CD",
+    description: "Managed AWS VM infrastructure and YAML-based CI/CD workflows for enterprise .NET services, helping achieve 99.9% uptime and consistent deployment quality.",
+    techStack: ["AWS VM", "YAML Pipelines", "CI/CD", "Docker", "Monitoring", "Performance Tuning"],
+    icon: Receipt,
     type: "professional"
   }
 ];

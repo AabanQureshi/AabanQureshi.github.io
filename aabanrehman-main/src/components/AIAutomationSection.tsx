@@ -2,18 +2,18 @@ import { Bot, Server, Workflow } from "lucide-react";
 
 const aiWork = [
   {
-    title: "AI Agent Development",
-    description: "Building intelligent agents using LLM APIs (OpenAI, Anthropic Claude) integrated into .NET backends. Experience wiring agents into real application workflows.",
+    title: "Azure AI Fundamentals (AI-900)",
+    description: "Microsoft Certified in Azure AI Fundamentals with practical understanding of AI service capabilities, responsible AI concepts, and AI solution design patterns for production systems.",
     icon: Bot
   },
   {
-    title: "Local AI Stack",
-    description: "Self-hosted local LLM setup using Ollama on personal hardware (RTX 3050). Integrated with Claude Code CLI + OpenRouter for a free AI development environment.",
+    title: "Workflow Automation",
+    description: "Implemented ASP.NET Core background services for automated contract generation, invoice creation, and Firebase notifications, cutting response times by 50%.",
     icon: Server
   },
   {
-    title: "n8n Workflow Automation",
-    description: "Designed and deployed automated workflows using n8n for business process automation, connecting APIs, databases, and notification systems without custom code.",
+    title: "Event-Driven Integration",
+    description: "Integrated Azure Service Bus in distributed .NET services to support asynchronous, event-driven workflows across microservices.",
     icon: Workflow
   }
 ];

@@ -9,33 +9,30 @@ const skillCategories = [
       "ASP.NET Core",
       ".NET 8",
       ".NET 9",
-      ".NET 10",
       "Entity Framework Core",
+      "Dapper",
+      "SOLID",
       "Clean Architecture",
       "Vertical Slice Architecture",
-      "Custom CQRS (no MediatR)",
       "Domain-Driven Design (DDD)",
       "Microservices",
       "Background Services",
+      "MVC",
       "Minimal APIs",
       "Web APIs",
       "OpenAPI/Swagger",
       "xUnit",
-      ".NET MAUI",
-      "Blazor"
+      "NUnit"
     ],
     color: "primary",
   },
   {
-    title: "AI & LLM Integration",
+    title: "Messaging & Caching",
     icon: Cpu,
     skills: [
-      "AI Agent Development",
-      "LLM Integration (OpenAI, Anthropic Claude)",
-      "Local LLMs with Ollama",
-      "n8n Workflow Automation",
-      "Claude Code CLI",
-      "OpenRouter API"
+      "Azure Service Bus",
+      "RabbitMQ",
+      "Redis (caching layer)"
     ],
     color: "accent",
   },
@@ -43,13 +40,14 @@ const skillCategories = [
     title: "Frontend",
     icon: Layers,
     skills: [
+      "Blazor",
       "React",
       "TypeScript",
       "JavaScript",
       "HTML5",
       "CSS3",
-      "Tailwind CSS",
       "Bootstrap",
+      "Tailwind CSS",
       "jQuery"
     ],
     color: "primary",
@@ -60,11 +58,14 @@ const skillCategories = [
     skills: [
       "MSSQL Server",
       "PostgreSQL",
-      "SQLite",
       "MySQL",
+      "SQLite",
+      "MongoDB",
+      "Cosmos DB",
       "EF Core Migrations",
-      "Database Replication & Scaling",
-      "Schema Optimization"
+      "Stored Procedures",
+      "Indexing",
+      "Performance Tuning"
     ],
     color: "accent",
   },
@@ -73,16 +74,17 @@ const skillCategories = [
     icon: Cloud,
     skills: [
       "Azure (AZ-900, AI-900)",
-      "Azure Kubernetes Service (AKS)",
+      "Azure App Services",
       "Azure SQL",
       "Azure Key Vault",
       "Azure Service Bus",
-      "AWS (EC2)",
+      "AWS (EC2, VM)",
       "Docker",
       "Kubernetes (conceptual)",
-      "GitHub Actions CI/CD",
       "YAML Pipelines",
-      "Server Management"
+      "CI/CD",
+      "Git",
+      "AWS Infrastructure Management",
     ],
     color: "primary",
   },
@@ -92,7 +94,8 @@ const skillCategories = [
     skills: [
       "OAuth2",
       "OpenID Connect",
-      "JWT"
+      "JWT",
+      "Azure AD SSO"
     ],
     color: "accent",
   },
@@ -100,10 +103,11 @@ const skillCategories = [
     title: "Architecture & System Design",
     icon: Server,
     skills: [
-      "System Architecture Design",
+      "Microservices",
+      "Domain-Driven Design (DDD)",
+      "Vertical Slice Architecture (VSA)",
       "Event-Driven Architecture",
-      "API Gateway",
-      "Reverse Proxy (Nginx, YARP)",
+      "Clean Architecture",
       "Performance Optimization"
     ],
     color: "primary",
@@ -116,7 +120,8 @@ const skillCategories = [
       "PostGrid",
       "USPS",
       "Firebase",
-      "RESTful APIs"
+      "REST APIs",
+      "Third-Party API Integration"
     ],
     color: "accent",
   },
