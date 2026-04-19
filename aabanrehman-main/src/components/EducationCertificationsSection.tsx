@@ -13,8 +13,8 @@ const timelineItems: TimelineItem[] = [
   {
     type: "education",
     title: "BS Software Engineering",
-    institution: "International Islamic University, Islamabad",
-    date: "Jan 2022 – Jun 2026",
+    institution: "International Islamic University Islamabad",
+    date: "Jan 2022 – Jun 2026 (Expected)",
     icon: "🎓",
   },
   {

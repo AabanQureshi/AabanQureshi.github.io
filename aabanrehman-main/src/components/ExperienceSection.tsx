@@ -2,17 +2,22 @@ import { Building2, Calendar, ChevronRight } from "lucide-react";
 
 const experiences = [
   {
-    title: "Full Stack .NET + React (TS) Engineer",
+    title: "Full-Stack .NET + React Engineer",
     company: "OwaSoft Technologies",
-    period: "July 2025 – Present",
+    period: "Jul 2025 – Apr 2026",
     current: true,
     responsibilities: [
-      "Developed and maintained scalable applications using ASP.NET Core MVC, micro-architecture patterns, and modern development practices",
-      "Collaborated seamlessly with the frontend team, leveraging full-stack expertise to ensure smooth integration between backend and UI components",
-      "Led and mentored interns, providing technical guidance, code reviews, and training to help them grow as developers",
-      "Designed and managed server-side architecture and database pipelines, ensuring reliability, scalability, and efficiency",
-      "Architected and implemented a microservices-based system for InkedFlow using ASP.NET Core MVC, comprising over 10+ .NET Core API projects",
-      "Integrated third-party services including PostGrid, USPS, and Stripe, handling transactions efficiently and reducing integration errors by 30%",
+      "Architected InkedFlow as a microservices-based platform with 10+ ASP.NET Core API projects using DDD and Vertical Slice Architecture (VSA), improving scalability and fault isolation.",
+      "Designed RESTful APIs with OpenAPI/Swagger and implemented OAuth2, OpenID Connect, and JWT authentication across web and mobile clients.",
+      "Integrated Azure Service Bus for event-driven, asynchronous workflows across distributed .NET services.",
+      "Integrated Stripe, PostGrid, and USPS, reducing third-party integration errors by 30%.",
+      "Built ASP.NET Core background services for contract generation, invoice creation, and Firebase push notifications, halving user engagement response times.",
+      "Authored and maintained YAML-based CI/CD pipelines to automate build, test, and deployment across multiple .NET services.",
+      "Containerized services with Docker and worked with Kubernetes orchestration concepts.",
+      "Managed AWS VM infrastructure lifecycle and performance tuning, helping maintain 99.9% uptime.",
+      "Administered MSSQL Server with EF Core migrations/schema updates, reducing query latency by 35%.",
+      "Led InkedFlow and MediDisconts cross-functional delivery, cutting integration bugs by 25%.",
+      "Mentored interns through code reviews and technical guidance to improve team productivity and quality.",
     ],
   },
   {
@@ -21,11 +26,10 @@ const experiences = [
     period: "Feb 2025 – May 2025",
     current: false,
     responsibilities: [
-      "Gained hands-on full-stack development experience working on real client projects using Blazor for frontend and ASP.NET Core for backend services",
-      "Contributed to building modules for a legal-tech platform (WooqLaw.com), implementing features specific to lawyers' workflows and case management",
-      "Collaborated closely with senior developers to understand and apply enterprise architecture patterns, improving code structure and maintainability",
-      "Developed and optimized 5+ reusable components in Blazor, enhancing frontend efficiency",
-      "Implemented API endpoints increasing data retrieval speed by 22% with ASP.NET Core",
+      "Built full-stack features for WooqLaw.com, a legal-tech platform, using Blazor frontend and ASP.NET Core backend.",
+      "Developed and optimized 5+ reusable Blazor components, improving maintainability and frontend efficiency.",
+      "Implemented RESTful API endpoints with ASP.NET Core, increasing data retrieval speed by 22%.",
+      "Collaborated with senior engineers to apply Clean Architecture and SOLID principles.",
     ],
   },
   {
@@ -34,11 +38,9 @@ const experiences = [
     period: "Aug 2024 – Feb 2025",
     current: false,
     responsibilities: [
-      "Led production readiness and go-live for the Learning Management System (LMS) in partnership with NAVTTC (National Vocational & Technical Training Commission)",
-      "Collaborated directly with trainers, teachers, and institutes under NAVTTC to conduct system training sessions, demonstrate features, and gather feedback",
-      "Attended and contributed to requirement refinement meetings with stakeholders, clarifying needs and prioritizing enhancements",
-      "Oversaw final testing, deployment, and post-launch support, delivering a reliable, production-grade platform that supported government-backed skills development programs",
-      "Applied production best practices to ensure scalability, data integrity, and maintainability in a live environment serving multi-institute users",
+      "Led production go-live of a nationwide LMS in partnership with NAVTTC, overseeing data migration, deployment, and post-launch support.",
+      "Conducted training sessions for trainers and institutes across multiple government-affiliated locations to drive adoption.",
+      "Applied production best practices to ensure scalability, data integrity, and maintainability in a live multi-institute environment.",
     ],
   },
 ];

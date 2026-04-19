@@ -95,7 +95,7 @@ const Navigation = () => {
               <span className="ml-2 text-xs">{getThemeLabel()}</span>
             </Button>
             
-            <a href="/Aaban_Rehman_CV.pdf" download="Aaban_Rehman_CV.pdf">
+            <a href="/Aaban_Rehman_ATS_CV_v4.docx" download="Aaban_Rehman_ATS_CV_v4.docx">
               <Button size="sm" className="bg-gradient-primary text-white font-semibold">
                 <Download className="w-4 h-4 mr-2" />
                 Resume
@@ -159,7 +159,7 @@ const Navigation = () => {
                     {link.label}
                   </a>
                 ))}
-                <a href="/Aaban_Rehman_CV.pdf" download="Aaban_Rehman_CV.pdf" className="mt-4">
+                <a href="/Aaban_Rehman_ATS_CV_v4.docx" download="Aaban_Rehman_ATS_CV_v4.docx" className="mt-4">
                   <Button size="lg" className="bg-gradient-primary text-white font-semibold w-full">
                     <Download className="w-4 h-4 mr-2" />
                     Resume

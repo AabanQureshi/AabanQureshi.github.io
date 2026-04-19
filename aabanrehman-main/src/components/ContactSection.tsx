@@ -220,7 +220,7 @@ const ContactSection = () => {
                     <span className="text-lg">📍</span>
                   </div>
                   <div>
-                    <p className="font-mono text-sm text-foreground">Rawalpindi, Pakistan</p>
+                    <p className="font-mono text-sm text-foreground">Islamabad, Pakistan</p>
                   </div>
                 </div>
                 
@@ -258,7 +258,7 @@ const ContactSection = () => {
           <p className="text-muted-foreground text-sm font-mono">
             Designed & Built by <span className="text-primary">Aaban Rehman</span>
           </p>
-          <p className="text-muted-foreground/50 text-xs mt-2">© 2025 All rights reserved</p>
+          <p className="text-muted-foreground/50 text-xs mt-2">© 2026 All rights reserved</p>
         </div>
       </div>
     </section>
