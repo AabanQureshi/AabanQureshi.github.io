@@ -16,7 +16,7 @@ const experiences = [
       "Containerized services with Docker and worked with Kubernetes orchestration concepts.",
       "Managed AWS VM infrastructure lifecycle and performance tuning, helping maintain 99.9% uptime.",
       "Administered MSSQL Server with EF Core migrations/schema updates, reducing query latency by 35%.",
-      "Led InkedFlow and MediDisconts cross-functional delivery, cutting integration bugs by 25%.",
+      "Led InkedFlow and MediDiscounts cross-functional delivery, cutting integration bugs by 25%.",
       "Mentored interns through code reviews and technical guidance to improve team productivity and quality.",
     ],
   },

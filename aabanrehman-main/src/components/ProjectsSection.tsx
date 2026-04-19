@@ -22,7 +22,7 @@ const projects: Project[] = [
     type: "professional"
   },
   {
-    title: "MediDisconts",
+    title: "MediDiscounts",
     description: "Led cross-functional delivery as project lead, coordinating mobile, web, and admin teams to reduce integration bugs by 25% and ensure on-time delivery.",
     techStack: ["ASP.NET Core", ".NET", "Project Leadership", "Integration Management", "Cross-Team Coordination"],
     icon: Building2,
