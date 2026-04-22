@@ -229,7 +229,7 @@ const ContactSection = () => {
                   <p className="text-sm text-muted-foreground mb-3">Connect with me</p>
                   <div className="flex gap-3">
                     <a 
-                      href="https://www.linkedin.com/in/aaban-qureshi/" 
+                      href="https://linkedin.com/in/aaban-qureshi/" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 px-4 py-2 rounded-lg bg-secondary/50 hover:bg-secondary border border-border hover:border-primary/50 transition-all text-sm text-foreground hover:text-primary"

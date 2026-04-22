@@ -73,13 +73,13 @@ const HeroSection = () => {
               Get In Touch
             </Button>
           </a>
-          <a href="/Aaban_Rehman_ATS_CV_v4.docx" download="Aaban_Rehman_ATS_CV_v4.docx">
+          <a href="/Aaban_Rehman_CV_v5.docx" download="Aaban_Rehman_CV_v5.docx">
             <Button size="lg" variant="outline" className="border-border hover:bg-secondary hover:border-primary transition-all hover:scale-105 hover-glow">
               <Download className="w-4 h-4 mr-2" />
               Download CV
             </Button>
           </a>
-          <a href="https://www.linkedin.com/in/aaban-qureshi/" target="_blank" rel="noopener noreferrer">
+          <a href="https://linkedin.com/in/aaban-qureshi/" target="_blank" rel="noopener noreferrer">
             <Button size="lg" variant="outline" className="border-border hover:bg-secondary hover:border-accent transition-all hover:scale-105">
               <Linkedin className="w-4 h-4 mr-2" />
               LinkedIn
