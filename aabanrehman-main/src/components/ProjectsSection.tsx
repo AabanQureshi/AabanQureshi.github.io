@@ -15,16 +15,16 @@ interface ExpandState {
 
 const projects: Project[] = [
   {
-    title: "InkedFlow",
-    description: "Microservices-based enterprise platform with 10+ ASP.NET Core APIs using DDD and VSA. Integrated Stripe, PostGrid, USPS, Azure Service Bus, and background services for automated contract/invoice workflows and Firebase notifications.",
-    techStack: ["ASP.NET Core", "Microservices", "DDD", "VSA", "Azure Service Bus", "Stripe", "PostGrid", "USPS", "Firebase", "Docker"],
+    title: "Enterprise Microservices Platform",
+    description: "Architected and delivered a large-scale distributed platform with 10+ ASP.NET Core APIs using Domain-Driven Design and Vertical Slice Architecture to improve scalability and fault isolation.",
+    techStack: ["ASP.NET Core", "Microservices", "DDD", "VSA", "Azure Service Bus", "Docker", "OpenAPI/Swagger", "MSSQL", "EF Core"],
     icon: Briefcase,
     type: "professional"
   },
   {
-    title: "MediDiscounts",
-    description: "Led cross-functional delivery as project lead, coordinating mobile, web, and admin teams to reduce integration bugs by 25% and ensure on-time delivery.",
-    techStack: ["ASP.NET Core", ".NET", "Project Leadership", "Integration Management", "Cross-Team Coordination"],
+    title: "Secure API & Integration Suite",
+    description: "Designed and maintained secure REST APIs with OAuth2/OpenID Connect and JWT while integrating payment, mailing, and address verification services to reduce integration errors by over 30%.",
+    techStack: ["ASP.NET Core", ".NET", "OAuth2", "OpenID Connect", "JWT", "REST APIs", "Third-Party Integrations", "Swagger"],
     icon: Building2,
     type: "professional"
   },
