@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, MapPin, Phone, Download, Sparkles } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Phone, Download } from "lucide-react";
 import { Button } from "./ui/button";
 
 const HeroSection = () => {
@@ -20,11 +20,10 @@ const HeroSection = () => {
       </div>
 
       <div className="max-w-5xl mx-auto text-center relative z-10">
-        {/* Status badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8 animate-scale-in hover-glow cursor-default">
+        {/* Open to Work badge */}
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8 animate-scale-in hover-glow cursor-default border border-green-500/20">
           <span className="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse" />
-          <span className="text-sm text-muted-foreground font-mono">Available for opportunities</span>
-          <Sparkles className="w-4 h-4 text-primary animate-pulse-slow" />
+          <span className="text-sm text-foreground font-medium">Open to Work — Freelance, Contract &amp; Full-Time Roles</span>
         </div>
 
         {/* Main heading with gradient animation */}
@@ -36,22 +35,18 @@ const HeroSection = () => {
         {/* Title badges with stagger animation */}
         <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
           <span className="px-4 py-2 bg-gradient-primary text-white font-mono text-sm md:text-base font-semibold rounded-lg animate-scale-in glow-primary" style={{ animationDelay: '0.2s' }}>
-            Full-Stack Developer
+            ASP.NET Core Engineer
           </span>
           <span className="px-4 py-2 bg-secondary text-secondary-foreground font-mono text-sm md:text-base rounded-lg border border-border animate-scale-in hover:border-primary/50 transition-colors" style={{ animationDelay: '0.3s' }}>
-            ASP.NET Core
-          </span>
-          <span className="px-4 py-2 bg-secondary text-secondary-foreground font-mono text-sm md:text-base rounded-lg border border-border animate-scale-in hover:border-accent/50 transition-colors" style={{ animationDelay: '0.4s' }}>
-            Microsoft Certified
+            Full-Stack .NET Developer
           </span>
         </div>
 
         {/* Description with fade animation */}
         <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed animate-fade-in" style={{ animationDelay: '0.5s' }}>
-          Passionate and detail-oriented developer with hands-on experience in full-stack web development 
-          using <span className="text-primary font-medium">ASP.NET Core</span>, <span className="text-primary font-medium">Blazor</span>, 
-          {" "}<span className="text-primary font-medium">Entity Framework</span>, and <span className="text-primary font-medium">SQL Server</span>. 
-          Building impactful solutions with clean, maintainable code.
+          Passionate about building <span className="text-primary font-medium">microservices-based</span>, <span className="text-primary font-medium">cloud-native</span> solutions with{" "}
+          <span className="text-primary font-medium">ASP.NET Core</span>, <span className="text-primary font-medium">Entity Framework Core</span>, and{" "}
+          <span className="text-primary font-medium">DDD/VSA</span>. Microsoft Certified in AZ-900, AI-900, and Back-End Development with .NET.
         </p>
 
         {/* Contact info with slide animations */}
@@ -66,7 +61,7 @@ const HeroSection = () => {
           </a>
           <div className="flex items-center gap-2 animate-slide-in-right" style={{ animationDelay: '0.8s' }}>
             <MapPin className="w-4 h-4" />
-            <span className="text-sm font-mono">Islamabad</span>
+            <span className="text-sm font-mono">Islamabad, Pakistan</span>
           </div>
         </div>
 
@@ -78,13 +73,13 @@ const HeroSection = () => {
               Get In Touch
             </Button>
           </a>
-          <a href="/Aaban_Rehman_CV.pdf" download="Aaban_Rehman_CV.pdf">
+          <a href="/Aaban_Rehman_CV_v5.docx" download="Aaban_Rehman_CV_v5.docx">
             <Button size="lg" variant="outline" className="border-border hover:bg-secondary hover:border-primary transition-all hover:scale-105 hover-glow">
               <Download className="w-4 h-4 mr-2" />
               Download CV
             </Button>
           </a>
-          <a href="https://www.linkedin.com/in/aaban-qureshi/" target="_blank" rel="noopener noreferrer">
+          <a href="https://linkedin.com/in/aaban-qureshi/" target="_blank" rel="noopener noreferrer">
             <Button size="lg" variant="outline" className="border-border hover:bg-secondary hover:border-accent transition-all hover:scale-105">
               <Linkedin className="w-4 h-4 mr-2" />
               LinkedIn
@@ -102,7 +97,7 @@ const HeroSection = () => {
         <div className="mt-16 pt-16 border-t border-border/50 animate-fade-in" style={{ animationDelay: '1.1s' }}>
           <p className="text-sm text-muted-foreground mb-6 font-mono">// Technologies I work with</p>
           <div className="flex flex-wrap items-center justify-center gap-3">
-            {['C#', 'ASP.NET Core', 'Blazor', 'SQL Server', 'Azure', 'React', 'Entity Framework', 'REST APIs'].map((tech, index) => (
+            {['C#', 'ASP.NET Core', 'Microservices', 'DDD', 'VSA', 'Azure Service Bus', 'Redis', 'Docker'].map((tech, index) => (
               <span
                 key={tech}
                 className="px-4 py-2 text-sm font-mono text-foreground bg-card border border-border rounded-lg hover:border-primary/50 hover:glow-primary transition-all cursor-default hover:scale-110 hover:-translate-y-1"
