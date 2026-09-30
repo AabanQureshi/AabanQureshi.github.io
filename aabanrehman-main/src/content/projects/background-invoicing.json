@@ -1,0 +1,23 @@
+{
+  "name": "Background invoicing",
+  "category": "Backend engineering",
+  "kind": "billing",
+  "summary": "Billing that runs on your schedule.",
+  "description": "A background processing system that turns contract rules and billing cadences into automated invoice workflows.",
+  "role": "Backend logic & data access",
+  "technologies": ".NET 8 / .NET 9, EF Core, background workers, SQL Server",
+  "challenge": "Daily, weekly, biweekly, and monthly schedules need consistent validation and clear data access paths.",
+  "approach": "Separate cadence rules from job execution, validate services before invoice generation, and use explicit database projections to retrieve the required data.",
+  "features": [
+    "Multiple billing cadences",
+    "Service-level validation",
+    "Batch processing workflows"
+  ],
+  "order": 3,
+  "visible": true,
+  "featured": false,
+  "image": "",
+  "imageAlt": "",
+  "demoUrl": "",
+  "sourceUrl": ""
+}

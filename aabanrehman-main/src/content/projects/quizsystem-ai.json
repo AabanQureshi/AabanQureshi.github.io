@@ -1,0 +1,23 @@
+{
+  "name": "QuizSystem AI",
+  "category": "Education & assessment",
+  "kind": "quiz",
+  "summary": "A clear path from questions to results.",
+  "description": "An assessment platform for creating quizzes, tracking attempts, and processing results through a modular backend.",
+  "role": "Backend development & system design",
+  "technologies": ".NET 8 / .NET 9, ASP.NET Core, Razor Pages, SQL Server",
+  "challenge": "Assessment authoring and result processing need different workflows while sharing reliable data and clear application boundaries.",
+  "approach": "Custom CQRS separates reads from writes. Dedicated query handlers support attempt tracking and result retrieval, with Razor Pages providing the interface.",
+  "features": [
+    "Quiz creation and administration",
+    "Attempt tracking",
+    "Dedicated result processing"
+  ],
+  "order": 2,
+  "visible": true,
+  "featured": false,
+  "image": "",
+  "imageAlt": "",
+  "demoUrl": "",
+  "sourceUrl": ""
+}

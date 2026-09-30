@@ -1,0 +1,373 @@
+# Portfolio content editor configuration
+media:
+  - name: projects
+    label: Project images
+    input: aabanrehman-main/public/uploads/projects
+    output: /uploads/projects
+    rename: safe
+    extensions:
+      - png
+      - jpg
+      - jpeg
+      - webp
+  - name: certificates
+    label: Certificate images
+    input: aabanrehman-main/public/uploads/certificates
+    output: /uploads/certificates
+    rename: safe
+    extensions:
+      - png
+      - jpg
+      - jpeg
+      - webp
+  - name: resumes
+    label: Résumés
+    input: aabanrehman-main/public/uploads/resumes
+    output: /uploads/resumes
+    rename: safe
+    extensions:
+      - pdf
+content:
+  - name: projects
+    label: Projects
+    type: collection
+    path: aabanrehman-main/src/content/projects
+    format: json
+    subfolders: false
+    filename: '{primary}.json'
+    view:
+      primary: name
+      fields:
+        - name
+        - order
+        - visible
+      sort:
+        - order
+      default:
+        sort: order
+        order: asc
+    fields:
+      - name: name
+        label: Project name
+        type: string
+        required: true
+      - name: visible
+        label: Show on website
+        type: boolean
+        description: Turn on when ready to publish. Hidden entries remain in the public repository.
+      - name: order
+        label: Display order
+        type: number
+        required: true
+        description: Lower numbers appear first.
+        options:
+          min: 0
+          step: 1
+      - name: featured
+        label: Full-width feature
+        type: boolean
+      - name: category
+        label: Category
+        type: string
+        required: true
+      - name: summary
+        label: Card summary
+        type: text
+        required: true
+      - name: description
+        label: Project overview
+        type: text
+        required: true
+      - name: image
+        label: Project screenshot
+        type: image
+        options:
+          media: projects
+      - name: imageAlt
+        label: Screenshot description
+        type: string
+        description: Required when uploading a screenshot. Describe what it shows.
+      - name: kind
+        label: Illustration without a screenshot
+        type: select
+        options:
+          values:
+            - name: generic
+              label: Project title (for new projects)
+            - name: invoice
+              label: Invoice illustration
+            - name: quiz
+              label: Quiz illustration
+            - name: billing
+              label: Billing workflow
+      - name: role
+        label: Your contribution
+        type: string
+        required: true
+      - name: technologies
+        label: Technologies
+        type: string
+        required: true
+      - name: challenge
+        label: The problem
+        type: text
+        required: true
+      - name: approach
+        label: The approach
+        type: text
+        required: true
+      - name: features
+        label: Key features
+        type: string
+        list: true
+      - name: demoUrl
+        label: Live project URL
+        type: string
+        pattern:
+          regex: ^https://[^\s]+$
+          message: Enter a complete HTTPS link.
+      - name: sourceUrl
+        label: Source code URL
+        type: string
+        pattern:
+          regex: ^https://[^\s]+$
+          message: Enter a complete HTTPS link.
+  - name: certificates
+    label: Certificates
+    type: collection
+    path: aabanrehman-main/src/content/certificates
+    format: json
+    subfolders: false
+    filename: '{primary}.json'
+    view:
+      primary: title
+      fields:
+        - title
+        - order
+        - visible
+      sort:
+        - order
+      default:
+        sort: order
+        order: asc
+    fields:
+      - name: title
+        label: Certificate name
+        type: string
+        required: true
+      - name: issuer
+        label: Issuer
+        type: string
+        required: true
+      - name: visible
+        label: Show on website
+        type: boolean
+        description: Turn on when ready to publish. Hidden entries remain in the public repository.
+      - name: order
+        label: Display order
+        type: number
+        required: true
+        description: Lower numbers appear first.
+        options:
+          min: 0
+          step: 1
+      - name: date
+        label: Date or year
+        type: string
+      - name: url
+        label: Credential URL
+        type: string
+        pattern:
+          regex: ^https://[^\s]+$
+          message: Enter a complete HTTPS link.
+      - name: image
+        label: Certificate image
+        type: image
+        options:
+          media: certificates
+  - name: experience
+    label: Experience
+    type: collection
+    path: aabanrehman-main/src/content/experience
+    format: json
+    subfolders: false
+    filename: '{primary}.json'
+    view:
+      primary: company
+      fields:
+        - company
+        - order
+        - visible
+      sort:
+        - order
+      default:
+        sort: order
+        order: asc
+    fields:
+      - name: company
+        label: Company
+        type: string
+        required: true
+      - name: visible
+        label: Show on website
+        type: boolean
+        description: Turn on when ready to publish. Hidden entries remain in the public repository.
+      - name: order
+        label: Display order
+        type: number
+        required: true
+        description: Lower numbers appear first.
+        options:
+          min: 0
+          step: 1
+      - name: role
+        label: Role
+        type: string
+        required: true
+      - name: date
+        label: Dates
+        type: string
+        required: true
+        description: 'For example: July 2025 – Apr 2026'
+      - name: text
+        label: Description
+        type: text
+        required: true
+  - name: profile
+    label: Profile & contact
+    type: file
+    path: aabanrehman-main/src/content/profile.json
+    format: json
+    fields:
+      - name: name
+        label: Name
+        type: string
+        required: true
+      - name: role
+        label: Professional title
+        type: string
+        required: true
+      - name: email
+        label: Contact email
+        type: string
+        required: true
+        pattern:
+          regex: ^[^\s@]+@[^\s@]+\.[^\s@]+$
+          message: Enter a valid email address.
+      - name: github
+        label: GitHub profile
+        type: string
+        required: true
+        pattern:
+          regex: ^https://[^\s]+$
+          message: Enter a complete HTTPS link.
+      - name: linkedin
+        label: LinkedIn profile
+        type: string
+        required: true
+        pattern:
+          regex: ^https://[^\s]+$
+          message: Enter a complete HTTPS link.
+      - name: availability
+        label: Availability message
+        type: string
+        required: true
+      - name: location
+        label: Location
+        type: string
+        required: true
+      - name: workLocation
+        label: Remote work message
+        type: string
+        required: true
+      - name: headline
+        label: Main headline
+        type: text
+        required: true
+        description: Line breaks are preserved. Keep it brief.
+      - name: introduction
+        label: Introduction
+        type: text
+        required: true
+      - name: aboutHeading
+        label: About heading
+        type: text
+        required: true
+      - name: about
+        label: About you
+        type: text
+        required: true
+      - name: education
+        label: Education
+        type: object
+        required: true
+        fields:
+          - name: title
+            label: Degree
+            type: string
+            required: true
+          - name: institution
+            label: Institution
+            type: string
+            required: true
+          - name: dates
+            label: Dates and status
+            type: string
+            required: true
+      - name: foundations
+        label: Core technologies
+        type: string
+        required: true
+        list: true
+      - name: projectsIntro
+        label: Projects introduction
+        type: text
+        required: true
+      - name: servicesIntro
+        label: Services introduction
+        type: text
+        required: true
+      - name: contactIntro
+        label: Contact introduction
+        type: text
+        required: true
+      - name: contactLocation
+        label: Contact location note
+        type: string
+        required: true
+  - name: services
+    label: Services
+    type: file
+    path: aabanrehman-main/src/content/services.json
+    format: json
+    fields:
+      - name: items
+        label: Services
+        type: object
+        required: true
+        list: true
+        fields:
+          - name: title
+            label: Service name
+            type: string
+            required: true
+          - name: text
+            label: Description
+            type: text
+            required: true
+          - name: tools
+            label: Technologies
+            type: string
+            required: true
+  - name: resume
+    label: Résumé
+    type: file
+    path: aabanrehman-main/src/content/resume.json
+    format: json
+    fields:
+      - name: file
+        label: Current résumé PDF
+        type: file
+        required: true
+        options:
+          media: resumes

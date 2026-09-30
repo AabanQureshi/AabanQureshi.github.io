@@ -1,0 +1,30 @@
+{
+  "name": "Aaban Rehman",
+  "role": "Software engineer",
+  "email": "aabanqureshi564@gmail.com",
+  "github": "https://github.com/AabanQureshi",
+  "linkedin": "https://www.linkedin.com/in/aaban-qureshi/",
+  "availability": "Open to freelance & contract work",
+  "location": "Islamabad, Pakistan",
+  "workLocation": "Working worldwide",
+  "headline": "Good software.\nBuilt with\nintention.",
+  "introduction": "I’m Aaban, a software engineer building thoughtful web applications, dependable APIs, and the systems behind them.",
+  "aboutHeading": "An engineer.\nA collaborator.\nA builder at heart.",
+  "about": "I’m based in Islamabad, working with the .NET ecosystem to turn business requirements into software people can use. I care about understanding the problem, explaining the tradeoffs, and leaving the code easier to work with.",
+  "education": {
+    "title": "Software engineering",
+    "institution": "International Islamic University, Islamabad",
+    "dates": "2022–Present (in progress)"
+  },
+  "foundations": [
+    "C#",
+    ".NET 8 / .NET 9",
+    "SQL Server",
+    "Azure",
+    "Blazor"
+  ],
+  "projectsIntro": "A selection of projects in billing, automation, and education.\nOpen a project to explore the approach.",
+  "servicesIntro": "I work across the application, from the first data model to the last integration. Clear decisions, readable code, and a useful result.",
+  "contactIntro": "A new product, an API that needs attention, or a team that could use another engineer. Tell me where you are and where you want to go.",
+  "contactLocation": "Based in Islamabad. Working remotely."
+}

@@ -1,0 +1,23 @@
+{
+  "name": "SmartInvoice AI",
+  "category": "Finance & automation",
+  "kind": "invoice",
+  "summary": "Making the business of getting paid simpler.",
+  "description": "An invoicing and expense management project connecting recurring billing, receipt processing, and financial reporting.",
+  "role": "Backend architecture & full-stack development",
+  "technologies": ".NET 8 / .NET 9, ASP.NET Core, EF Core, SQL Server",
+  "challenge": "Billing schedules, contracts, and receipts each have their own rules. The system needs to keep those workflows understandable and maintainable.",
+  "approach": "An API-first backend with explicit command and query handlers, separate billing modules, and background processing for recurring invoices.",
+  "features": [
+    "Contract-based invoice generation",
+    "Receipt processing with OCR",
+    "Client management and reporting"
+  ],
+  "order": 1,
+  "visible": true,
+  "featured": true,
+  "image": "",
+  "imageAlt": "",
+  "demoUrl": "",
+  "sourceUrl": ""
+}
