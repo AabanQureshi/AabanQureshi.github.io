@@ -11,7 +11,8 @@
     "preview": "vite preview",
     "validate:content": "node scripts/validate-content.mjs",
     "prebuild": "npm run validate:content",
-    "prebuild:dev": "npm run validate:content"
+    "prebuild:dev": "npm run validate:content",
+    "postbuild": "node scripts/build-pages.mjs"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

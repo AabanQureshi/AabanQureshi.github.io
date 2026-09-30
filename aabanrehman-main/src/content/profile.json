@@ -26,5 +26,8 @@
   "projectsIntro": "A selection of projects in billing, automation, and education.\nOpen a project to explore the approach.",
   "servicesIntro": "I work across the application, from the first data model to the last integration. Clear decisions, readable code, and a useful result.",
   "contactIntro": "A new product, an API that needs attention, or a team that could use another engineer. Tell me where you are and where you want to go.",
-  "contactLocation": "Based in Islamabad. Working remotely."
+  "contactLocation": "Based in Islamabad. Working remotely.",
+  "showPhoto": true,
+  "photo": "/uploads/profile/aaban-rehman-cutout.png",
+  "photoAlt": "Aaban Rehman wearing a gray suit and white shirt"
 }

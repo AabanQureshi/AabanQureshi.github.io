@@ -26,14 +26,21 @@ const schemas = {
   }).refine(item => item.visible !== true || Boolean(item.url || item.image), { message: 'A visible certificate needs a credential URL or uploaded image', path: ['url'] }),
   experience: z.object({ company: text, role: text, date: text, text, ...ordered }),
   profile: z.object({
+    showPhoto: z.boolean().optional(), photo: optionalAsset, photoAlt: optionalText,
     name: text, role: text, email: z.string().email(), github: url, linkedin: url,
     availability: text, location: text, workLocation: text, headline: text, introduction: text,
     aboutHeading: text, about: text,
     education: z.object({ title: text, institution: text, dates: text }),
     foundations: z.array(text).min(1), projectsIntro: text, servicesIntro: text,
     contactIntro: text, contactLocation: text,
-  }),
-  services: z.object({ items: z.array(z.object({ title: text, text, tools: text })).min(1) }),
+  }).refine(item => !item.showPhoto || Boolean(item.photo && item.photoAlt?.trim()), { message: 'Choose a profile photo and add a description before showing it', path: ['photo'] }),
+  services: z.object({ items: z.array(z.object({ title: text, text, tools: text, details: optionalText, showOnHome: z.boolean().optional() })).min(1) }),
+  testimonials: z.object({ items: z.array(z.object({
+    name: text, quote: text, company: optionalText, project: optionalText,
+    approved: z.boolean().optional(), consentToPublish: z.boolean().optional(), consentToPublishEmail: z.boolean().optional(),
+    publicEmail: z.union([z.string().email(), z.literal('')]).nullish(),
+  }).refine(item => !item.publicEmail || (item.consentToPublishEmail === true && item.consentToPublish === true), {message:'Do not store an email without explicit permission to publish it',path:['publicEmail']})
+    .refine(item => !item.approved || item.consentToPublish === true, {message:'Publication requires client consent',path:['approved']})) }),
   resume: z.object({ file: asset.refine(value => /\.pdf$/i.test(value), 'Upload a PDF résumé') }),
 };
 let failures = 0;
@@ -41,7 +48,7 @@ let checked = 0;
 async function validate(file, schema) {
   try {
     const entry = schema.parse(JSON.parse(await readFile(file, 'utf8')));
-    for (const key of ['image', 'file']) {
+    for (const key of ['image', 'file', 'photo']) {
       if (!entry[key]) continue;
       const target = resolve(publicRoot, '.' + entry[key]);
       const within = relative(publicRoot, target);
@@ -59,6 +66,6 @@ for (const type of ['projects', 'certificates', 'experience']) {
     if (name.endsWith('.json')) await validate(resolve(content, type, name), schemas[type]);
   }
 }
-for (const type of ['profile', 'services', 'resume']) await validate(resolve(content, `${type}.json`), schemas[type]);
+for (const type of ['profile', 'services', 'resume', 'testimonials']) await validate(resolve(content, `${type}.json`), schemas[type]);
 if (failures) process.exitCode = 1;
 else console.log(`Content valid: ${checked} files; uploaded assets exist.`);

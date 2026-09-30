@@ -11,6 +11,7 @@ export interface Project {
   features?: string[];
   kind?: 'invoice' | 'quiz' | 'billing' | 'generic';
   featured?: boolean;
+  showOnHome?: boolean;
   image?: string;
   imageAlt?: string;
   demoUrl?: string;
@@ -58,3 +59,15 @@ import resumeData from './resume.json';
 export const profile = profileData;
 export const services = servicesData.items;
 export const resume = resumeData;
+import testimonialData from './testimonials.json';
+export interface Testimonial {
+  name: string;
+  company?: string;
+  project?: string;
+  quote: string;
+  approved: boolean;
+  consentToPublish: boolean;
+  consentToPublishEmail: boolean;
+  publicEmail?: string;
+}
+export const testimonials = (testimonialData.items as Testimonial[]).filter(item => item.approved && item.consentToPublish);

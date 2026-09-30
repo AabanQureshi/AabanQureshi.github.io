@@ -3,17 +3,23 @@
     {
       "title": "Products & platforms",
       "text": "Business applications with clear workflows, practical interfaces, and a backend your team can build on.",
-      "tools": "ASP.NET Core · Blazor · Razor Pages"
+      "tools": "ASP.NET Core · Blazor · Razor Pages",
+      "showOnHome": true,
+      "details": "Business applications with clear workflows, practical interfaces, and a backend your team can build on."
     },
     {
       "title": "APIs & integrations",
       "text": "Connect payments, external services, and internal systems through well-defined APIs and background workflows.",
-      "tools": ".NET 8 / .NET 9 · REST APIs · Hangfire"
+      "tools": ".NET 8 / .NET 9 · REST APIs · Hangfire",
+      "showOnHome": true,
+      "details": "Connect payments, external services, and internal systems through well-defined APIs and background workflows."
     },
     {
       "title": "Data & architecture",
       "text": "Explicit data access, maintainable application boundaries, and a deployment path that fits your product.",
-      "tools": "EF Core · SQL Server · PostgreSQL · Azure"
+      "tools": "EF Core · SQL Server · PostgreSQL · Azure",
+      "showOnHome": true,
+      "details": "Explicit data access, maintainable application boundaries, and a deployment path that fits your product."
     }
   ]
 }

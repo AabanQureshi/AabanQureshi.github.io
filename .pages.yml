@@ -1,4 +1,3 @@
-# Portfolio content editor configuration
 media:
   - name: projects
     label: Project images
@@ -27,6 +26,16 @@ media:
     rename: safe
     extensions:
       - pdf
+  - name: profile
+    label: Profile photos
+    input: aabanrehman-main/public/uploads/profile
+    output: /uploads/profile
+    rename: safe
+    extensions:
+      - png
+      - jpg
+      - jpeg
+      - webp
 content:
   - name: projects
     label: Projects
@@ -132,6 +141,10 @@ content:
         pattern:
           regex: ^https://[^\s]+$
           message: Enter a complete HTTPS link.
+      - name: showOnHome
+        label: Include on homepage
+        type: boolean
+        description: Up to three selected projects appear, in display order.
   - name: certificates
     label: Certificates
     type: collection
@@ -239,6 +252,18 @@ content:
     path: aabanrehman-main/src/content/profile.json
     format: json
     fields:
+      - name: showPhoto
+        label: Show profile photo
+        type: boolean
+      - name: photo
+        label: Profile photo
+        type: image
+        options:
+          media: profile
+      - name: photoAlt
+        label: Photo description
+        type: string
+        description: Describe the photo for visitors using a screen reader.
       - name: name
         label: Name
         type: string
@@ -359,6 +384,12 @@ content:
             label: Technologies
             type: string
             required: true
+          - name: showOnHome
+            label: Include on homepage
+            type: boolean
+          - name: details
+            label: Full service description
+            type: text
   - name: resume
     label: Résumé
     type: file
@@ -371,3 +402,43 @@ content:
         required: true
         options:
           media: resumes
+  - name: testimonials
+    label: Approved client feedback
+    type: file
+    path: aabanrehman-main/src/content/testimonials.json
+    format: json
+    fields:
+      - name: items
+        label: Feedback
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: Client name
+            type: string
+            required: true
+          - name: company
+            label: Company / role
+            type: string
+          - name: project
+            label: Project / service
+            type: string
+          - name: quote
+            label: Feedback
+            type: text
+            required: true
+          - name: consentToPublish
+            label: Client gave permission to publish feedback
+            type: boolean
+          - name: approved
+            label: Approved for website
+            type: boolean
+          - name: consentToPublishEmail
+            label: Client explicitly permitted public email
+            type: boolean
+          - name: publicEmail
+            label: Public email (only with permission)
+            type: string
+            description: >-
+              Leave empty unless the client explicitly consented. Never store private email or private
+              submissions here.

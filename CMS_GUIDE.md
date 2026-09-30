@@ -42,3 +42,19 @@ The design remains in React/CSS. Content controls determine order, visibility, i
 ## Verification
 
 Validated initial content, TypeScript and production build. Browser checks cover desktop/mobile navigation, project dialogs, portrait and wide images, long unbroken titles, image failure fallback, hidden items, ordering, PDF download and reduced motion. Tested viewport widths: 320, 375, 520, 768, 1024 and 1440 pixels.
+
+## Local directory and feedback additions
+
+The homepage shows at most three projects and services. Use Include on homepage to select entries; project display order determines which three are shown. The Projects page shows six entries per page with category filtering. Services has a full description field.
+
+Experience and education/certificates use keyboard-focusable scrolling regions.
+
+Feedback submissions go to a dedicated EmailJS template when VITE_EMAILJS_FEEDBACK_TEMPLATE_ID is configured together with the existing service/public key. Template parameters: from_name, from_email, message, publish_consent, publish_email_consent. Until configured, the form explicitly opens an email draft instead. No submissions are stored automatically in the public repository.
+
+Review consent in the received message before adding an item under Approved client feedback. Only approved entries with publication consent render. Enter Public email only when the client separately opted into publishing it. Do not put private feedback, private emails, or consent evidence in this public CMS; retain the original message privately.
+
+Production builds generate separate route entry HTML and a sitemap for GitHub Pages. After publishing, verify aabanrehman.me in Google Search Console, submit sitemap.xml, and request indexing for the homepage. No search-console verification has been performed by this implementation.
+
+## Shared email templates (current configuration)
+
+Both forms now reuse VITE_EMAILJS_TEMPLATE_ID and VITE_EMAILJS_AUTO_REPLY_TEMPLATE_ID; the earlier dedicated feedback template settings are obsolete. Follow aabanrehman-main/email-templates/SETUP.md. Replace the HTML of the existing templates before publishing the new forms.

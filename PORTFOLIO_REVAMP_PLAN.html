@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Revamp Plan — Modern 3D Professional Engineer Portfolio</title>
+  <style>
+    :root {
+      --bg: #0d1017;
+      --fg: #ebebeb;
+      --muted: #7a7f8a;
+      --primary: #8b5cf6;
+      --primary-dim: #512bd4;
+      --accent: #06b6d4;
+      --card: #171c26;
+      --border: #2a2f3a;
+      --success: #10b981;
+      --radius: 12px;
+      --shadow: 0 25px 50px -12px rgba(0,0,0,0.5), 0 0 30px rgba(139,92,246,0.1);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.7;
+      padding: 40px 24px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    h1, h2, h3, h4 { font-weight: 700; line-height: 1.3; color: var(--fg); }
+    h1 { font-size: 2.5rem; margin-bottom: 1rem; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    h2 { font-size: 1.5rem; margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+    h3 { font-size: 1.25rem; margin: 1.5rem 0 0.75rem; color: var(--accent); }
+    h4 { font-size: 1rem; margin: 1rem 0 0.5rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+    p { margin: 0.75rem 0; color: var(--muted); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    code { font-family: 'JetBrains Mono', monospace; background: var(--card); padding: 0.15em 0.4em; border-radius: 4px; font-size: 0.9em; color: var(--primary); }
+    pre { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; overflow-x: auto; margin: 1rem 0; }
+    pre code { background: none; padding: 0; color: var(--fg); font-size: 0.85rem; line-height: 1.6; }
+    table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
+    th, td { padding: 0.75rem 1rem; text-align: left; border-bottom: 1px solid var(--border); }
+    th { color: var(--primary); font-weight: 600; background: rgba(139,92,246,0.1); }
+    tr:hover td { background: rgba(139,92,246,0.03); }
+    ul, ol { margin: 0.75rem 0 0.75rem 1.5rem; color: var(--muted); }
+    li { margin: 0.4rem 0; }
+    .badge { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; margin: 0.25rem; }
+    .badge-primary { background: rgba(139,92,246,0.2); color: var(--primary); }
+    .badge-accent { background: rgba(6,182,212,0.2); color: var(--accent); }
+    .badge-success { background: rgba(16,185,129,0.2); color: var(--success); }
+    .badge-warning { background: rgba(245,158,11,0.2); color: #f59e0b; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 1.5rem 0; box-shadow: var(--shadow); }
+    .card h3 { margin-top: 0; }
+    .phase { border-left: 3px solid var(--primary); padding-left: 1rem; margin: 1rem 0; }
+    .phase h4 { margin-top: 0; }
+    .checklist { list-style: none; padding-left: 0; }
+    .checklist li { position: relative; padding-left: 1.5rem; margin: 0.5rem 0; }
+    .checklist li::before { content: "☐"; position: absolute; left: 0; color: var(--muted); }
+    .toc { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin-bottom: 2rem; }
+    .toc h2 { margin-top: 0; font-size: 1.25rem; border: none; }
+    .toc ul { list-style: none; padding: 0; columns: 2; column-gap: 2rem; }
+    .toc li { margin: 0.5rem 0; }
+    .toc a { color: var(--muted); font-size: 0.9rem; }
+    .toc a:hover { color: var(--accent); }
+    @media (max-width: 600px) { .toc ul { columns: 1; } h1 { font-size: 2rem; } body { padding: 24px 16px; } }
+    .gradient-text { background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .muted { color: var(--muted); }
+    .highlight { color: var(--primary); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="muted" style="font-size: 0.85rem; margin-bottom: 0.5rem;">Generated: 2026-09-19 | Target: React 18 + TypeScript + Vite + Tailwind + R3F + GSAP</p>
+    <h1>Portfolio Revamp Plan</h1>
+    <p style="font-size: 1.1rem; max-width: 700px;">Modern 3D Interactive Portfolio for <span class="gradient-text">Aaban Rehman</span> — Full-Stack .NET Engineer & Architect</p>
+  </header>
+
+  <nav class="toc" aria-label="Table of Contents">
+    <h2>Contents</h2>
+    <ul>
+      <li><a href="#executive-summary">Executive Summary</a></li>
+      <li><a href="#current-state">Current State Analysis</a></li>
+      <li><a href="#design-vision">Design Vision</a></li>
+      <li><a href="#3d-strategy">3D Implementation Strategy</a></li>
+      <li><a href="#component-revamp">Component Revamp Plan</a></li>
+      <li><a href="#shared-components">New Shared 3D Components</a></li>
+      <li><a href="#animation-system">Animation & Interaction System</a></li>
+      <li><a href="#performance">Performance Budget</a></li>
+      <li><a href="#accessibility">Accessibility Checklist</a></li>
+      <li><a href="#seo">SEO & Metadata</a></li>
+      <li><a href="#deployment">Deployment & CI/CD</a></li>
+      <li><a href="#phases">Implementation Phases</a></li>
+      <li><a href="#file-structure">File Structure After Revamp</a></li>
+      <li><a href="#risks">Risk Mitigation</a></li>
+      <li><a href="#metrics">Success Metrics</a></li>
+      <li><a href="#next-steps">Next Steps</a></li>
+    </ul>
+  </nav>
+
+  <section id="executive-summary">
+    <h2>Executive Summary</h2>
+    <p>Transform the current React + Tailwind portfolio into a <strong>cutting-edge 3D interactive experience</strong> that positions Aaban Rehman as a premium .NET/Full-Stack freelancer/contractor. The new design will feature React Three Fiber (R3F) powered 3D backgrounds, sophisticated animations, and a professional dark-first aesthetic with rich but restrained colors.</p>
+    <div class="card">
+      <h3>Core Philosophy</h3>
+      <p><em>"Senior Engineer Who Builds Systems"</em> — Every visual choice reinforces technical depth, performance awareness, and production-grade craft.</p>
+    </div>
+  </section>
+
+  <section id="current-state">
+    <h2>Current State Analysis</h2>
+    <h3>✅ Strengths</h3>
+    <ul>
+      <li>Clean architecture: React 18 + TypeScript + Vite</li>
+      <li>Tailwind CSS with CSS variables for theming</li>
+      <li>Shadcn/ui component library (Radix primitives)</li>
+      <li>Dark/Light theme with Microsoft-inspired palette</li>
+      <li>Well-structured sections: Hero, Skills, Experience, Projects, Education, Contact</li>
+      <li>Framer Motion-ready animations via CSS keyframes</li>
+      <li>EmailJS integration for contact form</li>
+    </ul>
+    <h3>🔄 Areas for Modernization</h3>
+    <ul>
+      <li><strong>No 3D/WebGL elements</strong> — purely 2D CSS animations</li>
+      <li><strong>Standard grid layouts</strong> — could use Bento/Asymmetric layouts</li>
+      <li><strong>Generic gradient orbs</strong> — replace with true 3D particle fields</li>
+      <li><strong>Static content cards</strong> — add interactive hover states with 3D depth</li>
+      <li><strong>Basic scroll experience</strong> — implement scroll-driven 3D transformations</li>
+      <li><strong>No performance optimization</strong> for heavy visual effects</li>
+    </ul>
+  </section>
+
+  <section id="design-vision">
+    <h2>Design Vision: "Senior Engineer Who Builds Systems"</h2>
+    <table>
+      <thead><tr><th>Aspect</th><th>Direction</th></tr></thead>
+      <tbody>
+        <tr><td>Theme</td><td>Dark-first (VS Code Dark Pro inspired) with light mode toggle</td></tr>
+        <tr><td>Primary Colors</td><td>.NET Purple (<code>#512BD4</code> / <code>#8B5CF6</code>) + Azure Blue (<code>#0078D4</code> / <code>#06B6D4</code>)</td></tr>
+        <tr><td>Accent</td><td>Cyan/Teal (<code>#06B6D4</code>) for CTAs, Emerald (<code>#10B981</code>) for success</td></tr>
+        <tr><td>Typography</td><td>Inter (UI) + JetBrains Mono (code/technical)</td></tr>
+        <tr><td>Glassmorphism</td><td>Frosted glass cards with subtle borders</td></tr>
+        <tr><td>Depth</td><td>Layered 3D space: background particles → floating elements → content cards</td></tr>
+        <tr><td>Motion</td><td>Respect <code>prefers-reduced-motion</code>, 60fps desktop, graceful mobile fallback</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="3d-strategy">
+    <h2>3D Implementation Strategy</h2>
+    <h3>Technology Stack Additions</h3>
+    <pre><code>{
+  "dependencies": {
+    "three": "^0.170+",
+    "@react-three/fiber": "^8.17+",
+    "@react-three/drei": "^9.115+",
+    "@react-three/postprocessing": "^2.16+",
+    "gsap": "^3.12+",
+    "maath": "^0.10+"
+  },
+  "devDependencies": {
+    "@types/three": "^0.170+"
+  }
+}</code></pre>
+
+    <h3>3D Scene Architecture (Hero Section)</h3>
+    <pre><code><Canvas> (Hero Section - Full Viewport)
+├── <PerspectiveCamera position={[0, 0, 5]} fov={60} />
+├── <OrbitControls /> (disabled on mobile, auto-rotate on desktop)
+├── <AmbientLight intensity={0.4} />
+├── <DirectionalLight position={[5, 10, 7]} intensity={1} />
+│
+├── <ParticleField count={4000} /> — Main atmospheric background
+│   ├── Floating particles with noise-based flow
+│   ├── Mouse parallax (desktop)
+│   ├── Scroll-driven Z-depth
+│   └── Color palette: Purple → Cyan gradient per particle
+│
+├── <GeometricAccents /> — 3-4 floating low-poly shapes
+│   ├── Rotating torus knot (subtle)
+│   ├── Floating cubes with glass material
+│   └── Pulse on scroll milestones
+│
+├── <ConnectionLines /> — Subtle lines between nearby particles
+│   └── Opacity based on distance + scroll
+│
+└── <PostProcessing>
+    ├── <Bloom threshold={0.8} intensity={0.3} />
+    └── <ChromaticAberration intensity={0.002} /></code></pre>
+
+    <h3>Section-Level 3D Elements</h3>
+    <table>
+      <thead><tr><th>Section</th><th>3D Element</th><th>Interaction</th></tr></thead>
+      <tbody>
+        <tr><td>Hero</td><td>Full-screen particle field + floating geometry</td><td>Mouse parallax, scroll zoom</td></tr>
+        <tr><td>Skills</td><td>Mini canvas per category card</td><td>Hover → particle burst</td></tr>
+        <tr><td>Experience</td><td>Timeline with 3D nodes</td><td>Scroll → node activation</td></tr>
+        <tr><td>Projects</td><td>3D card flip on hover</td><td>Mouse → perspective tilt</td></tr>
+        <tr><td>Contact</td><td>Interactive form with floating particles</td><td>Input focus → particle attraction</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="component-revamp">
+    <h2>Component Revamp Plan</h2>
+
+    <div class="card">
+      <h3>1. HeroSection → Hero3D.tsx</h3>
+      <ul>
+        <li>Full-screen R3F Canvas as background</li>
+        <li>4000-particle system with simplex noise flow</li>
+        <li>3-4 floating glassmorphic geometric shapes</li>
+        <li>Mouse parallax (desktop only)</li>
+        <li>Scroll-driven camera dolly (zoom out on scroll)</li>
+        <li>Text content as HTML overlay (SEO-friendly)</li>
+        <li><code>prefers-reduced-motion</code> → static gradient fallback</li>
+      </ul>
+      <p><strong>Performance:</strong> Lazy load Canvas with Suspense, <code>frameloop="demand"</code> when not in viewport, Draco-compressed models, Mobile: static image fallback (WebP, <100KB)</p>
+    </div>
+
+    <div class="card">
+      <h3>2. SkillsSection → SkillsBento3D.tsx</h3>
+      <ul>
+        <li>Bento grid layout (CSS Grid asymmetric)</li>
+        <li>Each card: mini R3F canvas (500 particles) on hover</li>
+        <li>Category icons as 3D models (GLTF)</li>
+        <li>Staggered entrance animation (GSAP + ScrollTrigger)</li>
+        <li>Filter by category (Backend/Frontend/Cloud/DB/Tools)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>3. ExperienceSection → ExperienceTimeline3D.tsx</h3>
+      <ul>
+        <li>3D timeline path (Catmull-Rom spline)</li>
+        <li>Nodes as glowing spheres on the path</li>
+        <li>ScrollTrigger: camera follows path, nodes activate</li>
+        <li>Company logos as 3D billboards</li>
+        <li>Current role: pulsing indicator</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>4. ProjectsSection → ProjectsShowcase3D.tsx</h3>
+      <ul>
+        <li>3D card carousel (infinite loop)</li>
+        <li>Tilt effect on mouse move (R3F + useFrame)</li>
+        <li>Click → expand to modal with full 3D model viewer</li>
+        <li>Tech stack as floating tags in 3D space</li>
+        <li>"View Code" / "Live Demo" as 3D buttons</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>5. EducationCertificationsSection → CredentialsWall3D.tsx</h3>
+      <ul>
+        <li>Isometric grid of credential cards</li>
+        <li>Hover → card lifts in 3D, verification badge glows</li>
+        <li>Certifications: animated holographic effect</li>
+        <li>Click → verify modal with certificate preview</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>6. ContactSection → ContactHub3D.tsx</h3>
+      <ul>
+        <li>Form with floating label animations (Framer Motion)</li>
+        <li>Background: subtle particle field reacting to input focus</li>
+        <li>Social links as orbiting icons around central CTA</li>
+        <li>Real-time validation with 3D shake on error</li>
+        <li>Success: confetti burst (canvas-confetti or R3F)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="shared-components">
+    <h2>New Shared Components</h2>
+    <h3><code>components/three/</code></h3>
+    <pre><code>three/
+├── Canvas3D.tsx              # Wrapper with Suspense, error boundary, perf
+├── ParticleField.tsx         # Reusable particle system
+├── FloatingGeometry.tsx      # Glass shapes, torus knots, etc.
+├── PostProcessing.tsx        # Bloom, vignette, chromatic aberration
+├── ScrollControls.tsx        # Camera path following scroll
+├── PerformanceMonitor.tsx    # Auto-degrade quality on low FPS
+├── useGPUDetect.ts           # Hook: detect GPU tier
+├── useReducedMotion.ts       # Hook: respects prefers-reduced-motion
+└── shaders/
+    ├── particleFlow.glsl     # Vertex: noise-based movement
+    ├── glassMaterial.glsl    # Fragment: frosted glass with fresnel
+    └── glowPulse.glsl        # Fragment: animated glow</code></pre>
+
+    <h3><code>components/ui/3d/</code></h3>
+    <pre><code>ui/3d/
+├── Card3D.tsx                # 3D tilt card wrapper
+├── Button3D.tsx              # Button with depth press effect
+├── Icon3D.tsx                # 3D icon with hover animation
+├── Badge3D.tsx               # Floating badge with physics
+└── Tooltip3D.tsx             # 3D positioned tooltip</code></pre>
+  </section>
+
+  <section id="animation-system">
+    <h2>Animation & Interaction System</h2>
+
+    <h3>GSAP + ScrollTrigger Setup</h3>
+    <pre><code>// lib/animations.ts
+export const scrollReveal = (element: Element, options = {}) => {
+  gsap.from(element, {
+    scrollTrigger: {
+      trigger: element,
+      start: "top 80%",
+      toggleActions: "play none none reverse",
+    },
+    y: 60,
+    opacity: 0,
+    duration: 0.8,
+    ease: "power3.out",
+    ...options
+  });
+};
+
+export const staggerChildren = (parent: Element, selector: string) => {
+  gsap.from(parent.querySelectorAll(selector), {
+    scrollTrigger: { trigger: parent, start: "top 85%" },
+    y: 30,
+    opacity: 0,
+    duration: 0.6,
+    stagger: 0.08,
+    ease: "power2.out"
+  });
+};</code></pre>
+
+    <h3>R3F Animation Patterns</h3>
+    <pre><code>// hooks/useScrollParallax.ts
+export const useScrollParallax = (factor = 0.5) => {
+  const ref = useRef<Group>(null);
+  const scrollY = useScroll(); // from @react-three/drei
+
+  useFrame(() => {
+    if (ref.current) {
+      ref.current.position.y = -scrollY.current * factor;
+    }
+  });
+
+  return ref;
+};</code></pre>
+  </section>
+
+  <section id="performance">
+    <h2>Performance Budget</h2>
+    <table>
+      <thead><tr><th>Metric</th><th>Target</th><th>Strategy</th></tr></thead>
+      <tbody>
+        <tr><td>Initial JS Bundle</td><td>< 150KB gzipped</td><td>Code-split 3D, lazy load Canvas</td></tr>
+        <tr><td>3D Assets</td><td>< 500KB total</td><td>Draco compression, procedural geo</td></tr>
+        <tr><td>FPS (Desktop)</td><td>60fps sustained</td><td><code>requestAnimationFrame</code> budgeting</td></tr>
+        <tr><td>FPS (Mobile)</td><td>30fps or static</td><td><code>PerformanceMonitor</code> auto-degrade</td></tr>
+        <tr><td>LCP</td><td>< 2.5s</td><td>Static hero fallback, preload fonts</td></tr>
+        <tr><td>TBT</td><td>< 200ms</td><td>Offload math to Web Workers</td></tr>
+        <tr><td>CLS</td><td>< 0.1</td><td>Reserve space for 3D canvas</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Adaptive Quality System</h3>
+    <pre><code>// components/three/PerformanceMonitor.tsx
+const QUALITY_PRESETS = {
+  high: { particles: 4000, dpr: [1, 2], bloom: true, shadows: true },
+  medium: { particles: 2000, dpr: [1, 1.5], bloom: false, shadows: false },
+  low: { particles: 500, dpr: 1, bloom: false, shadows: false },
+  static: { particles: 0, dpr: 1, canvas: false } // Image fallback
+};</code></pre>
+  </section>
+
+  <section id="accessibility">
+    <h2>Accessibility Checklist</h2>
+    <ul class="checklist">
+      <li><code>prefers-reduced-motion</code>: Disable all 3D animation, show static fallback</li>
+      <li><code>prefers-contrast: high</code>: Increase border weights, disable glassmorphism</li>
+      <li>Keyboard navigation: All 3D interactions have keyboard equivalents</li>
+      <li>Screen readers: ARIA labels on Canvas, hidden text alternatives</li>
+      <li>Color contrast: WCAG AA minimum (4.5:1 text, 3:1 UI)</li>
+      <li>Focus indicators: Visible on all interactive 3D elements</li>
+      <li>Touch targets: Minimum 44x44px on mobile</li>
+    </ul>
+  </section>
+
+  <section id="seo">
+    <h2>SEO & Metadata</h2>
+
+    <h3>Enhanced Meta Tags</h3>
+    <pre><code><!-- index.html additions -->
+<meta name="description" content="Aaban Rehman — Full-Stack .NET Engineer & Architect. Building scalable systems with ASP.NET Core, Azure, React. Available for freelance/contract work.">
+<meta property="og:title" content="Aaban Rehman | Full-Stack .NET Engineer">
+<meta property="og:description" content="Architecting scalable solutions. 6+ Microsoft Certifications. Available for contracts.">
+<meta property="og:image" content="/og-image-3d.webp">
+<meta property="og:type" content="profile">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" as="font" href="/fonts/inter-var.woff2" crossorigin>
+<link rel="preload" as="font" href="/fonts/jetbrains-mono-var.woff2" crossorigin></code></pre>
+
+    <h3>Structured Data (JSON-LD)</h3>
+    <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Aaban Rehman",
+  "jobTitle": "Full-Stack .NET Engineer",
+  "url": "https://aabanrehman.me",
+  "sameAs": [
+    "https://github.com/AabanQureshi",
+    "https://linkedin.com/in/aaban-qureshi"
+  ],
+  "knowsAbout": [
+    "ASP.NET Core", "C#", "Entity Framework Core", "SQL Server",
+    "Azure", "Blazor", "React", "TypeScript", "Microservices",
+    "Clean Architecture", "CQRS", "Domain-Driven Design"
+  ],
+  "certification": [
+    "Microsoft Azure Fundamentals (AZ-900)",
+    "Microsoft Azure AI Fundamentals (AI-900)",
+    "Microsoft Back-End Engineer Specialization",
+    "Meta React Specialization"
+  ]
+}</code></pre>
+  </section>
+
+  <section id="deployment">
+    <h2>Deployment & CI/CD</h2>
+
+    <h3>Vercel Configuration</h3>
+    <pre><code>// vercel.json
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": "vite",
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/models/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    }
+  ],
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}</code></pre>
+
+    <h3>GitHub Actions Workflow</h3>
+    <pre><code># .github/workflows/deploy.yml
+name: Deploy to Vercel
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run build
+      - uses: amondnet/vercel-action@v25
+        if: github.ref == 'refs/heads/main'
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-args: '--prod'</code></pre>
+  </section>
+
+  <section id="phases">
+    <h2>Implementation Phases</h2>
+
+    <div class="phase">
+      <h4>Phase 1: Foundation (Week 1)</h4>
+      <ul class="checklist">
+        <li>Install 3D dependencies</li>
+        <li>Create <code>Canvas3D</code> wrapper with Suspense, ErrorBoundary, PerformanceMonitor</li>
+        <li>Build <code>ParticleField</code> component with noise shaders</li>
+        <li>Implement adaptive quality system</li>
+        <li>Add <code>useReducedMotion</code> and <code>useGPUDetect</code> hooks</li>
+      </ul>
+    </div>
+
+    <div class="phase">
+      <h4>Phase 2: Hero Section (Week 1-2)</h4>
+      <ul class="checklist">
+        <li>Build <code>Hero3D</code> with full-screen particle field</li>
+        <li>Add floating glass geometries</li>
+        <li>Implement mouse parallax + scroll camera dolly</li>
+        <li>Create static fallback image for mobile/reduced-motion</li>
+        <li>SEO meta tags + JSON-LD</li>
+      </ul>
+    </div>
+
+    <div class="phase">
+      <h4>Phase 3: Skills & Experience (Week 2)</h4>
+      <ul class="checklist">
+        <li>Bento grid layout for Skills</li>
+        <li>Mini 3D canvases on skill cards (hover-activated)</li>
+        <li>3D timeline with scroll-driven camera for Experience</li>
+        <li>Staggered GSAP entrance animations</li>
+      </ul>
+    </div>
+
+    <div class="phase">
+      <h4>Phase 4: Projects & Credentials (Week 2-3)</h4>
+      <ul class="checklist">
+        <li>3D card carousel for Projects with tilt effect</li>
+        <li>Expandable modal with tech stack in 3D space</li>
+        <li>Isometric credentials wall for Education/Certifications</li>
+        <li>Holographic certification cards</li>
+      </ul>
+    </div>
+
+    <div class="phase">
+      <h4>Phase 5: Contact & Polish (Week 3)</h4>
+      <ul class="checklist">
+        <li>Contact form with particle interaction on focus</li>
+        <li>Social links as orbiting 3D icons</li>
+        <li>Success/error animations with 3D feedback</li>
+        <li>Global performance tuning</li>
+      </ul>
+    </div>
+
+    <div class="phase">
+      <h4>Phase 6: Launch Prep (Week 3-4)</h4>
+      <ul class="checklist">
+        <li>Cross-browser testing (Chrome, Firefox, Safari, Edge)</li>
+        <li>Mobile testing (iOS Safari, Chrome Android)</li>
+        <li>Lighthouse CI integration</li>
+        <li>Analytics: Vercel Analytics + custom 3D interaction events</li>
+        <li>Deploy to production</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="file-structure">
+    <h2>File Structure After Revamp</h2>
+    <pre><code>src/
+├── components/
+│   ├── three/                    # NEW: Core 3D components
+│   │   ├── Canvas3D.tsx
+│   │   ├── ParticleField.tsx
+│   │   ├── FloatingGeometry.tsx
+│   │   ├── PostProcessing.tsx
+│   │   ├── ScrollControls.tsx
+│   │   ├── PerformanceMonitor.tsx
+│   │   ├── hooks/
+│   │   │   ├── useGPUDetect.ts
+│   │   │   ├── useReducedMotion.ts
+│   │   │   └── useScrollParallax.ts
+│   │   └── shaders/
+│   │       ├── particleFlow.glsl
+│   │       ├── glassMaterial.glsl
+│   │       └── glowPulse.glsl
+│   ├── ui/3d/                    # NEW: 3D UI primitives
+│   │   ├── Card3D.tsx
+│   │   ├── Button3D.tsx
+│   │   ├── Icon3D.tsx
+│   │   ├── Badge3D.tsx
+│   │   └── Tooltip3D.tsx
+│   ├── sections/                 # REVISED: Section components
+│   │   ├── Hero3D.tsx
+│   │   ├── SkillsBento3D.tsx
+│   │   ├── ExperienceTimeline3D.tsx
+│   │   ├── ProjectsShowcase3D.tsx
+│   │   ├── CredentialsWall3D.tsx
+│   │   └── ContactHub3D.tsx
+│   ├── Navigation.tsx            # Enhanced with 3D logo
+│   └── ...existing UI components
+├── contexts/
+│   └── ThemeContext.tsx          # Enhanced with 3D theme tokens
+├── hooks/
+│   ├── use-toast.ts
+│   └── use-scroll.ts             # NEW: Scroll position hook
+├── lib/
+│   ├── animations.ts             # NEW: GSAP utilities
+│   ├── utils.ts
+│   └── constants.ts              # NEW: 3D config, quality presets
+├── pages/
+│   └── Index.tsx                 # Composed with new sections
+├── styles/
+│   ├── globals.css               # Enhanced with 3D utilities
+│   └── three.css                 # NEW: Canvas-specific styles
+└── types/
+    └── three.d.ts                # NEW: Three.js type extensions</code></pre>
+  </section>
+
+  <section id="risks">
+    <h2>Risk Mitigation</h2>
+    <table>
+      <thead><tr><th>Risk</th><th>Probability</th><th>Impact</th><th>Mitigation</th></tr></thead>
+      <tbody>
+        <tr><td>Mobile performance poor</td><td>High</td><td>High</td><td>Static fallback, quality presets, <code>frameloop="demand"</code></td></tr>
+        <tr><td>Bundle size too large</td><td>Medium</td><td>High</td><td>Code-split 3D, lazy load, tree-shake drei</td></tr>
+        <tr><td>Safari/WebKit issues</td><td>Medium</td><td>Medium</td><td>Test early, polyfill WebGL2 features, fallback</td></tr>
+        <tr><td>Accessibility regression</td><td>Low</td><td>High</td><td>Automated aXe testing, manual keyboard audit</td></tr>
+        <tr><td>SEO impact from Canvas</td><td>Low</td><td>Medium</td><td>HTML overlay content, static fallback, JSON-LD</td></tr>
+        <tr><td>Maintenance complexity</td><td>Medium</td><td>Medium</td><td>Document 3D components, isolate in <code>/three</code> folder</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="metrics">
+    <h2>Success Metrics</h2>
+    <table>
+      <thead><tr><th>Metric</th><th>Current</th><th>Target</th><th>Measurement</th></tr></thead>
+      <tbody>
+        <tr><td>Lighthouse Performance</td><td>~85</td><td>95+</td><td>Vercel Analytics / Lighthouse CI</td></tr>
+        <tr><td>Lighthouse Accessibility</td><td>~90</td><td>100</td><td>axe-core + manual audit</td></tr>
+        <tr><td>Time on Page</td><td>Baseline</td><td>+40%</td><td>Vercel Analytics</td></tr>
+        <tr><td>Contact Form Submissions</td><td>Baseline</td><td>+25%</td><td>EmailJS / Formspree</td></tr>
+        <tr><td>GitHub Profile Clicks</td><td>Baseline</td><td>+30%</td><td>UTM tracking</td></tr>
+        <tr><td>Mobile Usability</td><td>Good</td><td>Excellent</td><td>Chrome DevTools device toolbar</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="next-steps">
+    <h2>Next Steps</h2>
+    <ol>
+      <li><strong>Approve this plan</strong> — Confirm direction and priority</li>
+      <li><strong>Install dependencies</strong> — Add Three.js ecosystem packages</li>
+      <li><strong>Create foundation components</strong> — Canvas3D, ParticleField, PerformanceMonitor</li>
+      <li><strong>Iterate visually</strong> — Build Hero3D first as proof-of-concept</li>
+      <li><strong>Progressive enhancement</strong> — Each section builds on shared 3D primitives</li>
+    </ol>
+    <div class="card" style="margin-top: 2rem;">
+      <p style="margin: 0; font-style: italic; color: var(--muted);">Ready to begin Phase 1? I'll start by installing the 3D dependencies and building the core <code>Canvas3D</code> wrapper with adaptive quality and accessibility support.</p>
+    </div>
+  </section>
+
+  <footer style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 0.85rem;">
+    <p>Portfolio Revamp Plan for Aaban Rehman</p>
+    <p>Target Stack: React 18 + TypeScript + Vite + Tailwind + R3F + GSAP</p>
+    <p>Deployment: Vercel (GitHub Actions CI/CD)</p>
+  </footer>
+</body>
+</html>
