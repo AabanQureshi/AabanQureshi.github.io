@@ -12,6 +12,11 @@ dist
 dist-ssr
 *.local
 
+# Local visual review artifacts
+review-*.png
+review-results.json
+portfolio-review.cjs
+
 # Environment variables
 .env
 
