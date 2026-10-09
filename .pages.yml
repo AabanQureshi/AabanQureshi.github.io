@@ -88,14 +88,15 @@ content:
         type: text
         required: true
       - name: image
-        label: Project screenshot
+        label: Project cover / thumbnail
         type: image
+        description: Choose the cover shown on the project card. Use project artwork or a real screenshot.
         options:
           media: projects
       - name: imageAlt
-        label: Screenshot description
+        label: Cover description
         type: string
-        description: Required when uploading a screenshot. Describe what it shows.
+        description: Required for a cover image. Describe what it shows and identify concept artwork as an illustration.
       - name: kind
         label: Illustration without a screenshot
         type: select

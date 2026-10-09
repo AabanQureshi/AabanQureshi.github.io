@@ -13,8 +13,8 @@
   "visible": true,
   "featured": false,
   "showOnHome": false,
-  "image": "",
-  "imageAlt": "",
+  "image": "/uploads/projects/secure-api-integration-suite-concept.webp",
+  "imageAlt": "Concept illustration of a protected API gateway connecting payment, mail, and address verification services",
   "demoUrl": "",
   "sourceUrl": ""
 }

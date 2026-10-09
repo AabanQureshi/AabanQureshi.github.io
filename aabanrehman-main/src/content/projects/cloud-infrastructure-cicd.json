@@ -13,8 +13,8 @@
   "visible": true,
   "featured": false,
   "showOnHome": false,
-  "image": "",
-  "imageAlt": "",
+  "image": "/uploads/projects/cloud-infrastructure-cicd-concept.webp",
+  "imageAlt": "Concept illustration of container delivery stages, cloud infrastructure, and service monitoring for CI/CD",
   "demoUrl": "",
   "sourceUrl": ""
 }
