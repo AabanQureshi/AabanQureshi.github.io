@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc"><title id="title">WooQ Law — Interface concept</title><desc id="desc">Blazor legal workflows · reusable components · API retrieval.. Illustrative interface with fictional sample data.</desc><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#646644"/></marker></defs><rect x="0" y="0" width="1600" height="900" rx="0" fill="#F6F6F1" stroke="none"/>
+<text x="64" y="62" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" letter-spacing="2" fill="#53676C" font-weight="600">AABAN REHMAN / SELECTED SYSTEMS</text>
+<text x="1500" y="62" font-family="Consolas, Courier New, monospace" font-size="24" fill="#53676C" font-weight="400">06</text>
+<text x="64" y="150" font-family="Georgia, Cambria, serif" font-size="64" fill="#172B31" font-weight="400" letter-spacing="-1.5">WooQ Law</text>
+<text x="64" y="206" font-family="Segoe UI, Helvetica, sans-serif" font-size="28" fill="#53676C" font-weight="400">Blazor legal workflows · reusable components · API retrieval.</text>
+<path d="M64 832H1536" fill="none" stroke="#CCD7DA" stroke-width="2"/>
+<text x="64" y="874" font-family="Segoe UI, Helvetica, sans-serif" font-size="32" fill="#53676C" font-weight="600">Interface concept</text>
+<text x="480" y="874" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" fill="#53676C" font-weight="400">Fictional sample data</text>
+<rect x="64" y="266" width="538" height="520" rx="8" fill="#26352E" stroke="none"/>
+<text x="100" y="312" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" letter-spacing="2" fill="#CDD6CC" font-weight="600">CASE FILE / FICTIONAL</text>
+<text x="100" y="382" font-family="Georgia, Cambria, serif" font-size="48" fill="#F0F3EB" font-weight="400" letter-spacing="-1.5">Matter 024</text>
+<text x="100" y="436" font-family="Segoe UI, Helvetica, sans-serif" font-size="34" fill="#F0F3EB" font-weight="600">Contract review</text>
+<path d="M100 474H566" fill="none" stroke="#627366" stroke-width="2"/>
+<text x="100" y="527" font-family="Segoe UI, Helvetica, sans-serif" font-size="28" fill="#D3DED3" font-weight="400">Assigned to A. Khan</text>
+<text x="100" y="580" font-family="Segoe UI, Helvetica, sans-serif" font-size="27" fill="#D3DED3" font-weight="400">Stage: Document review</text>
+<text x="100" y="718" font-family="Segoe UI, Helvetica, sans-serif" font-size="25" fill="#D3DED3" font-weight="400">Private sample matter</text>
+<text x="652" y="305" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" letter-spacing="2" fill="#53676C" font-weight="600">REVIEW WORKFLOW</text>
+<rect x="652" y="332" width="884" height="88" rx="6" fill="#FFFFFF" stroke="#CCD7DA"/>
+<rect x="676" y="356" width="40" height="40" rx="20" fill="#646644" stroke="none"/>
+<text x="685" y="385" font-family="Segoe UI, Helvetica, sans-serif" font-size="23" fill="#FFFFFF" font-weight="600">1</text>
+<text x="740" y="386" font-family="Segoe UI, Helvetica, sans-serif" font-size="31" fill="#172B31" font-weight="400">Intake recorded</text>
+<rect x="652" y="443" width="884" height="88" rx="6" fill="#FFFFFF" stroke="#CCD7DA"/>
+<rect x="676" y="467" width="40" height="40" rx="20" fill="#646644" stroke="none"/>
+<text x="685" y="496" font-family="Segoe UI, Helvetica, sans-serif" font-size="23" fill="#FFFFFF" font-weight="600">2</text>
+<text x="740" y="497" font-family="Segoe UI, Helvetica, sans-serif" font-size="31" fill="#172B31" font-weight="400">Documents retrieved</text>
+<rect x="652" y="554" width="884" height="88" rx="6" fill="#FFFFFF" stroke="#CCD7DA"/>
+<rect x="676" y="578" width="40" height="40" rx="20" fill="#ECEEDF" stroke="none"/>
+<text x="685" y="607" font-family="Segoe UI, Helvetica, sans-serif" font-size="23" fill="#646644" font-weight="600">3</text>
+<text x="740" y="608" font-family="Segoe UI, Helvetica, sans-serif" font-size="31" fill="#172B31" font-weight="600">Review in progress</text>
+<rect x="1270" y="576" width="228" height="44" rx="8" fill="#ECEEDF" stroke="none"/>
+<text x="1286" y="606" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" fill="#646644" font-weight="600">Current</text>
+<rect x="652" y="665" width="884" height="88" rx="6" fill="#FFFFFF" stroke="#CCD7DA"/>
+<rect x="676" y="689" width="40" height="40" rx="20" fill="#ECEEDF" stroke="none"/>
+<text x="685" y="718" font-family="Segoe UI, Helvetica, sans-serif" font-size="23" fill="#646644" font-weight="600">4</text>
+<text x="740" y="719" font-family="Segoe UI, Helvetica, sans-serif" font-size="31" fill="#172B31" font-weight="400">Ready for approval</text>
+<text x="1120" y="874" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" fill="#53676C" font-weight="400">.NET 8 / .NET 9</text></svg>

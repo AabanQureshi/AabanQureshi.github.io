@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc"><title id="title">Collaborative Meeting &amp; Coding Platform — Interface concept</title><desc id="desc">Next.js + ASP.NET Core · Monaco editor · LiveKit meetings.. Illustrative interface with fictional sample data.</desc><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#98C8B4"/></marker></defs><rect x="0" y="0" width="1600" height="900" rx="0" fill="#182329" stroke="none"/>
+<text x="64" y="62" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" letter-spacing="2" fill="#B0C1C6" font-weight="600">AABAN REHMAN / SELECTED SYSTEMS</text>
+<text x="1500" y="62" font-family="Consolas, Courier New, monospace" font-size="24" fill="#B0C1C6" font-weight="400">04</text>
+<text x="64" y="150" font-family="Georgia, Cambria, serif" font-size="64" fill="#EDF3F2" font-weight="400" letter-spacing="-1.5">Collaborative Meeting</text>
+<text x="64" y="218" font-family="Georgia, Cambria, serif" font-size="64" fill="#EDF3F2" font-weight="400" letter-spacing="-1.5">&amp; Coding Platform</text>
+<text x="64" y="265" font-family="Segoe UI, Helvetica, sans-serif" font-size="28" fill="#B0C1C6" font-weight="400">Next.js + ASP.NET Core · Monaco editor · LiveKit meetings.</text>
+<path d="M64 832H1536" fill="none" stroke="#455A63" stroke-width="2"/>
+<text x="64" y="874" font-family="Segoe UI, Helvetica, sans-serif" font-size="32" fill="#B0C1C6" font-weight="600">Interface concept</text>
+<text x="480" y="874" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" fill="#B0C1C6" font-weight="400">Fictional sample data</text>
+<rect x="64" y="302" width="1472" height="494" rx="8" fill="#243239" stroke="#455A63"/>
+<rect x="64" y="302" width="288" height="494" rx="8" fill="#202D33" stroke="none"/>
+<text x="92" y="346" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" letter-spacing="2" fill="#B0C1C6" font-weight="600">FILES</text>
+<text x="92" y="397" font-family="Consolas, Courier New, monospace" font-size="25" fill="#EDF3F2" font-weight="400">src/</text>
+<text x="92" y="438" font-family="Consolas, Courier New, monospace" font-size="25" fill="#EDF3F2" font-weight="400">  app/</text>
+<rect x="80" y="452" width="252" height="44" rx="4" fill="#304C42" stroke="none"/>
+<text x="92" y="479" font-family="Consolas, Courier New, monospace" font-size="25" fill="#EDF3F2" font-weight="400">    room.tsx</text>
+<text x="92" y="520" font-family="Consolas, Courier New, monospace" font-size="25" fill="#EDF3F2" font-weight="400">    page.tsx</text>
+<text x="92" y="561" font-family="Consolas, Courier New, monospace" font-size="25" fill="#EDF3F2" font-weight="400">  components/</text>
+<text x="92" y="602" font-family="Consolas, Courier New, monospace" font-size="25" fill="#EDF3F2" font-weight="400">    editor.tsx</text>
+<text x="92" y="725" font-family="Segoe UI, Helvetica, sans-serif" font-size="23" fill="#98C8B4" font-weight="400">Checkout: Amina</text>
+<text x="92" y="764" font-family="Segoe UI, Helvetica, sans-serif" font-size="23" fill="#B0C1C6" font-weight="400">Heartbeat active</text>
+<text x="382" y="348" font-family="Segoe UI, Helvetica, sans-serif" font-size="27" fill="#EDF3F2" font-weight="600">room.tsx</text>
+<text x="860" y="348" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" fill="#B0C1C6" font-weight="400">Monaco editor</text>
+<path d="M352 376H1140" fill="none" stroke="#455A63" stroke-width="2"/>
+<text x="378" y="418" font-family="Consolas, Courier New, monospace" font-size="22" fill="#B0C1C6" font-weight="400">1</text>
+<text x="432" y="418" font-family="Consolas, Courier New, monospace" font-size="24" fill="#98C8B4" font-weight="400">export function Room() {</text>
+<text x="378" y="449" font-family="Consolas, Courier New, monospace" font-size="22" fill="#B0C1C6" font-weight="400">2</text>
+<text x="432" y="449" font-family="Consolas, Courier New, monospace" font-size="24" fill="#EDF3F2" font-weight="400">  const [file, setFile] =</text>
+<text x="378" y="480" font-family="Consolas, Courier New, monospace" font-size="22" fill="#B0C1C6" font-weight="400">3</text>
+<text x="432" y="480" font-family="Consolas, Courier New, monospace" font-size="24" fill="#EDF3F2" font-weight="400">    useState(&quot;room.tsx&quot;);</text>
+<text x="378" y="511" font-family="Consolas, Courier New, monospace" font-size="22" fill="#B0C1C6" font-weight="400">4</text>
+<text x="432" y="511" font-family="Consolas, Courier New, monospace" font-size="24" fill="#EDF3F2" font-weight="400"></text>
+<text x="378" y="542" font-family="Consolas, Courier New, monospace" font-size="22" fill="#B0C1C6" font-weight="400">5</text>
+<text x="432" y="542" font-family="Consolas, Courier New, monospace" font-size="24" fill="#EDF3F2" font-weight="400">  return (</text>
+<text x="378" y="573" font-family="Consolas, Courier New, monospace" font-size="22" fill="#B0C1C6" font-weight="400">6</text>
+<text x="432" y="573" font-family="Consolas, Courier New, monospace" font-size="24" fill="#EDF3F2" font-weight="400">    &lt;Workspace</text>
+<text x="378" y="604" font-family="Consolas, Courier New, monospace" font-size="22" fill="#B0C1C6" font-weight="400">7</text>
+<text x="432" y="604" font-family="Consolas, Courier New, monospace" font-size="24" fill="#EDF3F2" font-weight="400">      activeFile={file}</text>
+<text x="378" y="635" font-family="Consolas, Courier New, monospace" font-size="22" fill="#B0C1C6" font-weight="400">8</text>
+<text x="432" y="635" font-family="Consolas, Courier New, monospace" font-size="24" fill="#EDF3F2" font-weight="400">      onFileChange={setFile}</text>
+<text x="378" y="666" font-family="Consolas, Courier New, monospace" font-size="22" fill="#B0C1C6" font-weight="400">9</text>
+<text x="432" y="666" font-family="Consolas, Courier New, monospace" font-size="24" fill="#EDF3F2" font-weight="400">    /&gt;</text>
+<text x="378" y="697" font-family="Consolas, Courier New, monospace" font-size="22" fill="#B0C1C6" font-weight="400">10</text>
+<text x="432" y="697" font-family="Consolas, Courier New, monospace" font-size="24" fill="#EDF3F2" font-weight="400">  );</text>
+<text x="378" y="728" font-family="Consolas, Courier New, monospace" font-size="22" fill="#B0C1C6" font-weight="400">11</text>
+<text x="432" y="728" font-family="Consolas, Courier New, monospace" font-size="24" fill="#EDF3F2" font-weight="400">}</text>
+<path d="M1150 302L1150 796" fill="none" stroke="#455A63" stroke-width="2"/>
+<text x="1180" y="348" font-family="Segoe UI, Helvetica, sans-serif" font-size="28" fill="#EDF3F2" font-weight="600">In this meeting</text>
+<rect x="1180" y="380" width="326" height="45" rx="5" fill="#2E4048" stroke="none"/>
+<text x="1200" y="411" font-family="Segoe UI, Helvetica, sans-serif" font-size="25" fill="#EDF3F2" font-weight="400">AM  Amina</text>
+<rect x="1180" y="437" width="326" height="45" rx="5" fill="#2E4048" stroke="none"/>
+<text x="1200" y="468" font-family="Segoe UI, Helvetica, sans-serif" font-size="25" fill="#EDF3F2" font-weight="400">HA  Hamza</text>
+<rect x="1180" y="494" width="326" height="45" rx="5" fill="#2E4048" stroke="none"/>
+<text x="1200" y="525" font-family="Segoe UI, Helvetica, sans-serif" font-size="25" fill="#EDF3F2" font-weight="400">SA  Sara</text>
+<text x="1180" y="605" font-family="Segoe UI, Helvetica, sans-serif" font-size="28" fill="#EDF3F2" font-weight="600">Version history</text>
+<text x="1180" y="654" font-family="Segoe UI, Helvetica, sans-serif" font-size="25" fill="#98C8B4" font-weight="400">v03  Current</text>
+<text x="1180" y="701" font-family="Segoe UI, Helvetica, sans-serif" font-size="25" fill="#B0C1C6" font-weight="400">v02  File switching</text>
+<text x="1180" y="748" font-family="Segoe UI, Helvetica, sans-serif" font-size="25" fill="#B0C1C6" font-weight="400">v01  Initial workspace</text>
+<text x="1120" y="874" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" fill="#B0C1C6" font-weight="400">.NET 8 / .NET 9</text></svg>

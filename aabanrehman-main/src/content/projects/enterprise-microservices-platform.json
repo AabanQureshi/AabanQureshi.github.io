@@ -13,8 +13,8 @@
   "visible": true,
   "featured": false,
   "showOnHome": false,
-  "image": "/uploads/projects/enterprise-microservices-platform-concept.webp",
-  "imageAlt": "Concept illustration of modular service blocks and message-bus connections for the enterprise microservices platform",
+  "image": "/uploads/projects/enterprise-microservices-platform-design.webp",
+  "imageAlt": "Conceptual workflow diagram showing service boundaries, owned SQL data, and Azure Service Bus",
   "demoUrl": "",
   "sourceUrl": ""
 }

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc"><title id="title">Background Invoicing — Workflow diagram</title><desc id="desc">Scheduled cadence. Validated batches. Clear processing states.. Conceptual engineering workflow based on the supplied project capabilities.</desc><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#2F6198"/></marker></defs><rect x="0" y="0" width="1600" height="900" rx="0" fill="#F5F7F7" stroke="none"/>
+<text x="64" y="62" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" letter-spacing="2" fill="#53676C" font-weight="600">AABAN REHMAN / SELECTED SYSTEMS</text>
+<text x="1500" y="62" font-family="Consolas, Courier New, monospace" font-size="24" fill="#53676C" font-weight="400">03</text>
+<text x="64" y="150" font-family="Georgia, Cambria, serif" font-size="64" fill="#172B31" font-weight="400" letter-spacing="-1.5">Background Invoicing</text>
+<text x="64" y="206" font-family="Segoe UI, Helvetica, sans-serif" font-size="28" fill="#53676C" font-weight="400">Scheduled cadence. Validated batches. Clear processing states.</text>
+<path d="M64 832H1536" fill="none" stroke="#CCD7DA" stroke-width="2"/>
+<text x="64" y="874" font-family="Segoe UI, Helvetica, sans-serif" font-size="32" fill="#53676C" font-weight="600">Workflow diagram</text>
+<text x="480" y="874" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" fill="#53676C" font-weight="400">Conceptual system flow</text>
+<text x="560" y="295" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" letter-spacing="2" fill="#53676C" font-weight="600">MON</text>
+<path d="M586 330L586 572" fill="none" stroke="#CCD7DA" stroke-width="1"/>
+<text x="760" y="295" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" letter-spacing="2" fill="#53676C" font-weight="600">TUE</text>
+<path d="M786 330L786 572" fill="none" stroke="#CCD7DA" stroke-width="1"/>
+<text x="960" y="295" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" letter-spacing="2" fill="#53676C" font-weight="600">WED</text>
+<path d="M986 330L986 572" fill="none" stroke="#CCD7DA" stroke-width="1"/>
+<text x="1160" y="295" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" letter-spacing="2" fill="#53676C" font-weight="600">THU</text>
+<path d="M1186 330L1186 572" fill="none" stroke="#CCD7DA" stroke-width="1"/>
+<text x="1360" y="295" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" letter-spacing="2" fill="#53676C" font-weight="600">FRI</text>
+<path d="M1386 330L1386 572" fill="none" stroke="#CCD7DA" stroke-width="1"/>
+<text x="72" y="367" font-family="Segoe UI, Helvetica, sans-serif" font-size="32" fill="#172B31" font-weight="600">Daily</text>
+<path d="M320 356H1466" fill="none" stroke="#CCD7DA" stroke-width="2"/>
+<rect x="560" y="337" width="54" height="38" rx="6" fill="#2F6198" stroke="none"/>
+<rect x="760" y="337" width="54" height="38" rx="6" fill="#2F6198" stroke="none"/>
+<rect x="960" y="337" width="54" height="38" rx="6" fill="#2F6198" stroke="none"/>
+<rect x="1160" y="337" width="54" height="38" rx="6" fill="#2F6198" stroke="none"/>
+<rect x="1360" y="337" width="54" height="38" rx="6" fill="#2F6198" stroke="none"/>
+<text x="72" y="431" font-family="Segoe UI, Helvetica, sans-serif" font-size="32" fill="#172B31" font-weight="600">Weekly</text>
+<path d="M320 420H1466" fill="none" stroke="#CCD7DA" stroke-width="2"/>
+<rect x="560" y="401" width="54" height="38" rx="6" fill="#2F6198" stroke="none"/>
+<text x="72" y="495" font-family="Segoe UI, Helvetica, sans-serif" font-size="32" fill="#172B31" font-weight="600">Biweekly</text>
+<path d="M320 484H1466" fill="none" stroke="#CCD7DA" stroke-width="2"/>
+<rect x="760" y="465" width="54" height="38" rx="6" fill="#2F6198" stroke="none"/>
+<text x="72" y="559" font-family="Segoe UI, Helvetica, sans-serif" font-size="32" fill="#172B31" font-weight="600">Monthly</text>
+<path d="M320 548H1466" fill="none" stroke="#CCD7DA" stroke-width="2"/>
+<rect x="1160" y="529" width="54" height="38" rx="6" fill="#2F6198" stroke="none"/>
+<text x="72" y="627" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" letter-spacing="2" fill="#53676C" font-weight="600">INVOICE BATCH LIFECYCLE</text>
+<rect x="64" y="662" width="332" height="126" rx="8" fill="#FFFFFF" stroke="#CCD7DA"/>
+<text x="88" y="710" font-family="Segoe UI, Helvetica, sans-serif" font-size="32" fill="#172B31" font-weight="600">Due items</text>
+<text x="88" y="750" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" fill="#53676C" font-weight="400">Select cadence</text>
+<path d="M403 724L432 724" fill="none" stroke="#2F6198" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="440" y="662" width="332" height="126" rx="8" fill="#FFFFFF" stroke="#CCD7DA"/>
+<text x="464" y="710" font-family="Segoe UI, Helvetica, sans-serif" font-size="32" fill="#172B31" font-weight="600">Validate</text>
+<text x="464" y="750" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" fill="#53676C" font-weight="400">Check billing inputs</text>
+<path d="M779 724L808 724" fill="none" stroke="#2F6198" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="816" y="662" width="332" height="126" rx="8" fill="#FFFFFF" stroke="#CCD7DA"/>
+<text x="840" y="710" font-family="Segoe UI, Helvetica, sans-serif" font-size="32" fill="#172B31" font-weight="600">Build batch</text>
+<text x="840" y="750" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" fill="#53676C" font-weight="400">Group invoices</text>
+<path d="M1155 724L1184 724" fill="none" stroke="#2F6198" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="1192" y="662" width="332" height="126" rx="8" fill="#FFFFFF" stroke="#CCD7DA"/>
+<text x="1216" y="710" font-family="Segoe UI, Helvetica, sans-serif" font-size="32" fill="#172B31" font-weight="600">Process</text>
+<text x="1216" y="750" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" fill="#53676C" font-weight="400">Track batch state</text></svg>

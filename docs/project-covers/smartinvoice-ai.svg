@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc"><title id="title">SmartInvoice AI — Interface concept</title><desc id="desc">Clients, recurring billing, receipt OCR and reporting.. Illustrative interface with fictional sample data.</desc><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#226658"/></marker></defs><rect x="0" y="0" width="1600" height="900" rx="0" fill="#F5F7F7" stroke="none"/>
+<text x="64" y="62" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" letter-spacing="2" fill="#53676C" font-weight="600">AABAN REHMAN / SELECTED SYSTEMS</text>
+<text x="1500" y="62" font-family="Consolas, Courier New, monospace" font-size="24" fill="#53676C" font-weight="400">01</text>
+<text x="64" y="150" font-family="Georgia, Cambria, serif" font-size="64" fill="#172B31" font-weight="400" letter-spacing="-1.5">SmartInvoice AI</text>
+<text x="64" y="206" font-family="Segoe UI, Helvetica, sans-serif" font-size="28" fill="#53676C" font-weight="400">Clients, recurring billing, receipt OCR and reporting.</text>
+<path d="M64 832H1536" fill="none" stroke="#CCD7DA" stroke-width="2"/>
+<text x="64" y="874" font-family="Segoe UI, Helvetica, sans-serif" font-size="32" fill="#53676C" font-weight="600">Interface concept</text>
+<text x="480" y="874" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" fill="#53676C" font-weight="400">Fictional sample data</text>
+<rect x="64" y="250" width="1472" height="544" rx="12" fill="#FFFFFF" stroke="#CCD7DA"/>
+<rect x="64" y="250" width="260" height="544" rx="12" fill="#EAF0ED" stroke="none"/>
+<text x="94" y="296" font-family="Segoe UI, Helvetica, sans-serif" font-size="26" fill="#226658" font-weight="600">INVOICE</text>
+<text x="94" y="324" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" fill="#53676C" font-weight="600">WORKSPACE</text>
+<text x="100" y="355" font-family="Segoe UI, Helvetica, sans-serif" font-size="27" fill="#172B31" font-weight="400">Overview</text>
+<text x="100" y="403" font-family="Segoe UI, Helvetica, sans-serif" font-size="27" fill="#172B31" font-weight="400">Clients</text>
+<rect x="82" y="414" width="222" height="56" rx="6" fill="#FFFFFF" stroke="none"/>
+<text x="100" y="451" font-family="Segoe UI, Helvetica, sans-serif" font-size="27" fill="#172B31" font-weight="600">Invoices</text>
+<text x="100" y="499" font-family="Segoe UI, Helvetica, sans-serif" font-size="27" fill="#172B31" font-weight="400">Recurring</text>
+<text x="100" y="547" font-family="Segoe UI, Helvetica, sans-serif" font-size="27" fill="#172B31" font-weight="400">Reports</text>
+<text x="366" y="312" font-family="Segoe UI, Helvetica, sans-serif" font-size="34" fill="#172B31" font-weight="600">Draft invoice</text>
+<rect x="1290" y="274" width="196" height="44" rx="8" fill="#E6F0EB" stroke="none"/>
+<text x="1306" y="304" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" fill="#226658" font-weight="600">Review OCR</text>
+<path d="M356 338H1504" fill="none" stroke="#CCD7DA" stroke-width="2"/>
+<rect x="364" y="366" width="300" height="286" rx="8" fill="#FFFFFF" stroke="#CCD7DA"/>
+<text x="388" y="414" font-family="Segoe UI, Helvetica, sans-serif" font-size="32" fill="#172B31" font-weight="600">Receipt upload</text>
+<text x="388" y="454" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" fill="#53676C" font-weight="400">Fictional receipt</text>
+<text x="388" y="498" font-family="Segoe UI, Helvetica, sans-serif" font-size="28" fill="#172B31" font-weight="400">Studio supplies</text>
+<text x="388" y="544" font-family="Segoe UI, Helvetica, sans-serif" font-size="26" fill="#53676C" font-weight="400">Paper + ink</text>
+<path d="M388 570H636" fill="none" stroke="#CCD7DA" stroke-width="2"/>
+<text x="388" y="610" font-family="Segoe UI, Helvetica, sans-serif" font-size="36" fill="#172B31" font-weight="600">PKR 8,400</text>
+<text x="388" y="650" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" fill="#226658" font-weight="400">Ready for review</text>
+<path d="M686 505L754 505" fill="none" stroke="#226658" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="782" y="366" width="718" height="350" rx="4" fill="#FFFFFF" stroke="#CCD7DA"/>
+<text x="812" y="406" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" letter-spacing="2" fill="#53676C" font-weight="600">INVOICE INV-014</text>
+<text x="812" y="462" font-family="Segoe UI, Helvetica, sans-serif" font-size="40" fill="#172B31" font-weight="600">River Studio</text>
+<text x="812" y="505" font-family="Segoe UI, Helvetica, sans-serif" font-size="26" fill="#53676C" font-weight="400">Client • October billing</text>
+<path d="M812 538H1468" fill="none" stroke="#CCD7DA" stroke-width="2"/>
+<text x="812" y="577" font-family="Segoe UI, Helvetica, sans-serif" font-size="28" fill="#172B31" font-weight="400">Office supplies</text>
+<text x="1280" y="577" font-family="Consolas, Courier New, monospace" font-size="28" fill="#172B31" font-weight="400">8,400</text>
+<text x="812" y="624" font-family="Segoe UI, Helvetica, sans-serif" font-size="26" fill="#53676C" font-weight="400">Receipt attached</text>
+<text x="812" y="686" font-family="Segoe UI, Helvetica, sans-serif" font-size="28" fill="#172B31" font-weight="600">Total</text>
+<text x="1240" y="686" font-family="Segoe UI, Helvetica, sans-serif" font-size="30" fill="#172B31" font-weight="600">PKR 8,400</text>
+<text x="364" y="758" font-family="Segoe UI, Helvetica, sans-serif" font-size="26" fill="#53676C" font-weight="400">Upload receipt</text>
+<text x="702" y="758" font-family="Segoe UI, Helvetica, sans-serif" font-size="28" fill="#226658" font-weight="400">→</text>
+<text x="768" y="758" font-family="Segoe UI, Helvetica, sans-serif" font-size="26" fill="#53676C" font-weight="400">Review extracted fields</text>
+<text x="1120" y="758" font-family="Segoe UI, Helvetica, sans-serif" font-size="26" fill="#53676C" font-weight="400">→  Create invoice</text>
+<text x="1120" y="874" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" fill="#53676C" font-weight="400">.NET 8 / .NET 9</text></svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc"><title id="title">NAVTTC LMS — Interface concept</title><desc id="desc">Institute learning operations, migration, onboarding and support.. Illustrative interface with fictional sample data.</desc><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#286C79"/></marker></defs><rect x="0" y="0" width="1600" height="900" rx="0" fill="#F5F7F7" stroke="none"/>
+<text x="64" y="62" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" letter-spacing="2" fill="#53676C" font-weight="600">AABAN REHMAN / SELECTED SYSTEMS</text>
+<text x="1500" y="62" font-family="Consolas, Courier New, monospace" font-size="24" fill="#53676C" font-weight="400">07</text>
+<text x="64" y="150" font-family="Georgia, Cambria, serif" font-size="64" fill="#172B31" font-weight="400" letter-spacing="-1.5">NAVTTC LMS</text>
+<text x="64" y="206" font-family="Segoe UI, Helvetica, sans-serif" font-size="28" fill="#53676C" font-weight="400">Institute learning operations, migration, onboarding and support.</text>
+<path d="M64 832H1536" fill="none" stroke="#CCD7DA" stroke-width="2"/>
+<text x="64" y="874" font-family="Segoe UI, Helvetica, sans-serif" font-size="32" fill="#53676C" font-weight="600">Interface concept</text>
+<text x="480" y="874" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" fill="#53676C" font-weight="400">Fictional sample data</text>
+<rect x="64" y="260" width="1472" height="134" rx="8" fill="#203F4B" stroke="none"/>
+<text x="100" y="310" font-family="Segoe UI, Helvetica, sans-serif" font-size="28" fill="#D4E4E8" font-weight="400">Institute workspace</text>
+<text x="100" y="366" font-family="Segoe UI, Helvetica, sans-serif" font-size="40" fill="#F1F6F7" font-weight="600">Central Training Institute</text>
+<text x="1070" y="348" font-family="Segoe UI, Helvetica, sans-serif" font-size="27" fill="#D4E4E8" font-weight="400">Fictional institute</text>
+<text x="64" y="447" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" letter-spacing="2" fill="#53676C" font-weight="600">COURSE / LEARNER OPERATIONS</text>
+<rect x="64" y="476" width="964" height="310" rx="6" fill="#FFFFFF" stroke="#CCD7DA"/>
+<text x="96" y="520" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" letter-spacing="2" fill="#53676C" font-weight="600">COURSE</text>
+<text x="520" y="520" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" letter-spacing="2" fill="#53676C" font-weight="600">COHORT</text>
+<text x="748" y="520" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" letter-spacing="2" fill="#53676C" font-weight="600">ONBOARDING</text>
+<text x="96" y="579" font-family="Segoe UI, Helvetica, sans-serif" font-size="28" fill="#172B31" font-weight="400">Web Development</text>
+<text x="520" y="579" font-family="Consolas, Courier New, monospace" font-size="27" fill="#172B31" font-weight="400">WD-24</text>
+<text x="748" y="579" font-family="Segoe UI, Helvetica, sans-serif" font-size="27" fill="#53676C" font-weight="400">Complete</text>
+<path d="M96 604H994" fill="none" stroke="#CCD7DA" stroke-width="2"/>
+<text x="96" y="656" font-family="Segoe UI, Helvetica, sans-serif" font-size="28" fill="#172B31" font-weight="400">Electrical Skills</text>
+<text x="520" y="656" font-family="Consolas, Courier New, monospace" font-size="27" fill="#172B31" font-weight="400">ES-24</text>
+<text x="748" y="656" font-family="Segoe UI, Helvetica, sans-serif" font-size="27" fill="#53676C" font-weight="400">In review</text>
+<path d="M96 681H994" fill="none" stroke="#CCD7DA" stroke-width="2"/>
+<text x="96" y="733" font-family="Segoe UI, Helvetica, sans-serif" font-size="28" fill="#172B31" font-weight="400">Office Computing</text>
+<text x="520" y="733" font-family="Consolas, Courier New, monospace" font-size="27" fill="#172B31" font-weight="400">OC-24</text>
+<text x="748" y="733" font-family="Segoe UI, Helvetica, sans-serif" font-size="27" fill="#53676C" font-weight="400">Pending</text>
+<rect x="1070" y="434" width="466" height="352" rx="6" fill="#E2F0F1" stroke="none"/>
+<text x="1104" y="487" font-family="Segoe UI, Helvetica, sans-serif" font-size="31" fill="#172B31" font-weight="600">Production support</text>
+<text x="1104" y="548" font-family="Consolas, Courier New, monospace" font-size="24" fill="#286C79" font-weight="400">01</text>
+<text x="1160" y="548" font-family="Segoe UI, Helvetica, sans-serif" font-size="23" fill="#172B31" font-weight="400">Migrate learner records</text>
+<text x="1104" y="607" font-family="Consolas, Courier New, monospace" font-size="24" fill="#286C79" font-weight="400">02</text>
+<text x="1160" y="607" font-family="Segoe UI, Helvetica, sans-serif" font-size="23" fill="#172B31" font-weight="400">Validate course mapping</text>
+<text x="1104" y="666" font-family="Consolas, Courier New, monospace" font-size="24" fill="#286C79" font-weight="400">03</text>
+<text x="1160" y="666" font-family="Segoe UI, Helvetica, sans-serif" font-size="23" fill="#172B31" font-weight="400">Onboard institute staff</text>
+<text x="1104" y="725" font-family="Consolas, Courier New, monospace" font-size="24" fill="#286C79" font-weight="400">04</text>
+<text x="1160" y="725" font-family="Segoe UI, Helvetica, sans-serif" font-size="23" fill="#172B31" font-weight="400">Resolve support requests</text></svg>

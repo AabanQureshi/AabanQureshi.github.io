@@ -13,8 +13,8 @@
   "visible": true,
   "featured": false,
   "showOnHome": false,
-  "image": "/uploads/projects/secure-api-integration-suite-concept.webp",
-  "imageAlt": "Concept illustration of a protected API gateway connecting payment, mail, and address verification services",
+  "image": "/uploads/projects/secure-api-integration-suite-design.webp",
+  "imageAlt": "Conceptual workflow diagram showing OAuth and OIDC authentication, JWT validation, and integration branches",
   "demoUrl": "",
   "sourceUrl": ""
 }

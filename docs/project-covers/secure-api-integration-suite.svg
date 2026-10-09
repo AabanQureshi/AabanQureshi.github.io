@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc"><title id="title">Secure API Integration Suite — Workflow diagram</title><desc id="desc">OAuth / OIDC / JWT · payment, mailing and address verification.. Conceptual engineering workflow based on the supplied project capabilities.</desc><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#735239"/></marker></defs><rect x="0" y="0" width="1600" height="900" rx="0" fill="#F5F7F7" stroke="none"/>
+<text x="64" y="62" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" letter-spacing="2" fill="#53676C" font-weight="600">AABAN REHMAN / SELECTED SYSTEMS</text>
+<text x="1500" y="62" font-family="Consolas, Courier New, monospace" font-size="24" fill="#53676C" font-weight="400">09</text>
+<text x="64" y="150" font-family="Georgia, Cambria, serif" font-size="64" fill="#172B31" font-weight="400" letter-spacing="-1.5">Secure API Integration Suite</text>
+<text x="64" y="206" font-family="Segoe UI, Helvetica, sans-serif" font-size="28" fill="#53676C" font-weight="400">OAuth / OIDC / JWT · payment, mailing and address verification.</text>
+<path d="M64 832H1536" fill="none" stroke="#CCD7DA" stroke-width="2"/>
+<text x="64" y="874" font-family="Segoe UI, Helvetica, sans-serif" font-size="32" fill="#53676C" font-weight="600">Workflow diagram</text>
+<text x="480" y="874" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" fill="#53676C" font-weight="400">Conceptual system flow</text>
+<rect x="64" y="287" width="352" height="134" rx="8" fill="#FFFFFF" stroke="#CCD7DA"/>
+<text x="88" y="335" font-family="Segoe UI, Helvetica, sans-serif" font-size="32" fill="#172B31" font-weight="600">Client</text>
+<text x="88" y="375" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" fill="#53676C" font-weight="400">Request sign-in</text>
+<path d="M430 351L505 351" fill="none" stroke="#735239" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="526" y="287" width="486" height="134" rx="8" fill="#FFFFFF" stroke="#CCD7DA"/>
+<text x="550" y="335" font-family="Segoe UI, Helvetica, sans-serif" font-size="32" fill="#172B31" font-weight="600">OAuth / OIDC</text>
+<text x="550" y="375" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" fill="#53676C" font-weight="400">Authenticate + issue token</text>
+<path d="M1026 351L1100 351" fill="none" stroke="#735239" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="1120" y="287" width="416" height="134" rx="8" fill="#FFFFFF" stroke="#CCD7DA"/>
+<text x="1144" y="335" font-family="Segoe UI, Helvetica, sans-serif" font-size="32" fill="#172B31" font-weight="600">JWT validation</text>
+<text x="1144" y="375" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" fill="#53676C" font-weight="400">Verify access token</text>
+<path d="M1328 432L1328 468" fill="none" stroke="#735239" stroke-width="3"/>
+<path d="M258 468H1328" fill="none" stroke="#735239" stroke-width="3"/>
+<path d="M258 468L258 592" fill="none" stroke="#735239" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="64" y="520" width="1472" height="268" rx="8" fill="#FFFFFF" stroke="#CCD7DA"/>
+<text x="100" y="564" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" letter-spacing="2" fill="#53676C" font-weight="600">AUTHORIZED INTEGRATION BOUNDARY</text>
+<rect x="100" y="600" width="316" height="144" rx="8" fill="#F1E9E2" stroke="#CCD7DA"/>
+<text x="124" y="648" font-family="Segoe UI, Helvetica, sans-serif" font-size="32" fill="#172B31" font-weight="600">API request</text>
+<text x="124" y="688" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" fill="#53676C" font-weight="400">Access checked</text>
+<path d="M434 578H1336" fill="none" stroke="#735239" stroke-width="3"/>
+<path d="M434 578L434 670" fill="none" stroke="#735239" stroke-width="3"/>
+<path d="M420 670H434" fill="none" stroke="#735239" stroke-width="3"/>
+<rect x="558" y="600" width="292" height="144" rx="8" fill="#FFFFFF" stroke="#CCD7DA"/>
+<text x="582" y="648" font-family="Segoe UI, Helvetica, sans-serif" font-size="32" fill="#172B31" font-weight="600">Payment</text>
+<text x="582" y="688" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" fill="#53676C" font-weight="400">Process request</text>
+<path d="M704 578L704 592" fill="none" stroke="#735239" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="874" y="600" width="292" height="144" rx="8" fill="#FFFFFF" stroke="#CCD7DA"/>
+<text x="898" y="648" font-family="Segoe UI, Helvetica, sans-serif" font-size="32" fill="#172B31" font-weight="600">Mailing</text>
+<text x="898" y="688" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" fill="#53676C" font-weight="400">Send message</text>
+<path d="M1020 578L1020 592" fill="none" stroke="#735239" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="1190" y="600" width="292" height="144" rx="8" fill="#FFFFFF" stroke="#CCD7DA"/>
+<text x="1214" y="648" font-family="Segoe UI, Helvetica, sans-serif" font-size="32" fill="#172B31" font-weight="600">Address</text>
+<text x="1214" y="688" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" fill="#53676C" font-weight="400">Verify address</text>
+<path d="M1336 578L1336 592" fill="none" stroke="#735239" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="1036" y="505" font-family="Segoe UI, Helvetica, sans-serif" font-size="25" fill="#53676C" font-weight="400">Authenticated request</text></svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc"><title id="title">QuizSystem AI — Interface concept</title><desc id="desc">Quiz creation, attempts and results · Razor Pages · custom CQRS.. Illustrative interface with fictional sample data.</desc><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#8C3943"/></marker></defs><rect x="0" y="0" width="1600" height="900" rx="0" fill="#F9F7F8" stroke="none"/>
+<text x="64" y="62" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" letter-spacing="2" fill="#53676C" font-weight="600">AABAN REHMAN / SELECTED SYSTEMS</text>
+<text x="1500" y="62" font-family="Consolas, Courier New, monospace" font-size="24" fill="#53676C" font-weight="400">02</text>
+<text x="64" y="150" font-family="Georgia, Cambria, serif" font-size="64" fill="#172B31" font-weight="400" letter-spacing="-1.5">QuizSystem AI</text>
+<text x="64" y="206" font-family="Segoe UI, Helvetica, sans-serif" font-size="28" fill="#53676C" font-weight="400">Quiz creation, attempts and results · Razor Pages · custom CQRS.</text>
+<path d="M64 832H1536" fill="none" stroke="#CCD7DA" stroke-width="2"/>
+<text x="64" y="874" font-family="Segoe UI, Helvetica, sans-serif" font-size="32" fill="#53676C" font-weight="600">Interface concept</text>
+<text x="480" y="874" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" fill="#53676C" font-weight="400">Fictional sample data</text>
+<rect x="64" y="260" width="912" height="528" rx="8" fill="#FFFFFF" stroke="#CCD7DA"/>
+<text x="96" y="310" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" letter-spacing="2" fill="#53676C" font-weight="600">QUIZ BUILDER</text>
+<text x="96" y="368" font-family="Segoe UI, Helvetica, sans-serif" font-size="42" fill="#172B31" font-weight="600">C# fundamentals</text>
+<rect x="764" y="284" width="160" height="44" rx="8" fill="#F6E8EA" stroke="none"/>
+<text x="780" y="314" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" fill="#8C3943" font-weight="600">Draft</text>
+<text x="96" y="418" font-family="Segoe UI, Helvetica, sans-serif" font-size="26" fill="#53676C" font-weight="400">Question 03 / 08</text>
+<path d="M96 443H944" fill="none" stroke="#CCD7DA" stroke-width="2"/>
+<text x="96" y="496" font-family="Segoe UI, Helvetica, sans-serif" font-size="32" fill="#172B31" font-weight="600">Which keyword awaits an asynchronous task?</text>
+<rect x="96" y="524" width="848" height="58" rx="6" fill="#F6E8EA" stroke="#8C3943"/>
+<text x="124" y="563" font-family="Consolas, Courier New, monospace" font-size="25" fill="#53676C" font-weight="400">A</text>
+<text x="188" y="563" font-family="Consolas, Courier New, monospace" font-size="29" fill="#172B31" font-weight="400">await</text>
+<text x="790" y="563" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" fill="#8C3943" font-weight="600">Correct</text>
+<rect x="96" y="594" width="848" height="58" rx="6" fill="#F9F7F8" stroke="#CCD7DA"/>
+<text x="124" y="633" font-family="Consolas, Courier New, monospace" font-size="25" fill="#53676C" font-weight="400">B</text>
+<text x="188" y="633" font-family="Consolas, Courier New, monospace" font-size="29" fill="#172B31" font-weight="400">yield</text>
+<rect x="96" y="664" width="848" height="58" rx="6" fill="#F9F7F8" stroke="#CCD7DA"/>
+<text x="124" y="703" font-family="Consolas, Courier New, monospace" font-size="25" fill="#53676C" font-weight="400">C</text>
+<text x="188" y="703" font-family="Consolas, Courier New, monospace" font-size="29" fill="#172B31" font-weight="400">lock</text>
+<rect x="1010" y="260" width="526" height="528" rx="8" fill="#26333D" stroke="none"/>
+<text x="1046" y="312" font-family="Segoe UI, Helvetica, sans-serif" font-size="32" fill="#F2F5F7" font-weight="600">Attempt review</text>
+<text x="1046" y="368" font-family="Segoe UI, Helvetica, sans-serif" font-size="28" fill="#C5D0D7" font-weight="400">Learner L-021</text>
+<path d="M1046 397H1500" fill="none" stroke="#596672" stroke-width="2"/>
+<text x="1046" y="452" font-family="Segoe UI, Helvetica, sans-serif" font-size="26" fill="#C5D0D7" font-weight="400">Question 03</text>
+<text x="1046" y="506" font-family="Segoe UI, Helvetica, sans-serif" font-size="32" fill="#F2F5F7" font-weight="600">Selected: await</text>
+<text x="1046" y="560" font-family="Segoe UI, Helvetica, sans-serif" font-size="26" fill="#F2F5F7" font-weight="400">Matches answer key</text>
+<path d="M1046 602H1500" fill="none" stroke="#596672" stroke-width="2"/>
+<text x="1046" y="656" font-family="Segoe UI, Helvetica, sans-serif" font-size="29" fill="#F2F5F7" font-weight="400">Review → Results</text>
+<text x="1046" y="730" font-family="Segoe UI, Helvetica, sans-serif" font-size="23" fill="#C5D0D7" font-weight="400">Custom command / query handlers</text>
+<text x="1120" y="874" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" fill="#53676C" font-weight="400">.NET 8 / .NET 9</text></svg>

@@ -13,8 +13,8 @@
   "visible": true,
   "featured": false,
   "showOnHome": false,
-  "image": "/uploads/projects/cloud-infrastructure-cicd-concept.webp",
-  "imageAlt": "Concept illustration of container delivery stages, cloud infrastructure, and service monitoring for CI/CD",
+  "image": "/uploads/projects/cloud-infrastructure-cicd-design.webp",
+  "imageAlt": "Workflow diagram showing build, test, container, deploy, and monitor pipeline stages",
   "demoUrl": "",
   "sourceUrl": ""
 }

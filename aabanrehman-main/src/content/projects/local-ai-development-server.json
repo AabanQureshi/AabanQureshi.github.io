@@ -13,8 +13,8 @@
   "visible": true,
   "featured": false,
   "showOnHome": false,
-  "image": "/uploads/projects/local-ai-development-server-concept.webp",
-  "imageAlt": "Concept illustration of a GPU-equipped local AI server and private remote connectivity",
+  "image": "/uploads/projects/local-ai-development-server-design.webp",
+  "imageAlt": "Conceptual workflow diagram showing private remote access and local Ollama inference on an Ubuntu server",
   "demoUrl": "",
   "sourceUrl": ""
 }

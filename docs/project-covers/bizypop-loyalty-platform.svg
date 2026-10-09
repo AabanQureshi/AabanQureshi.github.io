@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc"><title id="title">BizyPop Loyalty Platform — Interface concept</title><desc id="desc">Tenant-scoped loyalty, shared business membership and location data.. Illustrative interface with fictional sample data.</desc><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#435F9A"/></marker></defs><rect x="0" y="0" width="1600" height="900" rx="0" fill="#F5F7F7" stroke="none"/>
+<text x="64" y="62" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" letter-spacing="2" fill="#53676C" font-weight="600">AABAN REHMAN / SELECTED SYSTEMS</text>
+<text x="1500" y="62" font-family="Consolas, Courier New, monospace" font-size="24" fill="#53676C" font-weight="400">05</text>
+<text x="64" y="150" font-family="Georgia, Cambria, serif" font-size="64" fill="#172B31" font-weight="400" letter-spacing="-1.5">BizyPop Loyalty Platform</text>
+<text x="64" y="206" font-family="Segoe UI, Helvetica, sans-serif" font-size="28" fill="#53676C" font-weight="400">Tenant-scoped loyalty, shared business membership and location data.</text>
+<path d="M64 832H1536" fill="none" stroke="#CCD7DA" stroke-width="2"/>
+<text x="64" y="874" font-family="Segoe UI, Helvetica, sans-serif" font-size="32" fill="#53676C" font-weight="600">Interface concept</text>
+<text x="480" y="874" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" fill="#53676C" font-weight="400">Fictional sample data</text>
+<rect x="64" y="262" width="1472" height="526" rx="8" fill="#FFFFFF" stroke="#CCD7DA"/>
+<rect x="64" y="262" width="352" height="526" rx="8" fill="#E9EEF4" stroke="none"/>
+<text x="96" y="310" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" letter-spacing="2" fill="#53676C" font-weight="600">BUSINESS WORKSPACE</text>
+<text x="96" y="370" font-family="Segoe UI, Helvetica, sans-serif" font-size="36" fill="#172B31" font-weight="600">Cedar Market</text>
+<text x="96" y="418" font-family="Segoe UI, Helvetica, sans-serif" font-size="25" fill="#53676C" font-weight="400">Fictional tenant</text>
+<text x="96" y="494" font-family="Segoe UI, Helvetica, sans-serif" font-size="29" fill="#172B31" font-weight="600">Members</text>
+<text x="96" y="552" font-family="Segoe UI, Helvetica, sans-serif" font-size="29" fill="#172B31" font-weight="400">Loyalty rules</text>
+<text x="96" y="610" font-family="Segoe UI, Helvetica, sans-serif" font-size="29" fill="#172B31" font-weight="400">City / ZIP</text>
+<text x="96" y="668" font-family="Segoe UI, Helvetica, sans-serif" font-size="29" fill="#172B31" font-weight="400">Uploads</text>
+<text x="456" y="319" font-family="Segoe UI, Helvetica, sans-serif" font-size="38" fill="#172B31" font-weight="600">Loyalty members</text>
+<rect x="1290" y="280" width="204" height="44" rx="8" fill="#E8EDF6" stroke="none"/>
+<text x="1306" y="310" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" fill="#435F9A" font-weight="600">Add member</text>
+<text x="456" y="366" font-family="Segoe UI, Helvetica, sans-serif" font-size="27" fill="#53676C" font-weight="400">Membership belongs to this business.</text>
+<path d="M456 397H1496" fill="none" stroke="#CCD7DA" stroke-width="2"/>
+<text x="456" y="446" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" letter-spacing="2" fill="#53676C" font-weight="600">MEMBER</text>
+<text x="840" y="446" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" letter-spacing="2" fill="#53676C" font-weight="600">POINTS</text>
+<text x="1116" y="446" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" letter-spacing="2" fill="#53676C" font-weight="600">REWARD STATE</text>
+<text x="456" y="510" font-family="Segoe UI, Helvetica, sans-serif" font-size="28" fill="#172B31" font-weight="400">M-104 · Sara K.</text>
+<text x="840" y="510" font-family="Consolas, Courier New, monospace" font-size="28" fill="#172B31" font-weight="400">120</text>
+<text x="1116" y="510" font-family="Segoe UI, Helvetica, sans-serif" font-size="28" fill="#53676C" font-weight="400">Available</text>
+<path d="M456 535H1496" fill="none" stroke="#CCD7DA" stroke-width="2"/>
+<text x="456" y="586" font-family="Segoe UI, Helvetica, sans-serif" font-size="28" fill="#172B31" font-weight="400">M-108 · Hamza R.</text>
+<text x="840" y="586" font-family="Consolas, Courier New, monospace" font-size="28" fill="#172B31" font-weight="400">80</text>
+<text x="1116" y="586" font-family="Segoe UI, Helvetica, sans-serif" font-size="28" fill="#53676C" font-weight="400">Collecting</text>
+<path d="M456 611H1496" fill="none" stroke="#CCD7DA" stroke-width="2"/>
+<text x="456" y="662" font-family="Segoe UI, Helvetica, sans-serif" font-size="28" fill="#172B31" font-weight="400">M-112 · Amina S.</text>
+<text x="840" y="662" font-family="Consolas, Courier New, monospace" font-size="28" fill="#172B31" font-weight="400">160</text>
+<text x="1116" y="662" font-family="Segoe UI, Helvetica, sans-serif" font-size="28" fill="#53676C" font-weight="400">Available</text>
+<path d="M456 687H1496" fill="none" stroke="#CCD7DA" stroke-width="2"/>
+<text x="456" y="752" font-family="Segoe UI, Helvetica, sans-serif" font-size="27" fill="#435F9A" font-weight="600">Business ↔ User membership</text>
+<text x="1076" y="752" font-family="Segoe UI, Helvetica, sans-serif" font-size="26" fill="#53676C" font-weight="400">City + ZIP records</text></svg>

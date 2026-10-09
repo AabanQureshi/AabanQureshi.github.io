@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc"><title id="title">Local AI Development Server — Workflow diagram</title><desc id="desc">Private access. Local inference. Ubuntu + RTX 3050.. Conceptual engineering workflow based on the supplied project capabilities.</desc><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#416454"/></marker></defs><rect x="0" y="0" width="1600" height="900" rx="0" fill="#F3F5F2" stroke="none"/>
+<text x="64" y="62" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" letter-spacing="2" fill="#53676C" font-weight="600">AABAN REHMAN / SELECTED SYSTEMS</text>
+<text x="1500" y="62" font-family="Consolas, Courier New, monospace" font-size="24" fill="#53676C" font-weight="400">11</text>
+<text x="64" y="150" font-family="Georgia, Cambria, serif" font-size="64" fill="#172B31" font-weight="400" letter-spacing="-1.5">Local AI Development Server</text>
+<text x="64" y="206" font-family="Segoe UI, Helvetica, sans-serif" font-size="28" fill="#53676C" font-weight="400">Private access. Local inference. Ubuntu + RTX 3050.</text>
+<path d="M64 832H1536" fill="none" stroke="#CCD7DA" stroke-width="2"/>
+<text x="64" y="874" font-family="Segoe UI, Helvetica, sans-serif" font-size="32" fill="#53676C" font-weight="600">Workflow diagram</text>
+<text x="480" y="874" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" fill="#53676C" font-weight="400">Conceptual system flow</text>
+<rect x="64" y="272" width="428" height="516" rx="8" fill="#FFFFFF" stroke="#CCD7DA"/>
+<text x="96" y="318" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" letter-spacing="2" fill="#53676C" font-weight="600">REMOTE ACCESS</text>
+<text x="96" y="383" font-family="Segoe UI, Helvetica, sans-serif" font-size="36" fill="#172B31" font-weight="600">Developer device</text>
+<text x="96" y="430" font-family="Segoe UI, Helvetica, sans-serif" font-size="27" fill="#53676C" font-weight="400">Authorized connection</text>
+<rect x="96" y="498" width="364" height="120" rx="8" fill="#E7EEE8" stroke="#CCD7DA"/>
+<text x="120" y="546" font-family="Segoe UI, Helvetica, sans-serif" font-size="32" fill="#172B31" font-weight="600">Tailscale</text>
+<text x="120" y="586" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" fill="#53676C" font-weight="400">Private network</text>
+<text x="96" y="708" font-family="Segoe UI, Helvetica, sans-serif" font-size="32" fill="#172B31" font-weight="600">Hardened SSH</text>
+<text x="96" y="754" font-family="Segoe UI, Helvetica, sans-serif" font-size="25" fill="#53676C" font-weight="400">Administrative access</text>
+<path d="M507 542L617 542" fill="none" stroke="#416454" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="640" y="272" width="896" height="516" rx="8" fill="#243A30" stroke="none"/>
+<text x="676" y="318" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" letter-spacing="2" fill="#BDCEC1" font-weight="600">LOCAL SERVER BOUNDARY</text>
+<text x="676" y="384" font-family="Segoe UI, Helvetica, sans-serif" font-size="43" fill="#F1F5EE" font-weight="600">Ubuntu server</text>
+<text x="676" y="430" font-family="Segoe UI, Helvetica, sans-serif" font-size="27" fill="#CBDBCE" font-weight="400">RTX 3050 · local inference</text>
+<rect x="676" y="482" width="350" height="150" rx="6" fill="#F2F5EF" stroke="none"/>
+<text x="704" y="535" font-family="Segoe UI, Helvetica, sans-serif" font-size="37" fill="#243A30" font-weight="600">Ollama</text>
+<text x="704" y="585" font-family="Segoe UI, Helvetica, sans-serif" font-size="27" fill="#516957" font-weight="400">Model runtime</text>
+<path d="M1044 558H1108" fill="none" stroke="#BDCEC1" stroke-width="3"/>
+<path d="M1102 551L1114 558L1102 565Z" fill="#BDCEC1"/>
+<rect x="1128" y="482" width="372" height="150" rx="6" fill="#F2F5EF" stroke="none"/>
+<text x="1156" y="535" font-family="Segoe UI, Helvetica, sans-serif" font-size="37" fill="#243A30" font-weight="600">Inference</text>
+<text x="1156" y="585" font-family="Segoe UI, Helvetica, sans-serif" font-size="27" fill="#516957" font-weight="400">Local response</text>
+<text x="676" y="720" font-family="Segoe UI, Helvetica, sans-serif" font-size="30" fill="#F1F5EE" font-weight="400">Request → inference → response</text>
+<text x="676" y="762" font-family="Segoe UI, Helvetica, sans-serif" font-size="25" fill="#CBDBCE" font-weight="400">Compute stays inside the local server.</text></svg>

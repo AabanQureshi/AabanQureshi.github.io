@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc"><title id="title">Enterprise Microservices Platform — Workflow diagram</title><desc id="desc">DDD / vertical slices · ASP.NET Core · EF Core SQL · Docker · OpenAPI.. Conceptual engineering workflow based on the supplied project capabilities.</desc><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#326B76"/></marker></defs><rect x="0" y="0" width="1600" height="900" rx="0" fill="#F5F7F7" stroke="none"/>
+<text x="64" y="62" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" letter-spacing="2" fill="#53676C" font-weight="600">AABAN REHMAN / SELECTED SYSTEMS</text>
+<text x="1500" y="62" font-family="Consolas, Courier New, monospace" font-size="24" fill="#53676C" font-weight="400">08</text>
+<text x="64" y="150" font-family="Georgia, Cambria, serif" font-size="64" fill="#172B31" font-weight="400" letter-spacing="-1.5">Enterprise Microservices Platform</text>
+<text x="64" y="206" font-family="Segoe UI, Helvetica, sans-serif" font-size="28" fill="#53676C" font-weight="400">DDD / vertical slices · ASP.NET Core · EF Core SQL · Docker · OpenAPI.</text>
+<path d="M64 832H1536" fill="none" stroke="#CCD7DA" stroke-width="2"/>
+<text x="64" y="874" font-family="Segoe UI, Helvetica, sans-serif" font-size="32" fill="#53676C" font-weight="600">Workflow diagram</text>
+<text x="480" y="874" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" fill="#53676C" font-weight="400">Conceptual system flow</text>
+<text x="64" y="285" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" letter-spacing="2" fill="#53676C" font-weight="600">ILLUSTRATIVE SERVICE BOUNDARIES</text>
+<rect x="64" y="314" width="468" height="282" rx="8" fill="#FFFFFF" stroke="#CCD7DA"/>
+<text x="88" y="354" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" letter-spacing="2" fill="#53676C" font-weight="600">BOUNDED CONTEXT</text>
+<text x="88" y="410" font-family="Segoe UI, Helvetica, sans-serif" font-size="39" fill="#172B31" font-weight="600">Service A</text>
+<text x="88" y="452" font-family="Segoe UI, Helvetica, sans-serif" font-size="27" fill="#53676C" font-weight="400">Vertical slices</text>
+<path d="M88 478H508" fill="none" stroke="#CCD7DA" stroke-width="2"/>
+<rect x="88" y="500" width="420" height="68" rx="5" fill="#E5EFF0" stroke="none"/>
+<text x="112" y="546" font-family="Segoe UI, Helvetica, sans-serif" font-size="29" fill="#326B76" font-weight="600">Owned SQL data</text>
+<path d="M298 609L298 658" fill="none" stroke="#326B76" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="566" y="314" width="468" height="282" rx="8" fill="#FFFFFF" stroke="#CCD7DA"/>
+<text x="590" y="354" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" letter-spacing="2" fill="#53676C" font-weight="600">BOUNDED CONTEXT</text>
+<text x="590" y="410" font-family="Segoe UI, Helvetica, sans-serif" font-size="39" fill="#172B31" font-weight="600">Service B</text>
+<text x="590" y="452" font-family="Segoe UI, Helvetica, sans-serif" font-size="27" fill="#53676C" font-weight="400">Vertical slices</text>
+<path d="M590 478H1010" fill="none" stroke="#CCD7DA" stroke-width="2"/>
+<rect x="590" y="500" width="420" height="68" rx="5" fill="#E5EFF0" stroke="none"/>
+<text x="614" y="546" font-family="Segoe UI, Helvetica, sans-serif" font-size="29" fill="#326B76" font-weight="600">Owned SQL data</text>
+<path d="M800 609L800 658" fill="none" stroke="#326B76" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="1068" y="314" width="468" height="282" rx="8" fill="#FFFFFF" stroke="#CCD7DA"/>
+<text x="1092" y="354" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" letter-spacing="2" fill="#53676C" font-weight="600">BOUNDED CONTEXT</text>
+<text x="1092" y="410" font-family="Segoe UI, Helvetica, sans-serif" font-size="39" fill="#172B31" font-weight="600">Service C</text>
+<text x="1092" y="452" font-family="Segoe UI, Helvetica, sans-serif" font-size="27" fill="#53676C" font-weight="400">Vertical slices</text>
+<path d="M1092 478H1512" fill="none" stroke="#CCD7DA" stroke-width="2"/>
+<rect x="1092" y="500" width="420" height="68" rx="5" fill="#E5EFF0" stroke="none"/>
+<text x="1116" y="546" font-family="Segoe UI, Helvetica, sans-serif" font-size="29" fill="#326B76" font-weight="600">Owned SQL data</text>
+<path d="M1302 609L1302 658" fill="none" stroke="#326B76" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="64" y="674" width="1472" height="110" rx="8" fill="#203F49" stroke="none"/>
+<text x="100" y="742" font-family="Segoe UI, Helvetica, sans-serif" font-size="38" fill="#EDF4F5" font-weight="600">Azure Service Bus</text>
+<text x="632" y="742" font-family="Segoe UI, Helvetica, sans-serif" font-size="30" fill="#D0E0E4" font-weight="400">Publish events</text>
+<text x="1040" y="742" font-family="Segoe UI, Helvetica, sans-serif" font-size="30" fill="#D0E0E4" font-weight="400">Consume messages</text>
+<text x="1120" y="874" font-family="Segoe UI, Helvetica, sans-serif" font-size="24" fill="#53676C" font-weight="400">.NET 8 / .NET 9</text></svg>
