@@ -1,0 +1,20 @@
+{
+  "name": "BizyPop Loyalty Platform",
+  "category": "Business platforms",
+  "kind": "generic",
+  "summary": "Tenant-aware data and deployment workflows for a loyalty SaaS.",
+  "description": "Backend and infrastructure work on BizyPop, a multi-tenant loyalty platform. The work includes business-user relationships, geographic reference data, and deployment routines that preserve uploaded files.",
+  "role": "Backend data modelling & deployment workflows",
+  "technologies": "ASP.NET Core, .NET 8 / .NET 9, EF Core, SQL Server, rsync",
+  "challenge": "Businesses can have multiple users, and users can belong to multiple businesses. Deployments must also protect uploaded files while updating the application.",
+  "approach": "Represent business-user membership with an explicit many-to-many schema and resolve relationships through explicit queries. Maintain city and ZIP-code reference data, and use rsync deployments to preserve wwwroot/uploads.",
+  "features": ["Multi-tenant business-user membership", "City and ZIP-code reference data", "Explicit EF Core joins and DTO projections", "Upload-preserving deployments"],
+  "order": 5,
+  "visible": true,
+  "featured": false,
+  "showOnHome": false,
+  "image": "",
+  "imageAlt": "",
+  "demoUrl": "",
+  "sourceUrl": ""
+}

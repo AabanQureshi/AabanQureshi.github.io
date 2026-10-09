@@ -1,0 +1,20 @@
+{
+  "name": "Cloud Infrastructure & CI/CD",
+  "category": "Infrastructure & delivery",
+  "kind": "generic",
+  "summary": "Repeatable deployments for enterprise .NET services.",
+  "description": "Infrastructure and delivery work for enterprise .NET services, including AWS virtual machines, YAML-based CI/CD workflows, containerisation, monitoring, and performance tuning.",
+  "role": "Infrastructure management & deployment automation",
+  "technologies": ".NET 8 / .NET 9, AWS virtual machines, Docker, YAML pipelines, CI/CD, monitoring",
+  "challenge": "Production services need predictable deployments and operational visibility as changes move from development into live environments.",
+  "approach": "Manage virtual-machine infrastructure and automate delivery through YAML pipelines, with monitoring and performance tuning to support ongoing operations.",
+  "features": ["AWS virtual-machine management", "YAML-based delivery workflows", "Docker deployment tooling", "Monitoring and performance tuning"],
+  "order": 10,
+  "visible": true,
+  "featured": false,
+  "showOnHome": false,
+  "image": "",
+  "imageAlt": "",
+  "demoUrl": "",
+  "sourceUrl": ""
+}

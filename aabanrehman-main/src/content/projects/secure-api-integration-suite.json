@@ -1,0 +1,20 @@
+{
+  "name": "Secure API & Integration Suite",
+  "category": "APIs & integrations",
+  "kind": "generic",
+  "summary": "Secure application APIs connected to external services.",
+  "description": "Development and maintenance of authenticated REST APIs and third-party integrations. The work includes payment, mailing, and address verification services alongside OAuth2, OpenID Connect, and JWT authentication.",
+  "role": "API development, authentication & integrations",
+  "technologies": "ASP.NET Core, .NET 8 / .NET 9, OAuth2, OpenID Connect, JWT, REST APIs, OpenAPI",
+  "challenge": "External services have different authentication models and response contracts, while application APIs need a consistent security boundary.",
+  "approach": "Use authenticated API endpoints with clear request and response contracts, implement the required third-party integrations, and document the interfaces through OpenAPI.",
+  "features": ["OAuth2 and OpenID Connect authentication", "JWT-protected APIs", "Payment and mailing integrations", "Address verification integration"],
+  "order": 9,
+  "visible": true,
+  "featured": false,
+  "showOnHome": false,
+  "image": "",
+  "imageAlt": "",
+  "demoUrl": "",
+  "sourceUrl": ""
+}

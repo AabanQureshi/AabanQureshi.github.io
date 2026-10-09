@@ -1,0 +1,20 @@
+{
+  "name": "Local AI Development Server",
+  "category": "AI & infrastructure",
+  "kind": "generic",
+  "summary": "A local-first environment for working with language models.",
+  "description": "A personal Ubuntu server with an RTX 3050 GPU and Ollama for local language-model development. Tailscale provides private remote connectivity, with hardened SSH access.",
+  "role": "Personal infrastructure setup & administration",
+  "technologies": "Ubuntu Linux, NVIDIA RTX 3050, Ollama, Tailscale, SSH",
+  "challenge": "Local model experimentation needs usable GPU hardware and convenient remote access while keeping the server's access controlled.",
+  "approach": "Run models locally through Ollama on the Ubuntu GPU server and use Tailscale for private connectivity. Harden SSH and expose access selectively through the private network.",
+  "features": ["Local language models with Ollama", "GPU-equipped Ubuntu environment", "Private connectivity through Tailscale", "Hardened SSH access"],
+  "order": 11,
+  "visible": true,
+  "featured": false,
+  "showOnHome": false,
+  "image": "",
+  "imageAlt": "",
+  "demoUrl": "",
+  "sourceUrl": ""
+}

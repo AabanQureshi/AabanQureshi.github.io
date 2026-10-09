@@ -1,0 +1,20 @@
+{
+  "name": "Enterprise Microservices Platform",
+  "category": "Backend engineering",
+  "kind": "generic",
+  "summary": "Distributed services with clear business boundaries.",
+  "description": "Architecture and delivery work on a distributed platform of ASP.NET Core APIs. The platform uses Domain-Driven Design and Vertical Slice Architecture to organise business capabilities and isolate responsibilities.",
+  "role": "Backend architecture & API development",
+  "technologies": "ASP.NET Core, .NET 8 / .NET 9, EF Core, SQL Server, Azure Service Bus, Docker, OpenAPI",
+  "challenge": "Large application domains need service boundaries that support growth without tightly coupling every feature and integration.",
+  "approach": "Organise services around business domains and vertical feature slices, using messaging for service communication and containerisation for delivery. Document API contracts through OpenAPI.",
+  "features": ["Domain-oriented service boundaries", "Vertical feature slices", "Azure Service Bus integration", "Containerised APIs with OpenAPI documentation"],
+  "order": 8,
+  "visible": true,
+  "featured": false,
+  "showOnHome": false,
+  "image": "",
+  "imageAlt": "",
+  "demoUrl": "",
+  "sourceUrl": ""
+}

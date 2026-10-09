@@ -1,0 +1,20 @@
+{
+  "name": "WooqLaw",
+  "category": "Legal technology",
+  "kind": "generic",
+  "summary": "Blazor interfaces backed by clear, maintainable APIs.",
+  "description": "Full-stack feature development for a legal technology platform, combining a Blazor frontend with an ASP.NET Core backend. Contributions include reusable interface components and API retrieval improvements.",
+  "role": "Full-stack development & API optimisation",
+  "technologies": "Blazor, ASP.NET Core, .NET 8 / .NET 9, REST APIs, SQL Server, Clean Architecture",
+  "challenge": "Legal workflows need consistent interfaces and responsive data retrieval as features grow across the application.",
+  "approach": "Build reusable Blazor components and improve backend retrieval paths while keeping responsibilities separated through Clean Architecture and SOLID principles.",
+  "features": ["Reusable Blazor components", "ASP.NET Core API features", "Data retrieval optimisation"],
+  "order": 6,
+  "visible": true,
+  "featured": false,
+  "showOnHome": false,
+  "image": "",
+  "imageAlt": "",
+  "demoUrl": "",
+  "sourceUrl": ""
+}

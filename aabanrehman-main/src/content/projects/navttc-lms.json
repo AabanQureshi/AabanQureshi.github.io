@@ -1,0 +1,20 @@
+{
+  "name": "NAVTTC LMS",
+  "category": "Education & assessment",
+  "kind": "generic",
+  "summary": "Taking a learning management system into production.",
+  "description": "Production go-live work for a nationwide learning management system in partnership with NAVTTC. Responsibilities covered data migration, deployment, institute onboarding, and post-launch support.",
+  "role": "Production rollout & project leadership",
+  "technologies": ".NET 8 / .NET 9, SQL Server, data migration, deployment",
+  "challenge": "A learning platform rollout must bring existing data, participating institutes, and operational support into a reliable production environment.",
+  "approach": "Coordinate production readiness, migrate real data, deploy the application, support institute onboarding, and resolve issues after launch in collaboration with stakeholders.",
+  "features": ["Production deployment", "Real-data migration", "Institute onboarding", "Post-launch support"],
+  "order": 7,
+  "visible": true,
+  "featured": false,
+  "showOnHome": false,
+  "image": "",
+  "imageAlt": "",
+  "demoUrl": "",
+  "sourceUrl": ""
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Collaborative Meeting & Coding Platform",
+  "category": "Real-time collaboration",
+  "kind": "generic",
+  "summary": "Meet, discuss, and work on code in one shared workspace.",
+  "description": "A final-year project combining online meetings with a collaborative coding workspace. The platform brings together a Next.js interface, an ASP.NET Core backend, a Monaco editor, and LiveKit integration.",
+  "role": "Full-stack development & collaboration workflows",
+  "technologies": "Next.js, ASP.NET Core, .NET 8 / .NET 9, Monaco Editor, LiveKit, GitHub Actions, Vercel",
+  "challenge": "Meeting participants need to move between conversations and code while keeping file ownership, session activity, and previous versions understandable.",
+  "approach": "Combine the meeting experience with a file-based Monaco workspace. Use checkout and heartbeat lifecycle handling to manage editing sessions, with version history for reviewing earlier work. Deploy the frontend through GitHub Actions to Vercel.",
+  "features": ["Meeting integration with LiveKit", "Monaco editor with file switching", "Version history", "Heartbeat and checkout lifecycle handling"],
+  "order": 4,
+  "visible": true,
+  "featured": false,
+  "showOnHome": false,
+  "image": "",
+  "imageAlt": "",
+  "demoUrl": "",
+  "sourceUrl": ""
+}
