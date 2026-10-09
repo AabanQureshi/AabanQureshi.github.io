@@ -91,7 +91,6 @@ export function FloatingGeometry({ quality = 'medium', reducedMotion = false, co
   const geometries = useMemo(() => {
     return Array.from({ length: geometryCount }, (_, i) => {
       const geoType = GEOMETRY_TYPES[i % GEOMETRY_TYPES.length];
-      // @ts-ignore - dynamic geometry creation
       return new THREE[geoType.type](...geoType.args);
     });
   }, [geometryCount]);

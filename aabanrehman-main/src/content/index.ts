@@ -1,3 +1,7 @@
+export type ProjectMedia =
+  | { type: 'image'; src: string; alt: string; caption?: string }
+  | { type: 'video'; src: string; poster: string; caption: string; captions?: string };
+
 export interface Project {
   id: string;
   name: string;
@@ -14,6 +18,7 @@ export interface Project {
   showOnHome?: boolean;
   image?: string;
   imageAlt?: string;
+  media?: ProjectMedia[];
   demoUrl?: string;
   sourceUrl?: string;
   order: number;

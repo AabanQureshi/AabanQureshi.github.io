@@ -2,6 +2,7 @@ import { readFile, readdir, stat } from 'node:fs/promises';
 import { resolve, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { z } from 'zod';
+import assert from 'node:assert/strict';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const content = resolve(root, 'src/content');
@@ -12,6 +13,16 @@ const url = z.string().url().refine(value => /^https:\/\//i.test(value), 'Use an
 const optionalUrl = z.union([url, z.literal('')]).nullish();
 const asset = z.string().regex(/^\/(?!\/)[^\\?#]+$/, 'Use an uploaded file path starting with /');
 const optionalAsset = z.union([asset, z.literal('')]).nullish();
+const imageAsset = asset.refine(value => /\.(png|jpe?g|webp|avif|gif|svg)$/i.test(value), 'Use an image file');
+const projectMedia = z.discriminatedUnion('type', [
+  z.object({ type: z.literal('image'), src: imageAsset, alt: text, caption: optionalText }),
+  z.object({ type: z.literal('video'), src: asset.refine(value => /\.(mp4|webm)$/i.test(value), 'Use MP4 or WebM'), poster: imageAsset, caption: text, captions: asset.refine(value => /\.vtt$/i.test(value), 'Use WebVTT captions').optional() }),
+]);
+assert(projectMedia.safeParse({ type: 'image', src: '/media/screen.webp', alt: 'Invoice dashboard' }).success);
+assert(projectMedia.safeParse({ type: 'video', src: '/media/demo.mp4', poster: '/media/poster.webp', caption: 'Invoice demo' }).success);
+assert(!projectMedia.safeParse({ type: 'image', src: '/media/screen.webp', alt: ' ' }).success);
+assert(!projectMedia.safeParse({ type: 'video', src: '/media/demo.mp4', caption: 'Demo' }).success);
+assert(!projectMedia.safeParse({ type: 'video', src: '/media/demo.exe', poster: '/media/poster.webp', caption: 'Demo' }).success);
 const ordered = { order: z.number().int().nonnegative(), visible: z.boolean().optional() };
 const schemas = {
   projects: z.object({
@@ -19,6 +30,7 @@ const schemas = {
     technologies: text, challenge: text, approach: text,
     features: z.array(text).optional(), kind: z.enum(['invoice', 'quiz', 'billing', 'generic']).optional(),
     featured: z.boolean().optional(), image: optionalAsset, imageAlt: optionalText,
+    media: z.array(projectMedia).optional(),
     demoUrl: optionalUrl, sourceUrl: optionalUrl, ...ordered,
   }).refine(item => !item.image || Boolean(item.imageAlt?.trim()), { message: 'Add alternative text for the project image', path: ['imageAlt'] }),
   certificates: z.object({
@@ -48,9 +60,13 @@ let checked = 0;
 async function validate(file, schema) {
   try {
     const entry = schema.parse(JSON.parse(await readFile(file, 'utf8')));
-    for (const key of ['image', 'file', 'photo']) {
-      if (!entry[key]) continue;
-      const target = resolve(publicRoot, '.' + entry[key]);
+    const assets = ['image', 'file', 'photo'].map(key => [key, entry[key]]);
+    for (const [index, item] of (entry.media || []).entries()) {
+      for (const key of ['src', 'poster', 'captions']) assets.push([`media.${index}.${key}`, item[key]]);
+    }
+    for (const [key, path] of assets) {
+      if (!path) continue;
+      const target = resolve(publicRoot, '.' + path);
       const within = relative(publicRoot, target);
       if (within === '..' || within.startsWith('..' + sep) || !within) throw new Error(`${key}: file must be inside public/`);
       if (!(await stat(target)).isFile()) throw new Error(`${key}: upload is not a file`);

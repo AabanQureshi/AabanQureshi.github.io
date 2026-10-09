@@ -5,6 +5,7 @@ import { Dialog, DialogContent, DialogDescription, DialogTitle, DialogTrigger } 
 import { projects, certificates, experience, profile, services, resume, type Project } from '@/content';
 import { FeedbackSection } from './PortfolioPages';
 import './portfolio.css';
+import { ProjectGallery } from './ProjectGallery';
 
 
 
@@ -35,7 +36,12 @@ function ProjectArtwork({ project }: { project: Project }) {
 }
 
 export function ProjectCard({ project }: { project: Project }) {
-  return <article className={`work-item ${project.featured ? 'work-featured' : ''}`}><Dialog><DialogTrigger asChild><button className="project-cover" aria-label={`Read about ${project.name}`}><ProjectArtwork project={project} /><span className="project-open"><ArrowUpRight size={23} /></span></button></DialogTrigger><DialogContent className="portfolio-dialog"><span className="muted">{project.category}</span><DialogTitle>{project.name}</DialogTitle><DialogDescription>{project.description}</DialogDescription><h3>The problem</h3><p>{project.challenge}</p><h3>The approach</h3><p>{project.approach}</p><ul>{(project.features || []).map(f => <li key={f}>{f}</li>)}</ul><div className="project-links">{project.demoUrl && <a className="text-link" href={project.demoUrl} target="_blank" rel="noopener noreferrer">Visit project <ArrowUpRight size={16} /></a>}{project.sourceUrl && <a className="text-link" href={project.sourceUrl} target="_blank" rel="noopener noreferrer">View source <Github size={16} /></a>}</div><div className="dialog-meta"><b>My contribution</b><p>{project.role}</p><b>Technology</b><p>{project.technologies}</p></div><a className="p-button" href={`mailto:${email}?subject=${encodeURIComponent(`Let's discuss ${project.name}`)}`}>Discuss a similar project <ArrowUpRight size={17} /></a></DialogContent></Dialog><div className="project-meta"><h3>{project.name}</h3><span>{project.category}</span></div><p>{project.summary}</p></article>;
+  const mediaCount = (['image', 'video'] as const).map(type => {
+    const count = project.media?.filter(item => item.type === type).length || 0;
+    const label = type === 'image' ? 'screenshot' : 'video';
+    return count ? `${count} ${label}${count === 1 ? '' : 's'}` : '';
+  }).filter(Boolean).join(' · ');
+  return <article className={`work-item ${project.featured ? 'work-featured' : ''}`}><Dialog><DialogTrigger asChild><button className="project-cover" aria-label={`Read about ${project.name}`}><ProjectArtwork project={project} /><span className="project-open"><ArrowUpRight size={23} /></span></button></DialogTrigger><DialogContent className="portfolio-dialog"><span className="muted">{project.category}</span><DialogTitle>{project.name}</DialogTitle><DialogDescription>{project.description}</DialogDescription><ProjectGallery media={project.media?.length ? project.media : project.image ? [{ type: 'image', src: project.image, alt: project.imageAlt || `${project.name} screenshot` }] : []} /><h3>The problem</h3><p>{project.challenge}</p><h3>The approach</h3><p>{project.approach}</p><ul>{(project.features || []).map(f => <li key={f}>{f}</li>)}</ul><div className="project-links">{project.demoUrl && <a className="text-link" href={project.demoUrl} target="_blank" rel="noopener noreferrer">Visit project <ArrowUpRight size={16} /></a>}{project.sourceUrl && <a className="text-link" href={project.sourceUrl} target="_blank" rel="noopener noreferrer">View source <Github size={16} /></a>}</div><div className="dialog-meta"><b>My contribution</b><p>{project.role}</p><b>Technology</b><p>{project.technologies}</p></div><a className="p-button" href={`mailto:${email}?subject=${encodeURIComponent(`Let's discuss ${project.name}`)}`}>Discuss a similar project <ArrowUpRight size={17} /></a></DialogContent></Dialog><div className="project-meta"><h3>{project.name}</h3><span>{project.category}</span></div><p>{project.summary}</p>{mediaCount && <small className="project-media-count">{mediaCount}</small>}</article>;
 }
 
 function Contact() {

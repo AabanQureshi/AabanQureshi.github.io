@@ -46,6 +46,38 @@ npm run dev
 
 ## Building for Production
 
+### Project screenshots and videos
+
+Put assets in `aabanrehman-main/public/media/projects/<project-name>/` and edit the corresponding JSON in `aabanrehman-main/src/content/projects/`.
+`image` selects the card thumbnail independently of the gallery; set `imageAlt` to describe it. Keep this cover an image, including when showcasing a video.
+Add `media` entries in the order visitors should see them:
+
+```json
+{
+  "image": "/media/projects/smartinvoice/cover.webp",
+  "imageAlt": "SmartInvoice invoice dashboard",
+  "media": [
+    {
+      "type": "image",
+      "src": "/media/projects/smartinvoice/dashboard.webp",
+      "alt": "Invoice dashboard with monthly totals and outstanding payments",
+      "caption": "Monthly billing overview"
+    },
+    {
+      "type": "video",
+      "src": "/media/projects/smartinvoice/demo.mp4",
+      "poster": "/media/projects/smartinvoice/demo-poster.webp",
+      "caption": "Creating an invoice",
+      "captions": "/media/projects/smartinvoice/demo.vtt"
+    }
+  ]
+}
+```
+
+Merge these fields into the existing project JSON; the example is not a complete project entry. Videos accept MP4 or WebM. `captions` is optional; provide English WebVTT captions when the demo includes speech. Use compressed, short demos and remove private customer data from recordings.
+The gallery loads videos only on playback, supports keyboard buttons and arrow/Home/End navigation in the thumbnail strip, and offers fullscreen images. Existing image-only projects show their cover in the popup. Projects without media keep their generated artwork.
+`npm run validate:content` checks media fields and verifies every referenced local asset exists before deployment. No new dependency or upload editor is needed.
+
 ```bash
 cd aabanrehman-main
 npm run build
