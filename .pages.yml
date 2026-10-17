@@ -19,6 +19,7 @@ media:
       - jpg
       - jpeg
       - webp
+      - svg
   - name: resumes
     label: Résumés
     input: aabanrehman-main/public/uploads/resumes
@@ -79,6 +80,10 @@ content:
         label: Category
         type: string
         required: true
+      - name: status
+        label: Project context / status
+        type: string
+        description: For example Design concept, Personal project, or Production contribution. Describe the actual context.
       - name: summary
         label: Card summary
         type: text
@@ -197,6 +202,12 @@ content:
       - name: image
         label: Certificate image
         type: image
+        options:
+          media: certificates
+      - name: issuerLogo
+        label: Issuer logo (fallback artwork)
+        type: image
+        description: Choose microsoft-logo.svg or meta-logo.svg from certificate media, or upload another issuer logo. An actual certificate image takes priority. Use the real issuer only.
         options:
           media: certificates
   - name: experience

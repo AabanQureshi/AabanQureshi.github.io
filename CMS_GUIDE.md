@@ -47,13 +47,23 @@ Validated initial content, TypeScript and production build. Browser checks cover
 
 The homepage shows at most three projects and services. Use Include on homepage to select entries; project display order determines which three are shown. The Projects page shows six entries per page with category filtering. Services has a full description field.
 
-Experience and education/certificates use keyboard-focusable scrolling regions.
+Experience and education use natural page scrolling; certificates have a dedicated section and directory.
 
 Feedback submissions go to a dedicated EmailJS template when VITE_EMAILJS_FEEDBACK_TEMPLATE_ID is configured together with the existing service/public key. Template parameters: from_name, from_email, message, publish_consent, publish_email_consent. Until configured, the form explicitly opens an email draft instead. No submissions are stored automatically in the public repository.
 
 Review consent in the received message before adding an item under Approved client feedback. Only approved entries with publication consent render. Enter Public email only when the client separately opted into publishing it. Do not put private feedback, private emails, or consent evidence in this public CMS; retain the original message privately.
 
-Production builds generate separate route entry HTML and a sitemap for GitHub Pages. After publishing, verify aabanrehman.me in Google Search Console, submit sitemap.xml, and request indexing for the homepage. No search-console verification has been performed by this implementation.
+Production builds generate rendered route HTML and a sitemap for GitHub Pages. Google Search Console and Bing Webmaster Tools can use this sitemap to discover the site. See the current search setup below.
+
+## AI workflow concepts, issuer artwork, and search pages
+
+The profile now leads with AI engineering and workflow automation. Two illustrative workflow records are included under Projects. Keep their Project context / status as `Design concept` until implemented; do not present sample workflows as deployed client work.
+
+For each certificate, upload the actual certificate under Certificate image when available. Otherwise choose an Issuer logo from the certificate media library. `microsoft-logo.svg` and `meta-logo.svg` are included. The actual certificate image takes priority, with the logo as fallback. Choose only the actual issuer; existing credentials are Microsoft-issued.
+
+Builds pre-render all visible project detail pages automatically from the project filenames, plus About, AI Engineering, Workflow Automation, Projects, Services, and Certificates. Keep filenames stable to preserve indexed URLs. Every page has metadata, structured data, and a canonical URL; indexable pages enter `/sitemap.xml`. The feedback form stays available with `noindex`.
+
+Search Console already has the Google property verified. Bing ownership uses the public `msvalidate.01` tag in `index.html`; keep it after verification. Search engines decide when to crawl and whether to index or cite the pages.
 
 ## Shared email templates (current configuration)
 

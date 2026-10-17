@@ -13,7 +13,7 @@
     "Receipt processing with OCR",
     "Client management and reporting"
   ],
-  "order": 1,
+  "order": 2,
   "visible": true,
   "featured": true,
   "image": "/uploads/projects/smartinvoice-ai-design.webp",

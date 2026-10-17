@@ -29,12 +29,12 @@ const schemas = {
     name: text, category: text, summary: text, description: text, role: text,
     technologies: text, challenge: text, approach: text,
     features: z.array(text).optional(), kind: z.enum(['invoice', 'quiz', 'billing', 'generic']).optional(),
-    featured: z.boolean().optional(), image: optionalAsset, imageAlt: optionalText,
+    featured: z.boolean().optional(), image: optionalAsset, imageAlt: optionalText, status: optionalText,
     media: z.array(projectMedia).optional(),
     demoUrl: optionalUrl, sourceUrl: optionalUrl, ...ordered,
   }).refine(item => !item.image || Boolean(item.imageAlt?.trim()), { message: 'Add alternative text for the project image', path: ['imageAlt'] }),
   certificates: z.object({
-    title: text, issuer: text, date: optionalText, url: optionalUrl, image: optionalAsset, ...ordered,
+    title: text, issuer: text, date: optionalText, url: optionalUrl, image: optionalAsset, issuerLogo: optionalAsset, ...ordered,
   }).refine(item => item.visible !== true || Boolean(item.url || item.image), { message: 'A visible certificate needs a credential URL or uploaded image', path: ['url'] }),
   experience: z.object({ company: text, role: text, date: text, text, ...ordered }),
   profile: z.object({
@@ -60,7 +60,7 @@ let checked = 0;
 async function validate(file, schema) {
   try {
     const entry = schema.parse(JSON.parse(await readFile(file, 'utf8')));
-    const assets = ['image', 'file', 'photo'].map(key => [key, entry[key]]);
+    const assets = ['image', 'file', 'photo', 'issuerLogo'].map(key => [key, entry[key]]);
     for (const [index, item] of (entry.media || []).entries()) {
       for (const key of ['src', 'poster', 'captions']) assets.push([`media.${index}.${key}`, item[key]]);
     }

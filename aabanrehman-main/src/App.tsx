@@ -6,9 +6,22 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import { ProjectsPage, CertificatesPage, ServicesPage, FeedbackPage } from './components/portfolio/PortfolioPages';
+import { ProjectsPage, ProjectPage, CertificatesPage, ServicesPage, FeedbackPage, AboutPage, AIServicePage } from './components/portfolio/PortfolioPages';
 
 const queryClient = new QueryClient();
+
+export const PortfolioRoutes = () => <Routes>
+  <Route path="/" element={<Index />} />
+  <Route path="/projects" element={<ProjectsPage />} />
+  <Route path="/projects/:slug" element={<ProjectPage />} />
+  <Route path="/certificates" element={<CertificatesPage />} />
+  <Route path="/services" element={<ServicesPage />} />
+  <Route path="/about" element={<AboutPage />} />
+  <Route path="/ai-engineering" element={<AIServicePage kind="engineering" />} />
+  <Route path="/workflow-automation" element={<AIServicePage kind="automation" />} />
+  <Route path="/feedback" element={<FeedbackPage />} />
+  <Route path="*" element={<NotFound />} />
+</Routes>;
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -17,15 +30,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/projects" element={<ProjectsPage />} />
-            <Route path="/certificates" element={<CertificatesPage />} />
-            <Route path="/services" element={<ServicesPage />} />
-            <Route path="/feedback" element={<FeedbackPage />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <PortfolioRoutes />
         </BrowserRouter>
       </TooltipProvider>
     </ThemeProvider>

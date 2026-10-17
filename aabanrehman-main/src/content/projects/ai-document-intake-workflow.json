@@ -1,0 +1,21 @@
+{
+  "name": "AI Document Intake Workflow",
+  "summary": "Concept: extract document fields, check them, and route exceptions for review.",
+  "challenge": "Business documents arrive in inconsistent formats and require careful checks before updating records.",
+  "approach": "Proposed flow: ingest a sample document, extract text, ask a model for a constrained field set, validate required values using deterministic rules, and send uncertain results to a reviewer. This is a design concept using sample data.",
+  "features": [
+    "Sample document ingestion",
+    "Structured extraction and deterministic checks",
+    "Review queue for incomplete or ambiguous data"
+  ],
+  "category": "AI workflow concepts",
+  "description": "Illustrative workflow design concept using sample data. This is not a deployed product or client case study.",
+  "role": "Workflow concept and proposed architecture",
+  "technologies": "Proposed: Ollama, ASP.NET Core, C#, .NET 8 / .NET 9, Hangfire, SQL Server",
+  "kind": "generic",
+  "status": "Design concept",
+  "order": 1,
+  "visible": true,
+  "showOnHome": true,
+  "featured": false
+}

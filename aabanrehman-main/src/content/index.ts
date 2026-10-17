@@ -21,17 +21,19 @@ export interface Project {
   media?: ProjectMedia[];
   demoUrl?: string;
   sourceUrl?: string;
+  status?: string;
   order: number;
   visible?: boolean;
 }
 
-interface Certificate {
+export interface Certificate {
   id: string;
   title: string;
   issuer: string;
   date?: string;
   url?: string;
   image?: string;
+  issuerLogo?: string;
   order: number;
   visible?: boolean;
 }
@@ -56,6 +58,7 @@ function collection<T extends { order: number; visible?: boolean }>(files: Recor
 }
 
 export const projects = collection(import.meta.glob<Project>('./projects/*.json', { eager: true, import: 'default' }));
+export const projectSlug = (project: Project) => project.id.split('/').pop()!.replace(/\.json$/, '');
 export const certificates = collection(import.meta.glob<Certificate>('./certificates/*.json', { eager: true, import: 'default' }));
 export const experience = collection(import.meta.glob<Experience>('./experience/*.json', { eager: true, import: 'default' }));
 import profileData from './profile.json';

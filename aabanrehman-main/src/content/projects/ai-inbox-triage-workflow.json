@@ -1,0 +1,21 @@
+{
+  "name": "AI Inbox Triage Workflow",
+  "summary": "Concept: classify incoming enquiries and prepare a response for human review.",
+  "challenge": "Manual inbox sorting can delay useful enquiries and bury the context needed to reply.",
+  "approach": "Proposed flow: receive an enquiry through a webhook, remove unnecessary personal data, classify it with a local model, validate the structured result, and queue a draft for human approval. No message is sent automatically.",
+  "features": [
+    "Webhook intake and input validation",
+    "Local-model classification with a fallback queue",
+    "Human approval before any reply"
+  ],
+  "category": "AI workflow concepts",
+  "description": "Illustrative workflow design concept using sample data. This is not a deployed product or client case study.",
+  "role": "Workflow concept and proposed architecture",
+  "technologies": "Proposed: Ollama, ASP.NET Core, C#, .NET 8 / .NET 9, Hangfire, SQL Server",
+  "kind": "generic",
+  "status": "Design concept",
+  "order": 0,
+  "visible": true,
+  "showOnHome": true,
+  "featured": false
+}
