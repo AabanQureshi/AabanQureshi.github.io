@@ -27,7 +27,7 @@
   }
   * { @apply border-border; }
   html { scroll-behavior: smooth; }
-  body { margin: 0; background: #101c2c; color: #e7edf3; }
-  ::selection { background: #b4cce5; color: #101c2c; }
+  body { margin: 0; background: #f5f7fc; color: #142445; }
+  ::selection { background: #315bff; color: #ffffff; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

@@ -2,6 +2,7 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 const root = new URL('../dist/', import.meta.url);
 const html = await readFile(new URL('index.html', root), 'utf8');
 const pages = [
+  ['certificates', 'Certificates | Aaban Rehman', 'Explore verified Microsoft credentials in Azure, backend engineering, database management, and DevOps.'],
   ['projects', 'Projects | Aaban Rehman', 'Explore software projects by Aaban Rehman: application architecture, backend engineering, and practical business systems.'],
   ['services', 'Software Engineering Services | Aaban Rehman', 'Freelance and contract software engineering: ASP.NET Core applications, APIs, integrations, and data architecture.'],
   ['feedback', 'Share Client Feedback | Aaban Rehman', 'Share feedback about working with Aaban Rehman, with optional permission to publish your testimonial.'],
@@ -18,4 +19,4 @@ for (const [slug, title, description] of pages) {
   await mkdir(new URL(`${slug}/`, root), { recursive: true });
   await writeFile(new URL(`${slug}/index.html`, root), page);
 }
-await writeFile(new URL('sitemap.xml', root), '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ['', 'projects/', 'services/', 'feedback/'].map(path => `  <url><loc>https://aabanrehman.me/${path}</loc></url>`).join('\n') + '\n</urlset>\n');
+await writeFile(new URL('sitemap.xml', root), '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ['', 'projects/', 'certificates/', 'services/', 'feedback/'].map(path => `  <url><loc>https://aabanrehman.me/${path}</loc></url>`).join('\n') + '\n</urlset>\n');

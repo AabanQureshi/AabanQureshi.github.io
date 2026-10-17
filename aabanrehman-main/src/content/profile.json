@@ -1,6 +1,6 @@
 {
   "name": "Aaban Rehman",
-  "role": "Software engineer",
+  "role": "ASP.NET Core engineer",
   "email": "aabanqureshi564@gmail.com",
   "github": "https://github.com/AabanQureshi",
   "linkedin": "https://www.linkedin.com/in/aaban-qureshi/",
@@ -8,7 +8,7 @@
   "location": "Islamabad, Pakistan",
   "workLocation": "Working worldwide",
   "headline": "Good software.\nBuilt with\nintention.",
-  "introduction": "I’m Aaban, a software engineer building thoughtful web applications, dependable APIs, and the systems behind them.",
+  "introduction": "I’m Aaban, an ASP.NET Core engineer. I build business applications, dependable APIs, and automated workflows with C#, .NET 8 and .NET 9.",
   "aboutHeading": "An engineer.\nA collaborator.\nA builder at heart.",
   "about": "I’m based in Islamabad, working with the .NET ecosystem to turn business requirements into software people can use. I care about understanding the problem, explaining the tradeoffs, and leaving the code easier to work with.",
   "education": {

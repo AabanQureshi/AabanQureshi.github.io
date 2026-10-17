@@ -1,20 +1,27 @@
 import { useState, type FormEvent, type ReactNode } from 'react';
-import { ArrowUpRight } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
+import { ArrowUpRight, Award, Search } from 'lucide-react';
 import { emailConfigured, sendPortfolioEmail } from '@/lib/portfolio-email';
-import { projects, services, profile, testimonials } from '@/content';
+import { projects, certificates, services, profile, testimonials } from '@/content';
 import { ProjectCard } from './Portfolio';
 import './portfolio.css';
 
 function Page({ title, children }: { title: string; children: ReactNode }) {
-  return <div className="portfolio"><a className="skip-link" href="#main">Skip to content</a><header className="site-header page-width"><a className="wordmark" href="/">{profile.name}</a><div className="page-navigation"><a href="/projects">Projects</a><a href="/services">Services</a><a href="/#contact">Contact</a></div></header><main id="main" className="page-width collection-page"><a className="text-link" href="/">← Back to home</a><h1>{title}</h1>{children}</main></div>;
+  const { pathname } = useLocation();
+  return <div className="portfolio"><a className="skip-link" href="#main">Skip to content</a><header className="site-header page-width"><a className="wordmark" href="/">{profile.name}</a><nav aria-label="Collection navigation" className="page-navigation"><a href="/projects" aria-current={pathname.replace(/\/$/, '') === '/projects' ? 'page' : undefined}>Projects</a><a href="/certificates" aria-current={pathname.replace(/\/$/, '') === '/certificates' ? 'page' : undefined}>Certificates</a><a href="/services" aria-current={pathname.replace(/\/$/, '') === '/services' ? 'page' : undefined}>Services</a><a href="/#contact">Contact</a></nav></header><main id="main" className="page-width collection-page"><a className="text-link" href="/">← Back to home</a><h1>{title}</h1>{children}</main></div>;
 }
 
 export function ProjectsPage() {
   const [category, setCategory] = useState('All');
   const [page, setPage] = useState(0);
-  const filtered = projects.filter(project => category === 'All' || project.category === category);
+  const [search, setSearch] = useState('');
+  const filtered = projects.filter(project => (category === 'All' || project.category === category) && `${project.name} ${project.summary} ${project.technologies}`.toLowerCase().includes(search.trim().toLowerCase()));
   const pages = Math.max(1, Math.ceil(filtered.length / 6));
-  return <Page title="Projects"><p>Explore the work, the problems, and the engineering decisions behind them.</p><label className="filter-label" htmlFor="project-category">Filter by category</label><select id="project-category" className="project-filter" value={category} onChange={event => { setCategory(event.target.value); setPage(0); }}>{['All', ...new Set(projects.map(project => project.category))].map(value => <option key={value}>{value}</option>)}</select><div className="work-grid">{filtered.slice(page * 6, page * 6 + 6).map(project => <ProjectCard key={project.id} project={project} />)}</div>{!filtered.length && <p>No projects in this category yet.</p>}<nav className="pagination" aria-label="Project pages"><button className="p-button" disabled={page === 0} onClick={() => setPage(page - 1)}>Previous</button><span role="status">Page {page + 1} of {pages}</span><button className="p-button" disabled={page + 1 >= pages} onClick={() => setPage(page + 1)}>Next</button></nav></Page>;
+  return <Page title="Explore the work."><p>Business platforms, APIs, and automation. Open a project for the problem, approach, and my contribution.</p><div className="collection-controls"><div><label className="filter-label" htmlFor="project-search">Find a project or technology</label><div className="search-field"><Search size={18} aria-hidden="true" /><input id="project-search" type="search" placeholder="Try billing, Azure, or ASP.NET Core" value={search} onChange={event => { setSearch(event.target.value); setPage(0); }} /></div></div><div><label className="filter-label" htmlFor="project-category">Filter by category</label><select id="project-category" className="project-filter" value={category} onChange={event => { setCategory(event.target.value); setPage(0); }}>{['All', ...new Set(projects.map(project => project.category))].map(value => <option key={value}>{value}</option>)}</select></div></div><p className="collection-result" role="status">{filtered.length} of {projects.length} projects</p><div className="work-grid">{filtered.slice(page * 6, page * 6 + 6).map(project => <ProjectCard key={project.id} project={project} />)}</div>{!filtered.length && <div className="collection-empty"><h2>No matching projects</h2><p>Try another technology or clear the filters to see all the work.</p><button className="p-button" onClick={() => { setSearch(''); setCategory('All'); setPage(0); }}>Show all projects</button></div>}{pages > 1 && <nav className="pagination" aria-label="Project pages"><button className="p-button" disabled={page === 0} onClick={() => { setPage(page - 1); document.getElementById('project-search')?.focus(); }}>Previous</button><span role="status">Page {page + 1} of {pages}</span><button className="p-button" disabled={page + 1 >= pages} onClick={() => { setPage(page + 1); document.getElementById('project-search')?.focus(); }}>Next</button></nav>}</Page>;
+}
+
+export function CertificatesPage() {
+  return <Page title="Learning, backed by credentials."><p>{certificates.length} credentials across cloud, backend engineering, databases, and delivery. Each links directly to the issuing platform.</p><div className="certificate-directory">{certificates.map(certificate => <article className="certificate-card" key={certificate.id}><div className="certificate-emblem" aria-hidden="true"><Award size={30} /></div><span className="certificate-issuer">{certificate.issuer}{certificate.date ? ` · ${certificate.date}` : ''}</span><h2>{certificate.title}</h2>{certificate.image && <img className="certificate-preview" src={certificate.image} alt={`${certificate.title} certificate`} loading="lazy" />}<a className="text-link" href={certificate.url || certificate.image} target="_blank" rel="noopener noreferrer">View credential <ArrowUpRight size={18} aria-hidden="true" /><span className="sr-only"> for {certificate.title} (opens in a new tab)</span></a></article>)}</div><div className="collection-next"><h2>See the skills in practice.</h2><p>Explore the applications and engineering decisions behind the credentials.</p><a className="p-button" href="/projects">Explore all projects <ArrowUpRight size={18} aria-hidden="true" /></a></div></Page>;
 }
 
 export function ServicesPage() {
@@ -22,6 +29,7 @@ export function ServicesPage() {
 }
 
 export function FeedbackSection() {
+  if (!testimonials.length) return null;
   return <section className="feedback-section page-width" id="feedback"><div className="section-heading"><div><span className="section-kicker">Working together</span><h2>Client feedback</h2></div><a className="text-link" href="/feedback">Worked with me? Leave feedback <ArrowUpRight size={17} /></a></div>{testimonials.length ? <div className="testimonial-grid">{testimonials.slice(0, 3).map((item, index) => <figure key={`${item.name}-${index}`}><blockquote>{item.quote}</blockquote><figcaption><strong>{item.name}</strong>{item.company && <span>{item.company}</span>}{item.project && <span>{item.project}</span>}{item.consentToPublishEmail && item.publicEmail && <a href={`mailto:${item.publicEmail}`}>{item.publicEmail}</a>}</figcaption></figure>)}</div> : <p>If we’ve worked together, I’d welcome your perspective on the collaboration.</p>}</section>;
 }
 
