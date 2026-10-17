@@ -20,3 +20,10 @@ The owner requested AI engineering and workflow automation positioning, sample w
 
 ## Validation
 Build verifies every sitemap page has real rendered HTML, one H1, unique metadata, matching canonical, valid JSON-LD, existing uploaded assets and explicit concept labels. Verify responsive rendering, certificate fallback artwork, project detail links, and Search Console sitemap submission after publication.
+
+## Publication and indexing results
+- Google processed the initial sitemap successfully and discovered 20 URLs; homepage recrawl request accepted.
+- Bing site ownership verified with the meta tag; sitemap submitted and 20 initial URLs directly submitted for crawling.
+- Follow-up request: homepage selection is n8n AI Inbox Triage (0), n8n AI News Briefing (1), SmartInvoice AI (2). The document intake concept remains elsewhere in the collection.
+- Both n8n covers are unmodified reference images from `n8n-io/n8n-docs`, credited visibly and in gallery captions. The repository license is included under public/uploads/projects/N8N-DOCS-LICENSE.txt. These are not represented as screenshots of implemented portfolio work.
+- Follow-up build generates 22 pages, including 21 indexable sitemap URLs. New project pages are generated automatically after each CMS publication.

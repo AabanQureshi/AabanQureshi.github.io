@@ -1,0 +1,25 @@
+{
+  "name": "n8n AI News Briefing",
+  "category": "AI workflow concepts",
+  "summary": "Concept: collect industry updates, summarise the useful stories, and prepare a daily briefing.",
+  "description": "An illustrative n8n workflow design concept for a daily AI-assisted news digest. This is not a deployed product or client case study. The cover is a reference screenshot from n8n documentation.",
+  "role": "Workflow concept and proposed integration design",
+  "technologies": "Proposed: n8n, RSS, HTTP APIs, Ollama, Telegram, scheduled triggers",
+  "challenge": "Following several feeds manually makes it easy to miss useful updates or repeatedly read the same story.",
+  "approach": "Proposed flow: run on a daily schedule, collect permitted RSS or API sources, deduplicate links, generate concise source-linked summaries, and prepare a digest for review before optional delivery. The n8n documentation cover demonstrates a related news workflow; it is reference material rather than evidence of this project being implemented.",
+  "features": [
+    "Scheduled intake from permitted feeds",
+    "Deduplication and source-linked AI summaries",
+    "Human review before optional Telegram delivery"
+  ],
+  "kind": "generic",
+  "status": "Design concept",
+  "order": 1,
+  "visible": true,
+  "showOnHome": true,
+  "featured": false,
+  "image": "/uploads/projects/n8n-workflow-builder-reference.png",
+  "imageAlt": "Reference screenshot from n8n documentation showing its AI workflow builder configuring a news briefing; not a screenshot of this proposed portfolio project",
+  "imageCredit": "Reference image: n8n documentation. This project is a design concept.",
+  "imageSourceUrl": "https://github.com/n8n-io/n8n-docs/blob/main/docs/build/.gitbook/assets/ai-workflow-builder.png"
+}

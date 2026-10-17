@@ -29,7 +29,7 @@ const schemas = {
     name: text, category: text, summary: text, description: text, role: text,
     technologies: text, challenge: text, approach: text,
     features: z.array(text).optional(), kind: z.enum(['invoice', 'quiz', 'billing', 'generic']).optional(),
-    featured: z.boolean().optional(), image: optionalAsset, imageAlt: optionalText, status: optionalText,
+    featured: z.boolean().optional(), image: optionalAsset, imageAlt: optionalText, imageCredit: optionalText, imageSourceUrl: optionalUrl, status: optionalText,
     media: z.array(projectMedia).optional(),
     demoUrl: optionalUrl, sourceUrl: optionalUrl, ...ordered,
   }).refine(item => !item.image || Boolean(item.imageAlt?.trim()), { message: 'Add alternative text for the project image', path: ['imageAlt'] }),

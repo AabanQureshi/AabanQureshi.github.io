@@ -1,8 +1,8 @@
 {
-  "name": "AI Inbox Triage Workflow",
+  "name": "n8n AI Inbox Triage",
   "summary": "Concept: classify incoming enquiries and prepare a response for human review.",
   "challenge": "Manual inbox sorting can delay useful enquiries and bury the context needed to reply.",
-  "approach": "Proposed flow: receive an enquiry through a webhook, remove unnecessary personal data, classify it with a local model, validate the structured result, and queue a draft for human approval. No message is sent automatically.",
+  "approach": "Proposed n8n flow: receive an enquiry through a webhook, remove unnecessary personal data, classify it with an Ollama model, validate the structured result, and queue a draft for human approval. The reference image illustrates n8n agent wiring and uses a different model provider; it is not a screenshot of this proposed project. No message is sent automatically.",
   "features": [
     "Webhook intake and input validation",
     "Local-model classification with a fallback queue",
@@ -11,11 +11,15 @@
   "category": "AI workflow concepts",
   "description": "Illustrative workflow design concept using sample data. This is not a deployed product or client case study.",
   "role": "Workflow concept and proposed architecture",
-  "technologies": "Proposed: Ollama, ASP.NET Core, C#, .NET 8 / .NET 9, Hangfire, SQL Server",
+  "technologies": "Proposed: n8n, Ollama, webhooks, structured outputs, human approval",
   "kind": "generic",
   "status": "Design concept",
   "order": 0,
   "visible": true,
   "showOnHome": true,
-  "featured": false
+  "featured": false,
+  "image": "/uploads/projects/n8n-ai-workflow-reference.png",
+  "imageAlt": "Reference workflow from n8n documentation showing webhook intake, an AI agent, and structured output parsing; not a screenshot of an implemented portfolio project",
+  "imageCredit": "Reference image: n8n documentation. This project is a design concept.",
+  "imageSourceUrl": "https://github.com/n8n-io/n8n-docs/blob/main/docs/build/.gitbook/assets/example-ai-workflow.png"
 }

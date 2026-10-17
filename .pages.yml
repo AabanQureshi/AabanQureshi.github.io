@@ -102,6 +102,16 @@ content:
         label: Cover description
         type: string
         description: Required for a cover image. Describe what it shows and identify concept artwork as an illustration.
+      - name: imageCredit
+        label: Image credit / reference context
+        type: string
+        description: Credit third-party artwork and clearly identify reference screenshots that are not your own project.
+      - name: imageSourceUrl
+        label: Image source link
+        type: string
+        pattern:
+          regex: ^https://[^\s]+$
+          message: Enter a complete HTTPS source link.
       - name: kind
         label: Illustration without a screenshot
         type: select

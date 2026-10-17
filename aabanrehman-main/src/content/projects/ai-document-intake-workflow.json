@@ -14,7 +14,7 @@
   "technologies": "Proposed: Ollama, ASP.NET Core, C#, .NET 8 / .NET 9, Hangfire, SQL Server",
   "kind": "generic",
   "status": "Design concept",
-  "order": 1,
+  "order": 10,
   "visible": true,
   "showOnHome": true,
   "featured": false

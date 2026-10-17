@@ -18,6 +18,8 @@ export interface Project {
   showOnHome?: boolean;
   image?: string;
   imageAlt?: string;
+  imageCredit?: string;
+  imageSourceUrl?: string;
   media?: ProjectMedia[];
   demoUrl?: string;
   sourceUrl?: string;

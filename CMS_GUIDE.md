@@ -61,6 +61,8 @@ The profile now leads with AI engineering and workflow automation. Two illustrat
 
 For each certificate, upload the actual certificate under Certificate image when available. Otherwise choose an Issuer logo from the certificate media library. `microsoft-logo.svg` and `meta-logo.svg` are included. The actual certificate image takes priority, with the logo as fallback. Choose only the actual issuer; existing credentials are Microsoft-issued.
 
+Project covers also support Image credit / reference context and Image source link. Use these for third-party reference images. Current n8n examples retain visible concept labels and source credits. Homepage priorities 0 and 1 are the n8n concepts; priority 2 is SmartInvoice AI.
+
 Builds pre-render all visible project detail pages automatically from the project filenames, plus About, AI Engineering, Workflow Automation, Projects, Services, and Certificates. Keep filenames stable to preserve indexed URLs. Every page has metadata, structured data, and a canonical URL; indexable pages enter `/sitemap.xml`. The feedback form stays available with `noindex`.
 
 Search Console already has the Google property verified. Bing ownership uses the public `msvalidate.01` tag in `index.html`; keep it after verification. Search engines decide when to crawl and whether to index or cite the pages.
