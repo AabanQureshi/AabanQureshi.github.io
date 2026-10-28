@@ -4,15 +4,15 @@
       "title": "AI engineering",
       "text": "Connect language models to application data and APIs, with explicit boundaries, structured outputs, and human review where it matters.",
       "tools": "Ollama · REST APIs · C# · .NET 8 / .NET 9",
-      "details": "AI integration design and implementation for existing products. Start with a defined task and model constraints, connect approved application data, validate model responses, and keep consequential actions behind human review. A local-first Ollama environment is available for experimentation.",
-      "showOnHome": true
+      "showOnHome": true,
+      "details": "AI integration design and implementation for existing products. Start with a defined task and model constraints, connect approved application data, validate model responses, and keep consequential actions behind human review. A local-first Ollama environment is available for experimentation."
     },
     {
       "title": "Workflow automation",
       "text": "Turn repeated business tasks into connected workflows: capture a request, enrich it, route it for review, and hand it to the right system.",
       "tools": "Webhooks · Hangfire · ASP.NET Core · SQL Server",
-      "details": "API and webhook integrations, background processing, retry-aware job design, and approval steps for business workflows. AI can assist with classification and drafting while deterministic application logic controls validation, access, and delivery.",
-      "showOnHome": true
+      "showOnHome": true,
+      "details": "API and webhook integrations, background processing, retry-aware job design, and approval steps for business workflows. AI can assist with classification and drafting while deterministic application logic controls validation, access, and delivery."
     },
     {
       "title": "Products & platforms",
@@ -32,7 +32,7 @@
       "title": "Data & architecture",
       "text": "Explicit data access, maintainable application boundaries, and a deployment path that fits your product.",
       "tools": "EF Core · SQL Server · PostgreSQL · Azure",
-      "showOnHome": true,
+      "showOnHome": false,
       "details": "Explicit data access, maintainable application boundaries, and a deployment path that fits your product."
     }
   ]
