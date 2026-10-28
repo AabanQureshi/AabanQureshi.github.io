@@ -32,7 +32,7 @@
       "title": "Data & architecture",
       "text": "Explicit data access, maintainable application boundaries, and a deployment path that fits your product.",
       "tools": "EF Core · SQL Server · PostgreSQL · Azure",
-      "showOnHome": false,
+      "showOnHome": true,
       "details": "Explicit data access, maintainable application boundaries, and a deployment path that fits your product."
     }
   ]
